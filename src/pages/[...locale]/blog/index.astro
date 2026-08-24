@@ -17,7 +17,6 @@ const posts = await getPosts(lang);
 const pageItems = posts.slice(0, PER_PAGE);
 const totalPages = Math.max(1, Math.ceil(posts.length / PER_PAGE));
 const counts = tagCounts(posts);
-const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
 ---
 
 <BaseLayout
@@ -43,7 +42,6 @@ const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
           })),
         ]}
       />
-      <a href={rssHref} class="tag border-[var(--color-accent)] text-[var(--color-accent-text)]">RSS</a>
     </div>
   </PageHeader>
 

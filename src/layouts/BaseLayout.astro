@@ -39,7 +39,6 @@ const hreflangs = alternates(neutral);
 const social = absolute(ogImage ?? site.og.defaultImage);
 const fullTitle = neutral === '/' ? title : `${title} · ${site.shortName}`;
 const graph = [organizationLd(lang), ...jsonLd];
-const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
 ---
 
 <!doctype html>
@@ -77,7 +76,6 @@ const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="alternate" type="application/rss+xml" title={`${site.shortName} — ${t('news.title')}`} href={rssHref} />
 
     <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
     {lang === 'hy' && (

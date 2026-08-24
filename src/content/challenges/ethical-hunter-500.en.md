@@ -9,7 +9,7 @@ unit: "hits"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 yards"
-columns: ["rank", "name", "division", "hits", "misses", "date", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "hits", "misses", "date", "caliber"]
 active: true
 order: 20
 ---

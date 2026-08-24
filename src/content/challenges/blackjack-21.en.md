@@ -9,7 +9,7 @@ unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "A shooter prone with a 21-point card and steel targets downrange"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
 active: true
 order: 10
 ---
@@ -34,4 +34,4 @@ The challenge was created by Erik Cortina. ARMPRF uses it as a single standard f
 
 ## Submitting a score
 
-Film the whole session in one take, with the target and the score card visible. Without video the result is shown as unverified.
+Film the whole session in one take, with the target and the score card visible, and send it in with your score.

@@ -46,15 +46,15 @@
     "phone": "+374 00 000000",
     "phoneDisplay": "+374 00 00 00 00",
     "address": {
-      "hy": "TODO(content): հրաձգարանի հասցեն, Հայաստան",
-      "en": "TODO(content): range address, Armenia"
+      "hy": "«Ազատազեն» հրաձգարան, Կոտայքի մարզ, Հայաստան",
+      "en": "Azatazen shooting range, Kotayk Province, Armenia"
     },
     "geo": {
-      "lat": 40.1772,
-      "lon": 44.5035
+      "lat": 40.391897,
+      "lon": 44.708015
     },
-    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=44.35%2C40.05%2C44.65%2C40.30&layer=mapnik&marker=40.1772%2C44.5035",
-    "mapLinkUrl": "https://www.openstreetmap.org/?mlat=40.1772&mlon=44.5035#map=11/40.1772/44.5035"
+    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=44.6480%2C40.3519%2C44.7680%2C40.4319&layer=mapnik&marker=40.391897%2C44.708015",
+    "mapLinkUrl": "https://yandex.com/maps/org/azatazen/123975783232/"
   },
   "social": {
     "instagram": "https://instagram.com/armprf",

@@ -152,8 +152,8 @@ const others = (await getChallenges(lang)).filter((c) => c.data.id !== data.id);
         <h2 class="text-lg">{t('lb.submit')}</h2>
         <p class="mt-2 text-sm text-[var(--color-muted)]">
           {lang === 'hy'
-            ? 'Կցեք տեսանյութ կամ լուսանկար՝ թիրախով և միավորի քարտով։ Առանց ապացույցի արդյունքը նշվում է որպես չհաստատված։'
-            : 'Attach video or a photo showing the target and the score card. Without proof the result is flagged unverified.'}
+            ? 'Կցեք տեսանյութ կամ լուսանկար՝ թիրախով և միավորի քարտով։'
+            : 'Attach video or a photo showing the target and the score card.'}
         </p>
         <a href={site.forms.scoreSubmission} rel="noopener" class="btn btn-primary mt-4 w-full">{t('lb.submit')}</a>
       </div>

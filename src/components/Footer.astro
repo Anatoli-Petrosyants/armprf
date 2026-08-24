@@ -10,7 +10,6 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const year = new Date().getUTCFullYear();
 const links = visibleNav(nav.footer);
-const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
 ---
 
 <footer class="mt-24 border-t border-[var(--color-border)] bg-[var(--color-surface)]">
@@ -48,11 +47,6 @@ const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
             </a>
           </li>
         ))}
-        <li>
-          <a href={rssHref} class="text-[var(--color-muted)] hover:text-[var(--color-ink)]">
-            {t('news.rss')}
-          </a>
-        </li>
       </ul>
     </nav>
 

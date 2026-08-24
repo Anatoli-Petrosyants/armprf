@@ -89,7 +89,8 @@ array element into its own collection entry and stamps the challenge id from the
   tables through the same component.
 - A column carrying the same value in every row earns no space: `club` is off the board
   while the federation is the only club, and the club filter hides itself for the same
-  reason.
+  reason. `verified` and `proofUrl` are recorded on every row but not displayed; they are
+  the audit trail, and restoring either column is one entry in `columns`.
 - Names are shown, not linked. Athletes are a roster of cards with no detail page, so
   `athleteNames()` only maps the Latin spelling recorded at a match to the reader's
   language.

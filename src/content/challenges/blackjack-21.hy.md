@@ -9,7 +9,7 @@ unit: "միավոր"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "Հրաձիգը պառկած դիրքում՝ 21 միավորի քարտով և պողպատե թիրախներով"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
 active: true
 order: 10
 ---
@@ -34,4 +34,4 @@ order: 10
 
 ## Ինչպես ներկայացնել արդյունքը
 
-Նկարահանեք ամբողջ նստաշրջանը մեկ կադրով՝ երևացող թիրախով և միավորի քարտով։ Առանց տեսագրության արդյունքը ցուցադրվում է որպես չհաստատված։
+Նկարահանեք ամբողջ նստաշրջանը մեկ կադրով՝ երևացող թիրախով և միավորի քարտով, և ուղարկեք այն միավորի հետ միասին։

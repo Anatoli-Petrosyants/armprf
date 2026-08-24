@@ -104,8 +104,9 @@ Things worth knowing:
   result still shows, but the build prints a warning and the name will not link to a
   profile. Use the Latin spelling from the `.en.md` file — the site swaps in the Armenian
   spelling automatically on Armenian pages.
-- `verified: true` means an ARMPRF range officer recorded it, or there is video showing
-  every shot. Everything else is `false`.
+- `verified` and `proofUrl` are still recorded on every row, but no longer shown on the
+  board. Keep filling them in — they are the audit trail, and putting either column back is
+  one word in the challenge's `columns` list.
 - The season shown by the "current season" toggle comes from the year in `date`.
 - Depending on the challenge you may use `hits`, `misses`, `percent` or `time` (seconds)
   instead of `score`. The challenge file decides which columns appear.

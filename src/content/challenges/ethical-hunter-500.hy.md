@@ -9,7 +9,7 @@ unit: "խոցում"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "Որսորդը կրակում է ուսապարկից՝ լեռնային տեղանքում, 500 յարդ հեռավորության թիրախի ուղղությամբ"
-columns: ["rank", "name", "division", "hits", "misses", "date", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "hits", "misses", "date", "caliber"]
 active: true
 order: 20
 ---
