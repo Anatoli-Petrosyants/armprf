@@ -17,8 +17,7 @@ const t = useTranslations(lang);
 
 await assertResultsValid();
 
-const posts = await getPosts(lang);
-const [lead, ...rest] = posts.slice(0, 4);
+const posts = (await getPosts(lang)).slice(0, 2);
 
 const challenges = await getChallenges(lang);
 const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
@@ -116,32 +115,18 @@ const icons: Record<string, string> = {
     linkLabel={t('common.viewAll')}
   >
     <div class="grid gap-4 md:grid-cols-2">
-      {lead && (
+      {posts.map((post) => (
         <PostCard
           lang={lang}
-          slug={lead.slug}
-          title={lead.data.title}
-          excerpt={lead.data.excerpt}
-          date={lead.data.date}
-          tags={lead.data.tags}
-          cover={lead.data.cover}
-          coverAlt={lead.data.coverAlt}
+          slug={post.slug}
+          title={post.data.title}
+          excerpt={post.data.excerpt}
+          date={post.data.date}
+          tags={post.data.tags}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
         />
-      )}
-      <div class="grid gap-4">
-        {rest.map((post) => (
-          <PostCard
-            lang={lang}
-            slug={post.slug}
-            title={post.data.title}
-            excerpt={post.data.excerpt}
-            date={post.data.date}
-            tags={post.data.tags}
-            cover={post.data.cover}
-            coverAlt={post.data.coverAlt}
-          />
-        ))}
-      </div>
+      ))}
     </div>
   </Section>
 
