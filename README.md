@@ -31,7 +31,7 @@ Node 24 (see `.nvmrc`).
 | Fonts | Archivo + Noto Sans Armenian, self-hosted `woff2` | No request leaves the origin. Archivo has no Armenian glyphs, so Noto covers `U+0530–058F`. |
 | Logo | Federation wordmark inlined from SVG | The white lettering follows `currentColor`, so one file serves both themes; the ARMPRF monogram keeps its red, blue and orange. |
 | Interactivity | Vanilla TypeScript in `<script>` islands | Leaderboard sorting, lightbox, theme and menu. No UI framework. |
-| Social cards | satori → SVG → sharp → PNG, at build time | One card per post, event and challenge. |
+| Social cards | satori → SVG → sharp → PNG, at build time | One card per post and challenge. |
 
 ## Architecture
 
@@ -39,15 +39,14 @@ Node 24 (see `.nvmrc`).
 src/
 ├─ content/
 │  ├─ posts/        <slug>.hy.md + <slug>.en.md      blog
-│  ├─ events/       <slug>.hy.md + <slug>.en.md      matches
 │  ├─ challenges/   <id>.hy.md   + <id>.en.md        standing challenges (rules in the body)
 │  ├─ athletes/     <slug>.hy.md + <slug>.en.md      shooter profiles
 │  ├─ results/      <challenge-id>.json              flat arrays of leaderboard rows
-│  └─ config/       site.json, nav.json, i18n/*.json, home/about/gallery data
+│  └─ config/       site.json, nav.json, i18n/*.json, home and about data
 ├─ assets/img/      every photograph, optimized by the build
 ├─ components/      presentational Astro components
 ├─ layouts/         BaseLayout — head, meta, JSON-LD, header, footer
-├─ lib/             i18n, content access, ranking, SEO, ICS, OG rendering
+├─ lib/             i18n, content access, ranking, SEO, OG rendering
 ├─ pages/[...locale]/  every page, built once per language
 └─ styles/global.css   design tokens, base styles, components, motifs
 ```

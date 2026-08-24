@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { renderOg } from '@/lib/og';
-import { getChallenges, getEvents, getPosts } from '@/lib/content';
+import { getChallenges, getPosts } from '@/lib/content';
 import { formatDateShort } from '@/lib/format';
 import { LOCALES } from '@/lib/i18n';
 
@@ -13,19 +13,8 @@ export async function getStaticPaths() {
 
   for (const post of await getPosts('hy')) {
     paths.push({
-      params: { path: `news/${post.slug}` },
+      params: { path: `blog/${post.slug}` },
       props: { eyebrow: post.data.tags[0], title: post.data.title, meta: formatDateShort(post.data.date, 'hy') },
-    });
-  }
-
-  for (const event of await getEvents('hy')) {
-    paths.push({
-      params: { path: `events/${event.slug}` },
-      props: {
-        eyebrow: event.data.discipline,
-        title: event.data.title,
-        meta: `${formatDateShort(event.data.date, 'hy')} · ${event.data.location}`,
-      },
     });
   }
 

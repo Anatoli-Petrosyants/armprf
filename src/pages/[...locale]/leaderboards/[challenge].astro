@@ -3,7 +3,6 @@ import { render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Leaderboard from '@/components/Leaderboard.astro';
-import Podium from '@/components/Podium.astro';
 import LiteYouTube from '@/components/LiteYouTube.astro';
 import SmartImage from '@/components/SmartImage.astro';
 import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
@@ -102,9 +101,6 @@ const others = (await getChallenges(lang)).filter((c) => c.data.id !== data.id);
     </div>
   </header>
 
-  <section class="wrap py-12">
-    <Podium lang={lang} rows={rows} scoring={data.scoring} unit={data.unit} />
-  </section>
 
   <section class="wrap pb-12">
     <Leaderboard

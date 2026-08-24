@@ -2,7 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHeader from '@/components/PageHeader.astro';
 import Leaderboard from '@/components/Leaderboard.astro';
-import Podium from '@/components/Podium.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
@@ -75,9 +74,6 @@ const counts = await Promise.all(
         <a href={localizePath(`/leaderboards/${featured.data.id}`, lang)} class="btn btn-ghost">{t('lb.rules')}</a>
       </div>
 
-      <div class="mb-10">
-        <Podium lang={lang} rows={rows} scoring={featured.data.scoring} unit={featured.data.unit} />
-      </div>
 
       <Leaderboard
         lang={lang}

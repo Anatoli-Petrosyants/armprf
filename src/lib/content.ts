@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { DEFAULT_LANG, type Lang } from './i18n';
 
-type Bilingual = 'posts' | 'events' | 'challenges' | 'athletes';
+type Bilingual = 'posts' | 'challenges' | 'athletes';
 
 export function langOf(id: string): Lang {
   return id.endsWith('.en') ? 'en' : 'hy';
@@ -59,27 +59,6 @@ export async function getPosts(lang: Lang) {
   return posts
     .filter((p) => import.meta.env.DEV || !p.data.draft)
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-}
-
-export async function getEvents(lang: Lang) {
-  const events = await getLocalized('events', lang);
-  return events.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-}
-
-/** Split events on "now" using the end date when a match runs over two days. */
-export function splitEvents<T extends { data: { date: Date; endDate?: Date; status: string } }>(
-  events: T[],
-  now = new Date(),
-) {
-  const upcoming: T[] = [];
-  const past: T[] = [];
-  for (const e of events) {
-    const until = e.data.endDate ?? e.data.date;
-    if (e.data.status !== 'completed' && until.getTime() >= now.getTime()) upcoming.push(e);
-    else past.push(e);
-  }
-  upcoming.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
-  return { upcoming, past };
 }
 
 export async function getChallenges(lang: Lang) {

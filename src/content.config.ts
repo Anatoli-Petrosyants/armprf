@@ -57,38 +57,6 @@ const posts = defineCollection({
   }),
 });
 
-const EVENT_STATUS = ['open', 'full', 'closed', 'completed'] as const;
-
-const events = defineCollection({
-  loader: bilingual('events'),
-  schema: z.object({
-    title: z.string(),
-    summary: z.string(),
-    date: z.coerce.date(),
-    endDate: z.coerce.date().optional(),
-    status: z.enum(EVENT_STATUS),
-    location: z.string(),
-    mapUrl: z.url().optional(),
-    geo: z.object({ lat: z.number(), lon: z.number() }).optional(),
-    discipline: z.string(),
-    divisions: z.array(z.string()).min(1),
-    distanceMin: z.number().int().positive(),
-    distanceMax: z.number().int().positive(),
-    distanceUnit: z.enum(['m', 'yd']).default('m'),
-    roundCount: z.number().int().positive(),
-    entryFee: z.string().optional(),
-    registrationUrl: z.url().optional(),
-    matchDirector: z.string(),
-    bookletPdf: z.string().optional(),
-    resultsUrl: z.string().optional(),
-    galleryTag: z.string().optional(),
-    cover: imagePath.optional(),
-    coverAlt: altText.optional(),
-    gallery: z.array(galleryItem).default([]),
-    featured: z.boolean().default(false),
-  }),
-});
-
 const SCORING = ['points', 'hits', 'time', 'percent'] as const;
 
 /** Column ids a challenge may declare. Each maps to a field on a result row and
@@ -231,5 +199,5 @@ const results = defineCollection({
   schema: resultRow,
 });
 
-export const collections = { posts, events, challenges, athletes, results };
-export { TAGS, EVENT_STATUS, SCORING, COLUMNS };
+export const collections = { posts, challenges, athletes, results };
+export { TAGS, SCORING, COLUMNS };

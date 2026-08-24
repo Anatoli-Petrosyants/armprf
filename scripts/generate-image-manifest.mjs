@@ -119,11 +119,82 @@ for (const [folder, items] of [...groups.entries()].sort()) {
   lines.push('');
 }
 
+// The shooting plan is documented here rather than derived, so it survives even
+// when no content file currently points at a given folder.
+const PLAN = [
+  ['Competition', 'match/', [
+    ['stage-firing', 'Shooter behind the rifle on a stage, bipod or tripod, spotter beside'],
+    ['prone-positional', 'Prone, barricade, tank trap, roof-top prop'],
+    ['timers-and-scoring', 'RO with a timer, score card close-up'],
+    ['targets', 'Steel at distance, KYL rack, impact splash'],
+    ['podium', 'Top three with awards, and the whole field'],
+    ['gear-line', 'Rifles racked at the line, bipods, chrono session'],
+  ]],
+  ['Rimfire / .22LR', 'rimfire/', [
+    ['matches', 'Rimfire match at short distances'],
+    ['kids-and-newcomers', 'First shots under a coach'],
+    ['small-targets', 'Mini steel at 100 m and under'],
+  ]],
+  ['Long range', 'longrange/', [
+    ['1000m-plus', 'Shooter, spotting scope, wind flags'],
+    ['wind-reading', 'Kestrel, flags, mirage'],
+    ['dope-and-ballistics', 'Data book, ballistic app, turret close-up'],
+  ]],
+  ['Training', 'training/', [
+    ['zeroing', '100 m groups on paper'],
+    ['dry-fire-and-positions', 'Positional work without ammunition'],
+    ['coaching', 'Instructor correcting a position'],
+    ['safety-briefing', 'Everyone in eyes and ears, muzzle discipline'],
+    ['reloading-bench', 'Press, brass, powder, seating dies'],
+  ]],
+  ['Hunting / ethical shooting', 'hunting/', [
+    ['field-positions', 'Improvised rests, packs, terrain'],
+    ['500yd-challenge', 'Runs from the Ethical Hunter Challenge'],
+    ['landscape', 'Armenian terrain, giving a sense of distance'],
+  ]],
+  ['Range & construction', 'range/', [
+    ['construction-progress', 'Dated: earthworks, berms, firing line, target frames'],
+    ['facilities', 'Benches, signage, shade, parking'],
+    ['before-after', 'Pairs, shot from the same spot'],
+  ]],
+  ['Community', 'community/', [
+    ['birthday-and-celebrations', 'Federation celebrations'],
+    ['group-photos', 'Members and team photos'],
+    ['barbecue-and-camp', 'Overnight matches, camp life'],
+    ['kids-and-families', 'Family days at the range'],
+    ['international-guests', 'Visiting shooters and coaches'],
+  ]],
+];
+
+lines.push(
+  '## What to shoot',
+  '',
+  'The folders below are the agreed taxonomy. A folder only appears in the table above',
+  'once a content file points at a photo inside it — but shoot for all of them, and the',
+  'names will line up when you publish.',
+  '',
+);
+for (const [group, prefix, tags] of PLAN) {
+  lines.push(`**${group}** — \`/img/${prefix}\``, '');
+  for (const [tag, note] of tags) {
+    lines.push(`- \`${prefix}${tag}/\` — ${note}`);
+  }
+  lines.push('');
+}
+lines.push(
+  '**Brand assets** — `/img/brand/`',
+  '',
+  '- `brand/logo/` — the federation wordmark, light and dark, plus the themable copy',
+  '- `brand/hero/` — 3–5 landscape frames, min 2560×1440, text-safe area on the left',
+  '- `brand/portraits/` — one square headshot per athlete, min 1000×1000',
+  '- `about/` — the two square frames shown on the About page',
+  '',
+);
+
 lines.push(
   '## Video',
   '',
-  'Videos are never uploaded to the repository. Put the YouTube id in',
-  '`src/content/config/gallery.json` under `videos`, or in a post or challenge as `videoUrl`.',
+  'Videos are never uploaded to the repository. Set `videoUrl` on a post or a challenge.',
   'The player is a click-to-load facade, so nothing is requested from YouTube until a',
   'visitor asks for it.',
   '',

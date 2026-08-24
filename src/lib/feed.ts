@@ -17,7 +17,7 @@ export async function buildFeed(lang: Lang) {
       title: post.data.title,
       description: post.data.excerpt,
       pubDate: post.data.date,
-      link: localizePath(`/news/${post.slug}`, lang),
+      link: localizePath(`/blog/${post.slug}`, lang),
       categories: post.data.tags,
       author: post.data.author,
       ...(post.data.cover

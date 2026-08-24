@@ -2,11 +2,10 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import PostCard from '@/components/PostCard.astro';
-import EventCard from '@/components/EventCard.astro';
 import Leaderboard from '@/components/Leaderboard.astro';
 import SmartImage from '@/components/SmartImage.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
-import { getChallenges, getEvents, getPosts, splitEvents } from '@/lib/content';
+import { getChallenges, getPosts } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
 import { site, siteName, slogan } from '@/lib/site';
 import home from '@/content/config/home.json';
@@ -18,9 +17,8 @@ const t = useTranslations(lang);
 
 await assertResultsValid();
 
-const posts = (await getPosts(lang)).slice(0, 3);
-const { upcoming } = splitEvents(await getEvents(lang));
-const nextEvent = upcoming[0];
+const posts = await getPosts(lang);
+const [lead, ...rest] = posts.slice(0, 4);
 
 const challenges = await getChallenges(lang);
 const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
@@ -89,34 +87,6 @@ const icons: Record<string, string> = {
 
   <div class="arc-divider"></div>
 
-  <Section
-    eyebrow={t('home.next.eyebrow')}
-    title={nextEvent ? nextEvent.data.title : t('home.next.none')}
-    href={localizePath('/events', lang)}
-    linkLabel={t('common.viewAll')}
-  >
-    {nextEvent ? (
-      <EventCard
-        lang={lang}
-        slug={nextEvent.slug}
-        title={nextEvent.data.title}
-        summary={nextEvent.data.summary}
-        date={nextEvent.data.date}
-        endDate={nextEvent.data.endDate}
-        location={nextEvent.data.location}
-        discipline={nextEvent.data.discipline}
-        distanceMin={nextEvent.data.distanceMin}
-        distanceMax={nextEvent.data.distanceMax}
-        distanceUnit={nextEvent.data.distanceUnit}
-        status={nextEvent.data.status}
-        cover={nextEvent.data.cover}
-        coverAlt={nextEvent.data.coverAlt}
-      />
-    ) : (
-      <p class="text-[var(--color-muted)]">{t('home.next.none')}</p>
-    )}
-  </Section>
-
   {featured && featuredRows.length > 0 && (
     <Section
       eyebrow={t('home.leaderboard.eyebrow')}
@@ -140,22 +110,36 @@ const icons: Record<string, string> = {
   <Section
     eyebrow={t('home.news.eyebrow')}
     title={t('news.title')}
-    href={localizePath('/news', lang)}
+    href={localizePath('/blog', lang)}
     linkLabel={t('common.viewAll')}
   >
-    <div class="grid gap-4 md:grid-cols-3">
-      {posts.map((post) => (
+    <div class="grid gap-4 md:grid-cols-2">
+      {lead && (
         <PostCard
           lang={lang}
-          slug={post.slug}
-          title={post.data.title}
-          excerpt={post.data.excerpt}
-          date={post.data.date}
-          tags={post.data.tags}
-          cover={post.data.cover}
-          coverAlt={post.data.coverAlt}
+          slug={lead.slug}
+          title={lead.data.title}
+          excerpt={lead.data.excerpt}
+          date={lead.data.date}
+          tags={lead.data.tags}
+          cover={lead.data.cover}
+          coverAlt={lead.data.coverAlt}
         />
-      ))}
+      )}
+      <div class="grid gap-4">
+        {rest.map((post) => (
+          <PostCard
+            lang={lang}
+            slug={post.slug}
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            date={post.data.date}
+            tags={post.data.tags}
+            cover={post.data.cover}
+            coverAlt={post.data.coverAlt}
+          />
+        ))}
+      </div>
     </div>
   </Section>
 

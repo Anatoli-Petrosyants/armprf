@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import PostCard from '@/components/PostCard.astro';
+import Pagination from '@/components/Pagination.astro';
+import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getPosts } from '@/lib/content';
+import { PER_PAGE } from '@/lib/news';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCALES) {
+    const posts = await getPosts(lang);
+    const total = Math.max(1, Math.ceil(posts.length / PER_PAGE));
+    // Page 1 lives at /news, so only 2..n get their own route.
+    for (let page = 2; page <= total; page += 1) {
+      paths.push({
+        params: { locale: localeParam(lang), page: String(page) },
+        props: { lang, page, total },
+      });
+    }
+  }
+  return paths;
+}
+
+const { lang, page, total } = Astro.props as { lang: Lang; page: number; total: number };
+const t = useTranslations(lang);
+
+const posts = await getPosts(lang);
+const items = posts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+const prev = page === 2 ? localizePath('/blog', lang) : localizePath(`/blog/page/${page - 1}`, lang);
+const next = page < total ? localizePath(`/blog/page/${page + 1}`, lang) : undefined;
+---
+
+<BaseLayout
+  lang={lang}
+  neutral={`/blog/page/${page}`}
+  title={`${t('news.title')} — ${t('common.page')} ${page}`}
+  description={`${t('news.title')} — ${t('common.page')} ${page} ${t('common.of')} ${total}`}
+  noindex={true}
+>
+  <PageHeader lang={lang} title={t('news.title')} crumbs={[{ name: t('news.title'), path: '/blog' }]} />
+  <div class="wrap py-14">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {items.map((post) => (
+        <PostCard
+          lang={lang}
+          slug={post.slug}
+          title={post.data.title}
+          excerpt={post.data.excerpt}
+          date={post.data.date}
+          tags={post.data.tags}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
+        />
+      ))}
+    </div>
+    <Pagination lang={lang} current={page} total={total} prev={prev} next={next} />
+  </div>
+</BaseLayout>

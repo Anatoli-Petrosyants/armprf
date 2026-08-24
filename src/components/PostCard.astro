@@ -16,7 +16,7 @@ interface Props {
 }
 const { lang, slug, title, excerpt, date, tags, cover, coverAlt, featured = false } = Astro.props;
 const t = useTranslations(lang);
-const href = localizePath(`/news/${slug}`, lang);
+const href = localizePath(`/blog/${slug}`, lang);
 ---
 <article class={`card group relative flex h-full flex-col overflow-hidden transition-colors hover:border-[var(--color-border-strong)] ${featured ? 'md:col-span-2' : ''}`}>
   <a href={href} class="block overflow-hidden" tabindex="-1" aria-hidden="true">

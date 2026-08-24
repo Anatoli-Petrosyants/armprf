@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (102 total)
+## Slots (43 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -87,53 +87,6 @@ Aspect **16:9** · minimum **1920×1080** · Challenge hero; shown at 21:9 with 
 | --- | --- | --- |
 | `blackjack-21.jpg` | placeholder | `blackjack-21.en.md`, `blackjack-21.hy.md` |
 | `ethical-hunter-500.jpg` | placeholder | `ethical-hunter-500.en.md`, `ethical-hunter-500.hy.md` |
-| `rimfire-ladder.jpg` | placeholder | `rimfire-ladder.en.md`, `rimfire-ladder.hy.md` |
-| `season-standings.jpg` | placeholder | `season-standings.en.md`, `season-standings.hy.md` |
-
-### `/img/community/barbecue-and-camp/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-09-21_community-barbecue-and-camp_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-11-02_community-barbecue-and-camp_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/community/birthday-and-celebrations/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_community-birthday-and-celebrations_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-04-12_community-birthday-and-celebrations_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/community/group-photos/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-02_community-group-photos_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-03-08_community-group-photos_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/community/international-guests/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-07-13_community-international-guests_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_community-international-guests_todo-content_02.jpg` | placeholder | `gallery.json` |
-
-### `/img/community/kids-and-families/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-07-13_community-kids-and-families_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-09-21_community-kids-and-families_todo-content_01.jpg` | placeholder | `gallery.json` |
 
 ### `/img/events/`
 
@@ -141,65 +94,9 @@ Aspect **16:9** · minimum **1920×1080** · Event cover; also cropped to 3:4 in
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-11-final.jpg` | placeholder | `2025-11-02-season-final-2025.en.md`, `2025-11-02-season-final-2025.hy.md` |
-| `2026-03-rimfire.jpg` | placeholder | `2026-03-08-winter-rimfire.en.md`, `2026-03-08-winter-rimfire.hy.md` |
-| `2026-05-gyumri.jpg` | placeholder | `2026-05-17-gyumri-round-2.en.md`, `2026-05-17-gyumri-round-2.hy.md` |
-| `2026-09-ararat.jpg` | placeholder | `2026-09-20-ararat-long-range-open.en.md`, `2026-09-20-ararat-long-range-open.hy.md` |
-| `2026-10-final.jpg` | placeholder | `2026-10-18-season-final.en.md`, `2026-10-18-season-final.hy.md` |
-
-### `/img/hunting/500yd-challenge/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-02_hunting-500yd-challenge_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-03-08_hunting-500yd-challenge_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/hunting/field-positions/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_hunting-field-positions_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-04-12_hunting-field-positions_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/hunting/landscape/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-09-21_hunting-landscape_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-11-02_hunting-landscape_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/longrange/1000m-plus/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_longrange-1000m-plus_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-04-12_longrange-1000m-plus_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/longrange/dope-and-ballistics/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-09-21_longrange-dope-and-ballistics_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-11-02_longrange-dope-and-ballistics_todo-content_01.jpg` | placeholder | `gallery.json` |
-
-### `/img/longrange/wind-reading/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-02_longrange-wind-reading_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-03-08_longrange-wind-reading_todo-content_01.jpg` | placeholder | `gallery.json` |
+| `2025-11-final.jpg` | placeholder | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
+| `2026-03-rimfire.jpg` | placeholder | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
+| `2026-09-ararat.jpg` | placeholder | `2026-08-10-ararat-long-range-open-announced.en.md`, `2026-08-10-ararat-long-range-open-announced.hy.md` |
 
 ### `/img/match/gear-line/`
 
@@ -207,8 +104,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2026-04-12_match-gear-line_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_match-gear-line_todo-content_01.jpg` | placeholder | `gallery.json` |
+| `2026-04-12_match-gear-line_todo-content_01.jpg` | missing | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
 
 ### `/img/match/podium/`
 
@@ -216,19 +112,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_match-podium_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_match-podium_todo-content_01.jpg` | placeholder | `2026-05-17-gyumri-round-2.en.md`, `2026-05-17-gyumri-round-2.hy.md` |
-| `2026-05-17_match-podium_todo-content_02.jpg` | placeholder | `gallery.json` |
-
-### `/img/match/prone-positional/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-02_match-prone-positional_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-03-08_match-prone-positional_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_match-prone-positional_todo-content_01.jpg` | placeholder | `2026-05-17-gyumri-round-2.en.md`, `2026-05-17-gyumri-round-2.hy.md` |
+| `2026-03-08_match-podium_todo-content_02.jpg` | missing | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
 
 ### `/img/match/stage-firing/`
 
@@ -236,8 +120,6 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2026-03-08_match-stage-firing_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-04-12_match-stage-firing_todo-content_01.jpg` | placeholder | `gallery.json` |
 | `2026-05-17_match-stage-firing_todo-content_01.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
 
 ### `/img/match/targets/`
@@ -246,9 +128,6 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_match-targets_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-09-21_match-targets_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_match-targets_todo-content_01.jpg` | placeholder | `2026-05-17-gyumri-round-2.en.md`, `2026-05-17-gyumri-round-2.hy.md` |
 | `photo.jpg` | missing | `images.md` |
 
 ### `/img/match/timers-and-scoring/`
@@ -257,8 +136,6 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-09-21_match-timers-and-scoring_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-11-02_match-timers-and-scoring_todo-content_01.jpg` | placeholder | `gallery.json` |
 | `2026-05-17_match-timers-and-scoring_todo-content_01.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
 
 ### `/img/posts/`
@@ -274,23 +151,12 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 | `2026-08-02-range-update.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
 | `2026-08-15-final-registration.jpg` | placeholder | `2026-08-15-season-final-registration.en.md`, `2026-08-15-season-final-registration.hy.md` |
 
-### `/img/range/before-after/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_range-before-after_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_range-before-after_todo-content_01.jpg` | placeholder | `gallery.json` |
-
 ### `/img/range/construction-progress/`
 
 Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_range-construction-progress_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-09-21_range-construction-progress_todo-content_01.jpg` | placeholder | `gallery.json` |
 | `2026-03_berms_01.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
 
 ### `/img/range/facilities/`
@@ -299,9 +165,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_range-facilities_todo-content_01.jpg` | placeholder | `gallery.json` |
 | `2026-04-12_range-facilities_todo-content_01.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
-| `2026-05-17_range-facilities_todo-content_02.jpg` | placeholder | `gallery.json` |
 
 ### `/img/rimfire/kids-and-newcomers/`
 
@@ -309,8 +173,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_rimfire-kids-and-newcomers_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_rimfire-kids-and-newcomers_todo-content_02.jpg` | placeholder | `gallery.json` |
+| `2026-04-12_rimfire-kids-and-newcomers_todo-content_01.jpg` | missing | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
 
 ### `/img/rimfire/matches/`
 
@@ -318,66 +181,72 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-07-13_rimfire-matches_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-09-21_rimfire-matches_todo-content_01.jpg` | placeholder | `gallery.json` |
+| `2026-03-08_rimfire-matches_todo-content_01.jpg` | missing | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
 
-### `/img/rimfire/small-targets/`
+## What to shoot
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+The folders below are the agreed taxonomy. A folder only appears in the table above
+once a content file points at a photo inside it — but shoot for all of them, and the
+names will line up when you publish.
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_rimfire-small-targets_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_rimfire-small-targets_todo-content_01.jpg` | placeholder | `gallery.json` |
+**Competition** — `/img/match/`
 
-### `/img/training/coaching/`
+- `match/stage-firing/` — Shooter behind the rifle on a stage, bipod or tripod, spotter beside
+- `match/prone-positional/` — Prone, barricade, tank trap, roof-top prop
+- `match/timers-and-scoring/` — RO with a timer, score card close-up
+- `match/targets/` — Steel at distance, KYL rack, impact splash
+- `match/podium/` — Top three with awards, and the whole field
+- `match/gear-line/` — Rifles racked at the line, bipods, chrono session
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+**Rimfire / .22LR** — `/img/rimfire/`
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_training-coaching_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_training-coaching_todo-content_01.jpg` | placeholder | `gallery.json` |
+- `rimfire/matches/` — Rimfire match at short distances
+- `rimfire/kids-and-newcomers/` — First shots under a coach
+- `rimfire/small-targets/` — Mini steel at 100 m and under
 
-### `/img/training/dry-fire-and-positions/`
+**Long range** — `/img/longrange/`
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+- `longrange/1000m-plus/` — Shooter, spotting scope, wind flags
+- `longrange/wind-reading/` — Kestrel, flags, mirage
+- `longrange/dope-and-ballistics/` — Data book, ballistic app, turret close-up
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-07-13_training-dry-fire-and-positions_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2026-05-17_training-dry-fire-and-positions_todo-content_02.jpg` | placeholder | `gallery.json` |
+**Training** — `/img/training/`
 
-### `/img/training/reloading-bench/`
+- `training/zeroing/` — 100 m groups on paper
+- `training/dry-fire-and-positions/` — Positional work without ammunition
+- `training/coaching/` — Instructor correcting a position
+- `training/safety-briefing/` — Everyone in eyes and ears, muzzle discipline
+- `training/reloading-bench/` — Press, brass, powder, seating dies
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+**Hunting / ethical shooting** — `/img/hunting/`
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-02_training-reloading-bench_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-03-08_training-reloading-bench_todo-content_01.jpg` | placeholder | `gallery.json` |
+- `hunting/field-positions/` — Improvised rests, packs, terrain
+- `hunting/500yd-challenge/` — Runs from the Ethical Hunter Challenge
+- `hunting/landscape/` — Armenian terrain, giving a sense of distance
 
-### `/img/training/safety-briefing/`
+**Range & construction** — `/img/range/`
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+- `range/construction-progress/` — Dated: earthworks, berms, firing line, target frames
+- `range/facilities/` — Benches, signage, shade, parking
+- `range/before-after/` — Pairs, shot from the same spot
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_training-safety-briefing_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2026-04-12_training-safety-briefing_todo-content_01.jpg` | placeholder | `gallery.json` |
+**Community** — `/img/community/`
 
-### `/img/training/zeroing/`
+- `community/birthday-and-celebrations/` — Federation celebrations
+- `community/group-photos/` — Members and team photos
+- `community/barbecue-and-camp/` — Overnight matches, camp life
+- `community/kids-and-families/` — Family days at the range
+- `community/international-guests/` — Visiting shooters and coaches
 
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+**Brand assets** — `/img/brand/`
 
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-07-13_training-zeroing_todo-content_02.jpg` | placeholder | `gallery.json` |
-| `2025-09-21_training-zeroing_todo-content_01.jpg` | placeholder | `gallery.json` |
+- `brand/logo/` — the federation wordmark, light and dark, plus the themable copy
+- `brand/hero/` — 3–5 landscape frames, min 2560×1440, text-safe area on the left
+- `brand/portraits/` — one square headshot per athlete, min 1000×1000
+- `about/` — the two square frames shown on the About page
 
 ## Video
 
-Videos are never uploaded to the repository. Put the YouTube id in
-`src/content/config/gallery.json` under `videos`, or in a post or challenge as `videoUrl`.
+Videos are never uploaded to the repository. Set `videoUrl` on a post or a challenge.
 The player is a click-to-load facade, so nothing is requested from YouTube until a
 visitor asks for it.

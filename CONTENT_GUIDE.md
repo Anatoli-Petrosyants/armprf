@@ -13,7 +13,7 @@ You never need to touch anything inside `src/components`, `src/layouts`, `src/pa
 
 Everything exists twice: once in Armenian, once in English.
 
-For posts, events, challenges and athletes that means **two files per item**:
+For posts, challenges and athletes that means **two files per item**:
 
 ```
 src/content/posts/2026-05-19-gyumri-round-2-report.hy.md   ← Armenian
@@ -36,7 +36,7 @@ same file, as `"hy"` and `"en"` keys:
 
 ---
 
-## Add a news post
+## Add a blog post
 
 1. Create two files in `src/content/posts/`, named `YYYY-MM-DD-short-slug.hy.md` and
    `.en.md`.
@@ -68,45 +68,9 @@ Allowed `tags`, exactly as spelled: `match-report`, `training`, `gear`, `rimfire
 Set `draft: true` to keep a post visible while you work locally but out of the published
 site.
 
----
-
-## Add an event
-
-Two files in `src/content/events/`, `YYYY-MM-DD-slug.hy.md` and `.en.md`.
-
-```markdown
----
-title: "Ararat Long Range Open 2026"
-summary: "One sentence describing the match."
-date: 2026-09-20
-endDate: 2026-09-21        # optional, for multi-day matches
-status: "open"             # open | full | closed | completed
-location: "Ararat Province, TODO(content) range"
-mapUrl: "https://www.openstreetmap.org/?mlat=39.83&mlon=44.71"
-geo: { lat: 39.83, lon: 44.71 }
-discipline: "Centerfire long range"
-divisions: ["Open", "Hunter", "Production"]
-distanceMin: 400
-distanceMax: 1100
-distanceUnit: "m"          # m or yd
-roundCount: 140
-entryFee: "15,000 AMD"     # optional
-registrationUrl: "https://docs.google.com/forms/..."   # optional
-matchDirector: "Tigran Sargsyan"
-bookletPdf: "/downloads/2026-09-ararat-booklet.pdf"    # optional
-resultsUrl: "/leaderboards/season-standings"           # optional
-cover: "/img/events/2026-09-ararat.jpg"
-coverAlt: "A long-range firing line with wind flags out"
----
-
-Schedule, what to bring, anything else worth saying.
-```
-
-Upcoming and past are worked out from the date — you do not sort anything by hand. When a
-match is over, set `status: "completed"` and add `resultsUrl`.
-
-The `.ics` calendar file and the Google/Apple-friendly download button are generated for
-you at `/events/<slug>.ics`.
+Matches live here too. Announce one as a post tagged `announcement`, listing the date,
+divisions, distances, round count, entry fee and how to enter; afterwards publish a second
+post tagged `match-report` with the photographs.
 
 ---
 
@@ -236,13 +200,13 @@ everything else is still a placeholder, so nothing looks broken while you collec
 overwrites a file that already exists** — dropping your photo in at the same path is
 enough.
 
-To add a photo to the gallery grid, also add an entry to `photos` in
-`src/content/config/gallery.json`.
+Photographs are published inside posts. Add them to the `gallery:` list in a post's
+frontmatter and they appear as a grid under the article, with a lightbox.
 
 ## Add a video
 
-Do not upload video files. Add the YouTube id to `videos` in
-`src/content/config/gallery.json`, or set `videoUrl` on a post or a challenge.
+Do not upload video files. Set `videoUrl` on a post or a challenge and the YouTube id is
+enough — the player only contacts YouTube once a visitor clicks it.
 
 ---
 
@@ -272,7 +236,6 @@ Other settings files, all in `src/content/config/`:
 | `home.json` | Home page mission tiles and the three numbers under the hero |
 | `about.json` | Mission text, goals, board, history, safety statement, the two About photos |
 | `rules.json` | The Rules & Safety page |
-| `gallery.json` | Gallery photos, tags and videos |
 | `i18n/hy.json`, `i18n/en.json` | Every button and label on the site |
 
 ---

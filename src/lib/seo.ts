@@ -39,45 +39,6 @@ export function organizationLd(lang: Lang) {
   };
 }
 
-interface EventLdInput {
-  name: string;
-  description: string;
-  start: Date;
-  end?: Date;
-  location: string;
-  url: string;
-  status: string;
-  image?: string;
-}
-
-const EVENT_STATUS_LD: Record<string, string> = {
-  open: 'https://schema.org/EventScheduled',
-  full: 'https://schema.org/EventScheduled',
-  closed: 'https://schema.org/EventScheduled',
-  completed: 'https://schema.org/EventScheduled',
-};
-
-export function sportsEventLd(input: EventLdInput, lang: Lang) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'SportsEvent',
-    name: input.name,
-    description: input.description,
-    startDate: input.start.toISOString().slice(0, 10),
-    endDate: (input.end ?? input.start).toISOString().slice(0, 10),
-    eventStatus: EVENT_STATUS_LD[input.status] ?? 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    url: absolute(input.url),
-    ...(input.image ? { image: absolute(input.image) } : {}),
-    location: {
-      '@type': 'Place',
-      name: input.location,
-      address: { '@type': 'PostalAddress', addressCountry: 'AM' },
-    },
-    organizer: { '@id': `${site.url}/#organization`, name: site.name[lang] },
-  };
-}
-
 interface ArticleLdInput {
   title: string;
   description: string;
