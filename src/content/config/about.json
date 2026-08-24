@@ -150,6 +150,11 @@
     "org": "IPRF",
     "url": "https://www.precisionrifle.org",
     "postSlug": "2024-11-13-iprf-membership",
-    "since": "2024-11-13"
+    "since": "2024-11-13",
+    "image": "/img/community/international-guests/2024-11-13_community-international-guests_iprf-membership_01.jpg",
+    "imageAlt": {
+      "hy": "IPRF-ի նամակը, որը հաստատում է Հայաստանի ճշգրիտ հրաձգության ֆեդերացիայի անդամակցությունը",
+      "en": "The IPRF letter confirming the Armenian Precision Rifle Federation’s membership"
+    }
   }
 }

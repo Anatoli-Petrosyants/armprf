@@ -64,16 +64,29 @@ const t = useTranslations(lang);
   </section>
 
   <Section eyebrow={about.membership.org} title={about.membership.title[lang]} id="membership">
-    <div class="card p-6 md:p-8">
-      <p class="max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
-        {about.membership.body[lang]}
-      </p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href={localizePath(`/blog/${about.membership.postSlug}`, lang)} class="btn btn-ghost">
-          {t('common.readMore')}
-        </a>
-        <a href={about.membership.url} rel="noopener" class="btn btn-ghost">{about.membership.org} ↗</a>
+    <div class="card grid gap-8 p-6 md:p-8 lg:grid-cols-[1fr_26rem] lg:items-start">
+      <div>
+        <p class="text-lg leading-relaxed text-[var(--color-muted)]">{about.membership.body[lang]}</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={localizePath(`/blog/${about.membership.postSlug}`, lang)} class="btn btn-ghost">
+            {t('common.readMore')}
+          </a>
+          <a href={about.membership.url} rel="noopener" class="btn btn-ghost">{about.membership.org} ↗</a>
+        </div>
       </div>
+
+      {/* The confirmation letter is a document, so it keeps its own aspect
+          ratio rather than being cropped to a card shape. */}
+      <figure>
+        <SmartImage
+          src={about.membership.image}
+          alt={about.membership.imageAlt[lang]}
+          widths={[420, 840]}
+          sizes="(min-width: 64rem) 26rem, 100vw"
+          class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)] bg-white"
+        />
+        <figcaption class="mt-2 text-xs text-[var(--color-faint)]">{about.membership.imageAlt[lang]}</figcaption>
+      </figure>
     </div>
   </Section>
 
