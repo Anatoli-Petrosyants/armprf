@@ -69,6 +69,13 @@
     "showAthletePhotos": true
   },
   "featuredChallenge": "blackjack-21",
+  "featuredAthletes": [
+    "anatoli-petrosyants",
+    "ara-hovhannisyan",
+    "ruben-gevorgyan",
+    "david-baghdasaryan",
+    "artur-shatvoryan"
+  ],
   "currentSeason": 2026,
   "og": {
     "defaultImage": "/og-default.jpg"
