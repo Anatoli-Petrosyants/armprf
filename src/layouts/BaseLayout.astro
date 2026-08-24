@@ -4,7 +4,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { HTML_LANG, LOCALES, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { absolute, alternates, organizationLd } from '@/lib/seo';
-import { site, siteName } from '@/lib/site';
+import { site } from '@/lib/site';
 
 interface Props {
   lang: Lang;
@@ -37,7 +37,7 @@ const t = useTranslations(lang);
 const canonical = absolute(localizePath(neutral, lang));
 const hreflangs = alternates(neutral);
 const social = absolute(ogImage ?? site.og.defaultImage);
-const fullTitle = neutral === '/' ? `${siteName(lang)} — ${title}` : `${title} · ${site.shortName}`;
+const fullTitle = neutral === '/' ? title : `${title} · ${site.shortName}`;
 const graph = [organizationLd(lang), ...jsonLd];
 const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
 ---

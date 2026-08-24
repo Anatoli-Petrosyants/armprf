@@ -31,11 +31,12 @@ const divisions = [...new Set(rows.map((r) => r.division).filter(Boolean))].sort
 const clubs = [...new Set(rows.map((r) => r.club).filter(Boolean))].sort();
 const years = [...new Set(rows.map((r) => r.season))].sort((a, b) => b - a);
 
-/** Numeric columns get tabular figures and sort numerically. */
+/**
+ * Numeric columns get tabular figures and sort numerically. Alignment is not
+ * part of that: every column reads from the left, and font-variant-numeric is
+ * what keeps the digits lined up under each other.
+ */
 const NUMERIC = new Set(['rank', 'score', 'hits', 'misses', 'percent', 'time']);
-
-/** Only the rank hugs the name column; score values read left-aligned. */
-const END_ALIGNED = new Set(['rank']);
 
 function cellValue(row: RankedRow, column: string): string {
   switch (column) {
@@ -156,7 +157,7 @@ function sortValue(row: RankedRow, column: string): string {
             <th
               scope="col"
               data-lb-col={column}
-              class={`whitespace-nowrap px-3 py-2.5 text-start text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-[var(--color-muted)] ${END_ALIGNED.has(column) ? 'text-end' : ''}`}
+              class="whitespace-nowrap px-3 py-2.5 text-start text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-[var(--color-muted)]"
             >
               {compact ? (
                 <span>{t(`lb.${column}`)}</span>
@@ -182,11 +183,7 @@ function sortValue(row: RankedRow, column: string): string {
             {...Object.fromEntries(columns.map((c) => [`data-v-${c}`, sortValue(row, c)]))}
           >
             {columns.map((column) => {
-              // Tabular figures keep the digits in a column; alignment is a
-              // separate decision, and only the rank sits against the name.
-              const base = `px-3 py-2.5 ${NUMERIC.has(column) ? 'tnum' : ''} ${
-                END_ALIGNED.has(column) ? 'md:text-end' : ''
-              }`;
+              const base = `px-3 py-2.5 ${NUMERIC.has(column) ? 'tnum' : ''}`;
               if (column === 'rank') {
                 return (
                   <td class={`${base} font-bold`} data-label={t('lb.rank')}>

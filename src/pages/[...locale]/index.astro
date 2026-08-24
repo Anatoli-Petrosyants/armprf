@@ -7,7 +7,7 @@ import SmartImage from '@/components/SmartImage.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges, getPosts } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
-import { site, siteName, slogan } from '@/lib/site';
+import { site, siteName } from '@/lib/site';
 import home from '@/content/config/home.json';
 
 export const getStaticPaths = localePaths;
@@ -34,7 +34,7 @@ const icons: Record<string, string> = {
 <BaseLayout
   lang={lang}
   neutral="/"
-  title={slogan(lang)}
+  title={siteName(lang)}
   description={site.description[lang]}
 >
   <section class="relative isolate overflow-hidden border-b border-[var(--color-border)]">
@@ -56,9 +56,9 @@ const icons: Record<string, string> = {
     </div>
 
     <div class="wrap flex min-h-[clamp(30rem,72dvh,44rem)] flex-col justify-center py-20">
-      <p class="eyebrow">{site.hero.kicker[lang]}</p>
-      <h1 class="mt-4 max-w-3xl text-[clamp(2.5rem,7vw,4.75rem)] leading-[0.98]">
-        {slogan(lang)}
+      <p class="eyebrow">{site.shortName}</p>
+      <h1 class="mt-4 max-w-3xl text-[clamp(2rem,5.5vw,3.75rem)] leading-[1.02]">
+        {siteName(lang)}
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted)]">
         {site.description[lang]}
