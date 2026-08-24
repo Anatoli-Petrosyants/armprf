@@ -5,7 +5,7 @@
 // Everything the previous publish copied is listed in `.pages-manifest.json`,
 // so a page that disappears from the build is also removed from the root
 // instead of lingering as a stale URL.
-import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const root = new URL('..', import.meta.url).pathname;
@@ -38,6 +38,39 @@ for (const name of entries) {
   }
   await rm(join(root, name), { recursive: true, force: true });
   await cp(join(dist, name), join(root, name), { recursive: true });
+}
+
+// Every image is glob-imported so the build can read its metadata, which makes
+// Astro emit the untouched original next to the variants a page actually uses.
+// Nothing links to those, so they are swept here rather than shipped.
+async function collect(dir, out = []) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) await collect(full, out);
+    else out.push(full);
+  }
+  return out;
+}
+
+const assetDir = join(root, '_astro');
+if (await stat(assetDir).catch(() => null)) {
+  const readable = /\.(html|css|js|xml|json|webmanifest|txt)$/;
+  const pages = (await collect(root)).filter(
+    (file) => readable.test(file) && !file.startsWith(assetDir),
+  );
+  const linked = new Set();
+  for (const file of pages) {
+    for (const match of (await readFile(file, 'utf-8')).matchAll(/_astro\/([^"'\s,)]+)/g)) {
+      linked.add(match[1]);
+    }
+  }
+  let swept = 0;
+  for (const asset of await readdir(assetDir)) {
+    if (linked.has(asset)) continue;
+    await rm(join(assetDir, asset), { force: true });
+    swept += 1;
+  }
+  if (swept) console.log(`Swept ${swept} unreferenced asset(s) from _astro.`);
 }
 
 await writeFile(manifestPath, `${JSON.stringify({ files: entries.sort() }, null, 2)}\n`);

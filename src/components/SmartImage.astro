@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import { resolveImage } from '@/lib/images';
 
 interface Props {
@@ -11,6 +11,8 @@ interface Props {
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
   aspect?: string;
+  /** Output formats. A single entry ships one file per width, no <picture>. */
+  formats?: Array<'avif' | 'webp' | 'jpeg' | 'png'>;
 }
 
 const {
@@ -22,6 +24,7 @@ const {
   loading = 'lazy',
   fetchpriority = 'auto',
   aspect,
+  formats = ['avif', 'webp'],
 } = Astro.props;
 
 const image = resolveImage(src);
@@ -36,13 +39,26 @@ const finalWidths = image
   : [];
 ---
 {
-  image ? (
+  image && formats.length === 1 ? (
+    <Image
+      src={image}
+      alt={alt}
+      width={finalWidths.at(-1) ?? image.width}
+      format={formats[0]}
+      quality={72}
+      loading={loading}
+      decoding={loading === 'eager' ? 'sync' : 'async'}
+      fetchpriority={fetchpriority}
+      class={className}
+      style={aspect ? `aspect-ratio:${aspect};object-fit:cover` : undefined}
+    />
+  ) : image ? (
     <Picture
       src={image}
       alt={alt}
       widths={finalWidths}
       sizes={sizes}
-      formats={['avif', 'webp']}
+      formats={formats}
       fallbackFormat="jpeg"
       quality={72}
       loading={loading}
