@@ -1,0 +1,32 @@
+{
+  "name": "armprf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Armenian Precision Rifle Federation \u2014 static site (Astro, GitHub Pages)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "sync": "astro sync",
+    "placeholders": "node scripts/generate-placeholders.mjs",
+    "images": "node scripts/generate-image-manifest.mjs",
+    "content": "node scripts/generate-placeholders.mjs && node scripts/generate-image-manifest.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.4",
+    "sharp": "^0.35.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "@tailwindcss/vite": "^4.3.3",
+    "satori": "^0.33.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.0"
+  }
+}
