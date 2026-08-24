@@ -1,0 +1,67 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Gallery from '@/components/Gallery.astro';
+import LiteYouTube from '@/components/LiteYouTube.astro';
+import TagFilter from '@/components/TagFilter.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { breadcrumbLd } from '@/lib/seo';
+import gallery from '@/content/config/gallery.json';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const photos = gallery.photos.map((photo) => ({
+  src: photo.src,
+  alt: photo.alt[lang],
+  tag: photo.tag,
+  date: photo.date,
+}));
+
+// Group chips first, then every leaf tag — clicking a group shows its children.
+const chips = [
+  { id: '', label: t('common.all'), count: photos.length },
+  ...gallery.taxonomy.map((group) => ({
+    id: group.id,
+    label: group.label[lang],
+    count: photos.filter((p) => p.tag.startsWith(`${group.id}/`)).length,
+  })),
+];
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/gallery"
+  title={t('gallery.title')}
+  description={lang === 'hy'
+    ? 'Մրցումների, մարզումների, հրաձգարանի շինարարության և համայնքի լուսանկարներ ու տեսանյութեր։'
+    : 'Photos and video from matches, training, the range build-out and the community.'}
+  jsonLd={[breadcrumbLd([{ name: t('gallery.title'), url: localizePath('/gallery', lang) }])]}
+>
+  <PageHeader lang={lang} title={t('gallery.title')} crumbs={[{ name: t('gallery.title'), path: '/gallery' }]}>
+    <div class="mt-6">
+      <TagFilter items={chips} active="" client={true} target="[data-gallery]" />
+    </div>
+  </PageHeader>
+
+  <section class="wrap py-12">
+    <h2 class="eyebrow">{t('gallery.photos')}</h2>
+    <div class="mt-5">
+      <Gallery lang={lang} items={photos} columns={4} />
+    </div>
+  </section>
+
+  <section class="wrap border-t border-[var(--color-border)] py-12">
+    <h2 class="eyebrow">{t('gallery.videos')}</h2>
+    <div class="mt-5 grid gap-6 md:grid-cols-2">
+      {gallery.videos.map((video) => (
+        <LiteYouTube
+          lang={lang}
+          url={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+          title={video.title[lang]}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,149 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SmartImage from '@/components/SmartImage.astro';
+import Gallery from '@/components/Gallery.astro';
+import LiteYouTube from '@/components/LiteYouTube.astro';
+import PostCard from '@/components/PostCard.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getPosts } from '@/lib/content';
+import { formatDate } from '@/lib/format';
+import { articleLd, breadcrumbLd } from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCALES) {
+    for (const post of await getPosts(lang)) {
+      paths.push({ params: { locale: localeParam(lang), slug: post.slug }, props: { lang, post } });
+    }
+  }
+  return paths;
+}
+
+const { lang, post } = Astro.props;
+const t = useTranslations(lang);
+const { Content } = await render(post);
+
+const all = await getPosts(lang);
+const related = all
+  .filter((other) => other.slug !== post.slug && other.data.tags.some((tag) => post.data.tags.includes(tag)))
+  .slice(0, 3);
+
+const neutral = `/news/${post.slug}`;
+const ogImage = `/og/news/${post.slug}.png`;
+---
+
+<BaseLayout
+  lang={lang}
+  neutral={neutral}
+  title={post.data.title}
+  description={post.data.excerpt}
+  ogType="article"
+  ogImage={ogImage}
+  jsonLd={[
+    articleLd(
+      {
+        title: post.data.title,
+        description: post.data.excerpt,
+        published: post.data.date,
+        modified: post.data.updated,
+        url: localizePath(neutral, lang),
+        image: ogImage,
+        author: post.data.author,
+      },
+      lang,
+    ),
+    breadcrumbLd([
+      { name: t('news.title'), url: localizePath('/news', lang) },
+      { name: post.data.title, url: localizePath(neutral, lang) },
+    ]),
+  ]}
+>
+  <article>
+    <header class="moa-grid border-b border-[var(--color-border)]">
+      <div class="wrap-prose py-12 md:py-16">
+        <Breadcrumbs
+          lang={lang}
+          items={[
+            { name: t('news.title'), path: '/news' },
+            { name: post.data.title, path: neutral },
+          ]}
+        />
+        <div class="mt-5 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <a href={localizePath(`/news/tag/${tag}`, lang)} class="tag hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]">
+              #{tag}
+            </a>
+          ))}
+        </div>
+        <h1 class="mt-4 text-4xl leading-tight md:text-5xl">{post.data.title}</h1>
+        <p class="mt-4 text-lg leading-relaxed text-[var(--color-muted)]">{post.data.excerpt}</p>
+        <p class="mt-6 text-xs uppercase tracking-[0.1em] text-[var(--color-faint)]">
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
+          <span class="mx-2" aria-hidden="true">·</span>
+          {post.data.author}
+        </p>
+        {!post.translated && (
+          <p class="card mt-6 border-[var(--color-accent)] p-3 text-sm text-[var(--color-muted)]">
+            {t('common.translationPending')}
+          </p>
+        )}
+      </div>
+    </header>
+
+    {post.data.cover && (
+      <div class="wrap py-8">
+        <SmartImage
+          src={post.data.cover}
+          alt={post.data.coverAlt ?? post.data.title}
+          aspect="16/9"
+          widths={[800, 1200, 1800]}
+          sizes="(min-width: 78rem) 74rem, 100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="w-full rounded-[var(--radius-card)]"
+        />
+      </div>
+    )}
+
+    <div class="wrap-prose prose-armprf py-8">
+      <Content />
+    </div>
+
+    {post.data.videoUrl && (
+      <div class="wrap-prose py-6">
+        <LiteYouTube lang={lang} url={post.data.videoUrl} title={post.data.title} />
+      </div>
+    )}
+
+    {post.data.gallery.length > 0 && (
+      <div class="wrap py-10">
+        <h2 class="eyebrow">{t('gallery.photos')}</h2>
+        <div class="mt-4">
+          <Gallery lang={lang} items={post.data.gallery} columns={3} />
+        </div>
+      </div>
+    )}
+  </article>
+
+  {related.length > 0 && (
+    <section class="wrap border-t border-[var(--color-border)] py-14">
+      <h2 class="eyebrow">{t('news.related')}</h2>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        {related.map((other) => (
+          <PostCard
+            lang={lang}
+            slug={other.slug}
+            title={other.data.title}
+            excerpt={other.data.excerpt}
+            date={other.data.date}
+            tags={other.data.tags}
+            cover={other.data.cover}
+            coverAlt={other.data.coverAlt}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

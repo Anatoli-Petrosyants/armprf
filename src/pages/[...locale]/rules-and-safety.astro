@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { breadcrumbLd } from '@/lib/seo';
+import rules from '@/content/config/rules.json';
+import about from '@/content/config/about.json';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/rules-and-safety"
+  title={t('rules.title')}
+  description={rules.intro[lang]}
+  jsonLd={[breadcrumbLd([{ name: t('rules.title'), url: localizePath('/rules-and-safety', lang) }])]}
+>
+  <PageHeader
+    lang={lang}
+    title={t('rules.title')}
+    lead={rules.intro[lang]}
+    crumbs={[{ name: t('rules.title'), path: '/rules-and-safety' }]}
+  />
+
+  <Section>
+    <div class="card border-[var(--color-alert)] p-6 md:p-8">
+      <h2 class="text-2xl text-[var(--color-alert)]">{rules.safety.title[lang]}</h2>
+      <ol class="mt-5 grid gap-4 md:grid-cols-2">
+        {rules.safety.items[lang].map((item, index) => (
+          <li class="flex gap-4">
+            <span class="ring-num shrink-0 border-[var(--color-alert)] text-[var(--color-alert)]">{index + 1}</span>
+            <p class="self-center leading-relaxed">{item}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </Section>
+
+  {rules.sections.map((section) => (
+    <Section title={section.title[lang]} id={section.id}>
+      <ul class="grid gap-3">
+        {section.items[lang].map((item) => (
+          <li class="card flex gap-4 p-4 text-sm leading-relaxed">
+            <span aria-hidden="true" class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"></span>
+            <span class="text-[var(--color-muted)]">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  ))}
+
+  <Section>
+    <a href={about.rulebookPdf} class="btn btn-primary" download>{t('about.rulebook')}</a>
+  </Section>
+</BaseLayout>

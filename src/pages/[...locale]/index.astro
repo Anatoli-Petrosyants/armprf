@@ -1,0 +1,185 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import PostCard from '@/components/PostCard.astro';
+import EventCard from '@/components/EventCard.astro';
+import Leaderboard from '@/components/Leaderboard.astro';
+import SponsorStrip from '@/components/SponsorStrip.astro';
+import SmartImage from '@/components/SmartImage.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getChallenges, getEvents, getPosts, splitEvents } from '@/lib/content';
+import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
+import { site, siteName, slogan } from '@/lib/site';
+import home from '@/content/config/home.json';
+
+export const getStaticPaths = localePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+await assertResultsValid();
+
+const posts = (await getPosts(lang)).slice(0, 3);
+const { upcoming } = splitEvents(await getEvents(lang));
+const nextEvent = upcoming[0];
+
+const challenges = await getChallenges(lang);
+const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
+const featuredRows = featured ? await getRankedRows(featured.data) : [];
+
+const icons: Record<string, string> = {
+  reticle: 'M12 2v5M12 17v5M2 12h5M17 12h5',
+  shield: 'M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6z',
+  chart: 'M4 20V9M10 20V4M16 20v-7M22 20H2',
+};
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/"
+  title={slogan(lang)}
+  description={site.description[lang]}
+>
+  <section class="relative isolate overflow-hidden border-b border-[var(--color-border)]">
+    <SmartImage
+      src={site.hero.image}
+      alt={site.hero.alt[lang]}
+      widths={[960, 1600, 2560]}
+      sizes="100vw"
+      aspect="16/9"
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+    <div
+      class="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-bg)] via-[color-mix(in_srgb,var(--color-bg)_75%,transparent)] to-transparent"
+    >
+    </div>
+
+    <div class="wrap flex min-h-[clamp(30rem,72dvh,44rem)] flex-col justify-center py-20">
+      <p class="eyebrow">{site.hero.kicker[lang]}</p>
+      <h1 class="mt-4 max-w-3xl text-[clamp(2.5rem,7vw,4.75rem)] leading-[0.98]">
+        {slogan(lang)}
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted)]">
+        {site.description[lang]}
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href={localizePath('/join', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
+        <a href={localizePath('/leaderboards', lang)} class="btn btn-ghost">{t('home.hero.secondary')}</a>
+      </div>
+
+      <dl class="mt-14 flex flex-wrap gap-x-12 gap-y-4">
+        {home.stats.map((stat) => (
+          <div>
+            <dt class="text-[0.6875rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{stat.label[lang]}</dt>
+            <dd class="tnum mt-1 text-3xl font-bold text-[var(--color-accent)]">{stat.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <Section eyebrow={t('home.mission.eyebrow')} title={siteName(lang)}>
+    <ul class="grid gap-4 md:grid-cols-3">
+      {home.missionTiles.map((tile) => (
+        <li class="card p-6">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--color-accent)" stroke-width="1.6" aria-hidden="true">
+            {tile.icon === 'reticle' && <circle cx="12" cy="12" r="7" />}
+            <path d={icons[tile.icon]} />
+          </svg>
+          <h3 class="mt-4 text-xl">{tile.title[lang]}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{tile.body[lang]}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <div class="arc-divider"></div>
+
+  <Section
+    eyebrow={t('home.next.eyebrow')}
+    title={nextEvent ? nextEvent.data.title : t('home.next.none')}
+    href={localizePath('/events', lang)}
+    linkLabel={t('common.viewAll')}
+  >
+    {nextEvent ? (
+      <EventCard
+        lang={lang}
+        slug={nextEvent.slug}
+        title={nextEvent.data.title}
+        summary={nextEvent.data.summary}
+        date={nextEvent.data.date}
+        endDate={nextEvent.data.endDate}
+        location={nextEvent.data.location}
+        discipline={nextEvent.data.discipline}
+        distanceMin={nextEvent.data.distanceMin}
+        distanceMax={nextEvent.data.distanceMax}
+        distanceUnit={nextEvent.data.distanceUnit}
+        status={nextEvent.data.status}
+        cover={nextEvent.data.cover}
+        coverAlt={nextEvent.data.coverAlt}
+      />
+    ) : (
+      <p class="text-[var(--color-muted)]">{t('home.next.none')}</p>
+    )}
+  </Section>
+
+  {featured && featuredRows.length > 0 && (
+    <Section
+      eyebrow={t('home.leaderboard.eyebrow')}
+      title={featured.data.title}
+      href={localizePath(`/leaderboards/${featured.data.id}`, lang)}
+      linkLabel={t('home.leaderboard.viewFull')}
+      class="moa-grid"
+    >
+      <Leaderboard
+        lang={lang}
+        challengeId={featured.data.id}
+        columns={['rank', 'name', 'club', 'score', 'verified']}
+        rows={featuredRows}
+        scoring={featured.data.scoring}
+        unit={featured.data.unit}
+        limit={5}
+      />
+    </Section>
+  )}
+
+  <Section
+    eyebrow={t('home.news.eyebrow')}
+    title={t('news.title')}
+    href={localizePath('/news', lang)}
+    linkLabel={t('common.viewAll')}
+  >
+    <div class="grid gap-4 md:grid-cols-3">
+      {posts.map((post) => (
+        <PostCard
+          lang={lang}
+          slug={post.slug}
+          title={post.data.title}
+          excerpt={post.data.excerpt}
+          date={post.data.date}
+          tags={post.data.tags}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
+        />
+      ))}
+    </div>
+  </Section>
+
+  {site.flags.showSponsorStrip && (
+    <Section eyebrow={t('home.sponsors.eyebrow')} href={localizePath('/sponsors', lang)} linkLabel={t('common.viewAll')}>
+      <SponsorStrip lang={lang} />
+    </Section>
+  )}
+
+  <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div class="wrap flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="eyebrow">{t('home.join.eyebrow')}</p>
+        <h2 class="mt-2 max-w-xl text-3xl md:text-4xl">{t('join.title')}</h2>
+      </div>
+      <a href={localizePath('/join', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
+    </div>
+  </section>
+</BaseLayout>

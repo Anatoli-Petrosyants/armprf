@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import SmartImage from '@/components/SmartImage.astro';
+import Timeline from '@/components/Timeline.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { breadcrumbLd } from '@/lib/seo';
+import { site } from '@/lib/site';
+import about from '@/content/config/about.json';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const historyEntries = about.history.map((h) => ({
+  date: h.year,
+  status: 'done' as const,
+  title: h.title,
+  body: h.body,
+}));
+
+const timelineLabels = {
+  done: lang === 'hy' ? 'Արված' : 'Done',
+  'in-progress': lang === 'hy' ? 'Ընթացքում' : 'In progress',
+  planned: lang === 'hy' ? 'Ծրագրված' : 'Planned',
+};
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/about"
+  title={t('nav.about')}
+  description={about.intro[lang]}
+  jsonLd={[breadcrumbLd([{ name: t('nav.about'), url: localizePath('/about', lang) }])]}
+>
+  <PageHeader lang={lang} title={t('nav.about')} lead={about.intro[lang]} crumbs={[{ name: t('nav.about'), path: '/about' }]} />
+
+  <Section eyebrow={t('about.goals')} title={t('about.goals')} id="goals">
+    <ol class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {about.goals.map((goal, index) => (
+        <li class="card p-6">
+          <span class="ring-num text-[var(--color-accent)]">{index + 1}</span>
+          <h3 class="mt-4 text-lg">{goal.title[lang]}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{goal.body[lang]}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div class="wrap py-14 md:py-20">
+      <p class="eyebrow">{t('about.safety')}</p>
+      <blockquote class="mt-4 max-w-3xl border-s-2 border-[var(--color-accent)] ps-6 text-xl leading-relaxed md:text-2xl">
+        {about.safetyStatement[lang]}
+      </blockquote>
+      <a href={localizePath('/rules-and-safety', lang)} class="btn btn-ghost mt-8">{t('nav.rules')}</a>
+    </div>
+  </section>
+
+  <Section eyebrow={t('about.board')} title={t('about.board')} id="board">
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {about.board.map((member) => (
+        <li class="card overflow-hidden">
+          <SmartImage
+            src={member.photo}
+            alt={`${member.name} — ${member.role[lang]}`}
+            aspect="1/1"
+            widths={[240, 480]}
+            sizes="(min-width: 64rem) 22vw, 50vw"
+            class="w-full"
+          />
+          <div class="p-4">
+            <p class="font-bold">{member.name}</p>
+            <p class="mt-0.5 text-xs uppercase tracking-[0.1em] text-[var(--color-accent)]">{member.role[lang]}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow={t('about.history')} title={t('about.history')} id="history">
+    <Timeline lang={lang} entries={historyEntries} labels={timelineLabels} />
+  </Section>
+
+  <Section>
+    <div class="card flex flex-wrap items-center justify-between gap-4 p-6">
+      <div>
+        <h2 class="text-xl">{t('about.rulebook')}</h2>
+        <p class="mt-1 text-sm text-[var(--color-muted)]">
+          {lang === 'hy'
+            ? 'Ամբողջական կանոնագիրքը՝ դասակարգեր, անվտանգություն, միավորակալում։'
+            : 'The complete rulebook — divisions, safety, scoring.'}
+        </p>
+      </div>
+      <a href={about.rulebookPdf} class="btn btn-primary" download>{t('common.download')}</a>
+    </div>
+  </Section>
+</BaseLayout>

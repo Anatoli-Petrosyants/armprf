@@ -1,0 +1,146 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import SmartImage from '@/components/SmartImage.astro';
+import StatusBadge from '@/components/StatusBadge.astro';
+import Gallery from '@/components/Gallery.astro';
+import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getEvents } from '@/lib/content';
+import { formatDate } from '@/lib/format';
+import { breadcrumbLd, sportsEventLd } from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCALES) {
+    for (const event of await getEvents(lang)) {
+      paths.push({ params: { locale: localeParam(lang), slug: event.slug }, props: { lang, event } });
+    }
+  }
+  return paths;
+}
+
+const { lang, event } = Astro.props;
+const t = useTranslations(lang);
+const { Content } = await render(event);
+const data = event.data;
+const neutral = `/events/${event.slug}`;
+const ogImage = `/og/events/${event.slug}.png`;
+
+const facts = [
+  { label: t('common.date'), value: formatDate(data.date, lang) + (data.endDate ? ` — ${formatDate(data.endDate, lang)}` : '') },
+  { label: t('common.location'), value: data.location, href: data.mapUrl, hrefLabel: t('events.map') },
+  { label: t('events.discipline'), value: data.discipline },
+  { label: t('events.divisions'), value: data.divisions.join(' · ') },
+  { label: t('events.distance'), value: `${data.distanceMin}–${data.distanceMax} ${data.distanceUnit}` },
+  { label: t('events.rounds'), value: String(data.roundCount) },
+  ...(data.entryFee ? [{ label: t('events.fee'), value: data.entryFee }] : []),
+  { label: t('events.director'), value: data.matchDirector },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  neutral={neutral}
+  title={data.title}
+  description={data.summary}
+  ogImage={ogImage}
+  jsonLd={[
+    sportsEventLd(
+      {
+        name: data.title,
+        description: data.summary,
+        start: data.date,
+        end: data.endDate,
+        location: data.location,
+        url: localizePath(neutral, lang),
+        status: data.status,
+        image: ogImage,
+      },
+      lang,
+    ),
+    breadcrumbLd([
+      { name: t('events.title'), url: localizePath('/events', lang) },
+      { name: data.title, url: localizePath(neutral, lang) },
+    ]),
+  ]}
+>
+  <header class="moa-grid border-b border-[var(--color-border)]">
+    <div class="wrap py-12 md:py-16">
+      <Breadcrumbs
+        lang={lang}
+        items={[
+          { name: t('events.title'), path: '/events' },
+          { name: data.title, path: neutral },
+        ]}
+      />
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <StatusBadge lang={lang} status={data.status} />
+        <span class="text-[0.6875rem] uppercase tracking-[0.12em] text-[var(--color-faint)]">{data.discipline}</span>
+      </div>
+      <h1 class="mt-3 max-w-3xl text-4xl leading-tight md:text-5xl">{data.title}</h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">{data.summary}</p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        {data.registrationUrl && data.status === 'open' && (
+          <a href={data.registrationUrl} rel="noopener" class="btn btn-primary">{t('events.register')}</a>
+        )}
+        <a href={`/events/${event.slug}.ics`} class="btn btn-ghost" download>{t('events.addToCalendar')}</a>
+        {data.bookletPdf && <a href={data.bookletPdf} class="btn btn-ghost" download>{t('events.booklet')}</a>}
+        {data.resultsUrl && (
+          <a href={localizePath(data.resultsUrl, lang)} class="btn btn-ghost">{t('events.results')}</a>
+        )}
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap grid gap-10 py-12 lg:grid-cols-[1fr_20rem]">
+    <div>
+      {data.cover && (
+        <SmartImage
+          src={data.cover}
+          alt={data.coverAlt ?? data.title}
+          aspect="16/9"
+          widths={[800, 1200, 1600]}
+          sizes="(min-width: 64rem) 60vw, 100vw"
+          class="mb-8 w-full rounded-[var(--radius-card)]"
+        />
+      )}
+      <div class="prose-armprf">
+        <Content />
+      </div>
+      {!event.translated && (
+        <p class="card mt-6 border-[var(--color-accent)] p-3 text-sm text-[var(--color-muted)]">
+          {t('common.translationPending')}
+        </p>
+      )}
+    </div>
+
+    <aside>
+      <dl class="card divide-y divide-[var(--color-border)]">
+        {facts.map((fact) => (
+          <div class="p-4">
+            <dt class="text-[0.625rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{fact.label}</dt>
+            <dd class="mt-1 text-sm">
+              {fact.value}
+              {fact.href && (
+                <a href={fact.href} rel="noopener" class="ms-2 text-[var(--color-accent)] underline-offset-4 hover:underline">
+                  {fact.hrefLabel} ↗
+                </a>
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </aside>
+  </div>
+
+  {data.gallery.length > 0 && (
+    <section class="wrap border-t border-[var(--color-border)] py-12">
+      <h2 class="eyebrow">{t('events.gallery')}</h2>
+      <div class="mt-5">
+        <Gallery lang={lang} items={data.gallery} columns={3} />
+      </div>
+    </section>
+  )}
+</BaseLayout>

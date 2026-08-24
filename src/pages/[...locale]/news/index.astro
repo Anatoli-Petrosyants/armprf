@@ -1,0 +1,73 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import PostCard from '@/components/PostCard.astro';
+import Pagination from '@/components/Pagination.astro';
+import TagFilter from '@/components/TagFilter.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getPosts } from '@/lib/content';
+import { breadcrumbLd } from '@/lib/seo';
+import { PER_PAGE, tagCounts } from '@/lib/news';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const posts = await getPosts(lang);
+const pageItems = posts.slice(0, PER_PAGE);
+const totalPages = Math.max(1, Math.ceil(posts.length / PER_PAGE));
+const counts = tagCounts(posts);
+const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/news"
+  title={t('news.title')}
+  description={lang === 'hy'
+    ? 'Մրցումների հաշվետվություններ, մարզումների նյութեր, հանդերձանք և ֆեդերացիայի նորություններ։'
+    : 'Match reports, training material, gear notes and federation announcements.'}
+  jsonLd={[breadcrumbLd([{ name: t('news.title'), url: localizePath('/news', lang) }])]}
+>
+  <PageHeader lang={lang} title={t('news.title')} crumbs={[{ name: t('news.title'), path: '/news' }]}>
+    <div class="mt-6 flex flex-wrap items-center gap-3">
+      <TagFilter
+        active=""
+        items={[
+          { id: '', label: t('common.all'), href: localizePath('/news', lang), count: posts.length },
+          ...counts.map((c) => ({
+            id: c.tag,
+            label: c.tag,
+            href: localizePath(`/news/tag/${c.tag}`, lang),
+            count: c.count,
+          })),
+        ]}
+      />
+      <a href={rssHref} class="tag border-[var(--color-accent)] text-[var(--color-accent)]">RSS</a>
+    </div>
+  </PageHeader>
+
+  <div class="wrap py-14">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {pageItems.map((post) => (
+        <PostCard
+          lang={lang}
+          slug={post.slug}
+          title={post.data.title}
+          excerpt={post.data.excerpt}
+          date={post.data.date}
+          tags={post.data.tags}
+          cover={post.data.cover}
+          coverAlt={post.data.coverAlt}
+        />
+      ))}
+    </div>
+
+    <Pagination
+      lang={lang}
+      current={1}
+      total={totalPages}
+      next={totalPages > 1 ? localizePath('/news/page/2', lang) : undefined}
+    />
+  </div>
+</BaseLayout>

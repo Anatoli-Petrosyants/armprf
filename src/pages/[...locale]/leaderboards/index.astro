@@ -1,0 +1,114 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Leaderboard from '@/components/Leaderboard.astro';
+import Podium from '@/components/Podium.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getChallenges } from '@/lib/content';
+import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
+import { athleteMaps } from '@/lib/athletes';
+import { breadcrumbLd } from '@/lib/seo';
+import { site } from '@/lib/site';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+await assertResultsValid();
+
+const challenges = await getChallenges(lang);
+const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
+const rows = featured ? await getRankedRows(featured.data) : [];
+const { slugs, names } = await athleteMaps(lang);
+
+const counts = await Promise.all(
+  challenges.map(async (challenge) => ({
+    id: challenge.data.id,
+    title: challenge.data.title,
+    summary: challenge.data.summary,
+    count: (await getRankedRows(challenge.data)).length,
+  })),
+);
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/leaderboards"
+  title={t('lb.title')}
+  description={lang === 'hy'
+    ? 'ARMPRF-ի մարտահրավերների աղյուսակները՝ հրապարակված, հաստատված և ստուգելի արդյունքներով։'
+    : 'ARMPRF challenge leaderboards — published, verified and auditable results.'}
+  jsonLd={[breadcrumbLd([{ name: t('lb.title'), url: localizePath('/leaderboards', lang) }])]}
+>
+  <PageHeader
+    lang={lang}
+    title={t('lb.title')}
+    lead={lang === 'hy'
+      ? 'Տեղը հաշվարկվում է ավտոմատ։ Հավասար միավորները ստանում են նույն տեղը, հաջորդը՝ բաց է թողնվում։'
+      : 'Rank is computed, never typed. Equal scores share a rank and the next rank is skipped.'}
+    crumbs={[{ name: t('lb.title'), path: '/leaderboards' }]}
+  />
+
+  <div class="wrap py-10">
+    <nav aria-label={t('lb.title')} class="no-scrollbar -mx-1 flex gap-2 overflow-x-auto pb-2">
+      {counts.map((challenge) => (
+        <a
+          href={localizePath(`/leaderboards/${challenge.id}`, lang)}
+          class="tag whitespace-nowrap px-3 py-2 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          data-active={challenge.id === featured?.data.id ? 'true' : 'false'}
+        >
+          {challenge.title}
+          <span class="ms-2 opacity-60">{challenge.count}</span>
+        </a>
+      ))}
+    </nav>
+  </div>
+
+  {featured && (
+    <section class="wrap pb-16">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">{t('home.leaderboard.eyebrow')}</p>
+          <h2 class="mt-2 text-3xl md:text-4xl">{featured.data.title}</h2>
+          <p class="mt-2 max-w-2xl text-[var(--color-muted)]">{featured.data.summary}</p>
+        </div>
+        <a href={localizePath(`/leaderboards/${featured.data.id}`, lang)} class="btn btn-ghost">{t('lb.rules')}</a>
+      </div>
+
+      <div class="mb-10">
+        <Podium lang={lang} rows={rows} scoring={featured.data.scoring} unit={featured.data.unit} />
+      </div>
+
+      <Leaderboard
+        lang={lang}
+        challengeId={featured.data.id}
+        columns={featured.data.columns}
+        rows={rows}
+        scoring={featured.data.scoring}
+        unit={featured.data.unit}
+        seasonal={featured.data.seasonal}
+        athleteSlugs={slugs}
+        displayNames={names}
+      />
+    </section>
+  )}
+
+  <section class="wrap pb-20">
+    <h2 class="eyebrow">{t('common.all')}</h2>
+    <ul class="mt-5 grid gap-4 md:grid-cols-2">
+      {counts.map((challenge) => (
+        <li class="card relative p-6">
+          <h3 class="text-xl">
+            <a href={localizePath(`/leaderboards/${challenge.id}`, lang)} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">
+              {challenge.title}
+            </a>
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{challenge.summary}</p>
+          <p class="tnum mt-4 text-xs uppercase tracking-[0.12em] text-[var(--color-faint)]">
+            {challenge.count} {t('lb.entries')}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

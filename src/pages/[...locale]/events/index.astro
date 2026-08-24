@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import EventCard from '@/components/EventCard.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { getEvents, splitEvents } from '@/lib/content';
+import { breadcrumbLd } from '@/lib/seo';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const { upcoming, past } = splitEvents(await getEvents(lang));
+const groups = [
+  { id: 'upcoming', label: t('events.upcoming'), items: upcoming },
+  { id: 'past', label: t('events.past'), items: past },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/events"
+  title={t('events.title')}
+  description={lang === 'hy'
+    ? 'ARMPRF-ի մրցումների օրացույցը՝ առաջիկա և անցած մրցումներ, գրանցում, կանոններ և արդյունքներ։'
+    : 'The ARMPRF match calendar — upcoming and past matches, registration, rules and results.'}
+  jsonLd={[breadcrumbLd([{ name: t('events.title'), url: localizePath('/events', lang) }])]}
+>
+  <PageHeader lang={lang} title={t('events.title')} crumbs={[{ name: t('events.title'), path: '/events' }]} />
+
+  <div class="wrap py-14">
+    {groups.map((group) => (
+      <section class="mb-14 last:mb-0" id={group.id}>
+        <h2 class="eyebrow">{group.label}</h2>
+        {group.items.length === 0 ? (
+          <p class="mt-4 text-[var(--color-muted)]">{t('events.none')}</p>
+        ) : (
+          <ul class="mt-5 grid gap-4">
+            {group.items.map((event) => (
+              <li>
+                <EventCard
+                  lang={lang}
+                  slug={event.slug}
+                  title={event.data.title}
+                  summary={event.data.summary}
+                  date={event.data.date}
+                  endDate={event.data.endDate}
+                  location={event.data.location}
+                  discipline={event.data.discipline}
+                  distanceMin={event.data.distanceMin}
+                  distanceMax={event.data.distanceMax}
+                  distanceUnit={event.data.distanceUnit}
+                  status={event.data.status}
+                  cover={event.data.cover}
+                  coverAlt={event.data.coverAlt}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))}
+  </div>
+</BaseLayout>

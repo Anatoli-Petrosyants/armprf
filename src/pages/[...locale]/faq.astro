@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import Section from '@/components/Section.astro';
+import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { breadcrumbLd, faqLd } from '@/lib/seo';
+import faq from '@/content/config/faq.json';
+
+export const getStaticPaths = localePaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const flat = faq.groups.flatMap((group) =>
+  group.items.map((item) => ({ q: item.q[lang], a: item.a[lang] })),
+);
+---
+
+<BaseLayout
+  lang={lang}
+  neutral="/faq"
+  title={t('faq.title')}
+  description={flat[0]?.q ?? t('faq.title')}
+  jsonLd={[faqLd(flat), breadcrumbLd([{ name: t('faq.title'), url: localizePath('/faq', lang) }])]}
+>
+  <PageHeader lang={lang} title={t('faq.title')} crumbs={[{ name: t('faq.title'), path: '/faq' }]} />
+
+  {faq.groups.map((group) => (
+    <Section title={group.title[lang]} id={group.id}>
+      <div class="grid gap-2">
+        {group.items.map((item) => (
+          <details class="card group p-5">
+            <summary class="cursor-pointer list-none text-lg font-bold marker:hidden">
+              <span class="flex items-start justify-between gap-4">
+                {item.q[lang]}
+                <span aria-hidden="true" class="mt-1 shrink-0 text-[var(--color-accent)] transition-transform group-open:rotate-45">+</span>
+              </span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-[var(--color-muted)]">{item.a[lang]}</p>
+          </details>
+        ))}
+      </div>
+    </Section>
+  ))}
+</BaseLayout>

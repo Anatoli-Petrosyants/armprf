@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localizePath, useTranslations } from '@/lib/i18n';
+
+// A single 404 for both languages: GitHub Pages serves one file for every
+// unmatched path, so it shows Armenian first with the English line beneath.
+const hy = useTranslations('hy');
+const en = useTranslations('en');
+---
+
+<BaseLayout lang="hy" neutral="/404" title={hy('404.title')} description={hy('404.body')} noindex={true}>
+  <section class="moa-grid">
+    <div class="wrap grid min-h-[60dvh] place-items-center py-20 text-center">
+      <div>
+        <p class="tnum text-[clamp(5rem,18vw,10rem)] font-bold leading-none text-[var(--color-accent)]">404</p>
+        <h1 class="mt-4 text-3xl">{hy('404.title')}</h1>
+        <p class="mt-3 text-[var(--color-muted)]">{hy('404.body')}</p>
+        <p class="mt-1 text-sm text-[var(--color-faint)]">{en('404.body')}</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href={localizePath('/', 'hy')} class="btn btn-primary">{hy('404.home')}</a>
+          <a href={localizePath('/', 'en')} class="btn btn-ghost">{en('404.home')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
