@@ -1,0 +1,29 @@
+{
+  "files": [
+    ".nojekyll",
+    "404.html",
+    "CNAME",
+    "_astro",
+    "about",
+    "apple-touch-icon.png",
+    "athletes",
+    "blog",
+    "contact",
+    "downloads",
+    "en",
+    "favicon-192.png",
+    "favicon-32.png",
+    "favicon-512.png",
+    "favicon.ico",
+    "favicon.svg",
+    "fonts",
+    "index.html",
+    "leaderboards",
+    "og",
+    "og-default.jpg",
+    "robots.txt",
+    "site.webmanifest",
+    "sitemap-0.xml",
+    "sitemap-index.xml"
+  ]
+}

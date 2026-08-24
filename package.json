@@ -9,6 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "publish": "npm run build && node scripts/publish-root.mjs",
     "check": "astro check",
     "sync": "astro sync",
     "placeholders": "node scripts/generate-placeholders.mjs",

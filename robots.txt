@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://armprf.com/sitemap-index.xml

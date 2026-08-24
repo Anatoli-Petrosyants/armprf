@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Flag of Armenia">
+  <!-- Flag of Armenia in the official tricolour values, rounded so the tab icon
+       still reads as an icon at 16px. -->
+  <defs>
+    <clipPath id="r"><rect width="512" height="512" rx="96"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="171" y="0" fill="#D90012"/>
+    <rect width="512" height="171" y="170.667" fill="#0033A0"/>
+    <rect width="512" height="171" y="341" fill="#F2A800"/>
+  </g>
+  <rect x="4" y="4" width="504" height="504" rx="92" fill="none" stroke="#00000022" stroke-width="8"/>
+</svg>
