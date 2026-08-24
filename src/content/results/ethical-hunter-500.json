@@ -1,7 +1,7 @@
 [
   {
     "name": "Armen Hakobyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-04-12",
     "caliber": "6.5 Creedmoor",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Tigran Sargsyan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-05-17",
     "caliber": "6.5 Creedmoor",
@@ -24,7 +24,7 @@
   },
   {
     "name": "Narek Grigoryan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-06-07",
     "caliber": ".22LR",
@@ -35,7 +35,7 @@
   },
   {
     "name": "Gor Petrosyan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-05-11",
     "caliber": "6mm Dasher",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Hayk Avetisyan",
-    "club": "Vayots Dzor Shooters",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-07-13",
     "caliber": ".308 Win",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Davit Mkrtchyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-09-21",
     "caliber": "6.5 Creedmoor",
@@ -69,7 +69,7 @@
   },
   {
     "name": "Arsen Khachatryan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-11-02",
     "caliber": ".308 Win",
@@ -80,7 +80,7 @@
   },
   {
     "name": "Ani Melkonyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-01-18",
     "caliber": ".22LR",
@@ -92,7 +92,7 @@
   },
   {
     "name": "Vahe Hovhannisyan",
-    "club": "Independent",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-02-15",
     "caliber": ".30-06",
@@ -104,7 +104,7 @@
   },
   {
     "name": "Levon Baghdasaryan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-03-08",
     "caliber": "6.5 PRC",
@@ -114,31 +114,8 @@
     "verified": true
   },
   {
-    "name": "Marek Novak",
-    "club": "Guest — CZ",
-    "division": "Hunter",
-    "date": "2026-04-12",
-    "caliber": ".308 Win",
-    "hits": 2,
-    "misses": 3,
-    "time": 226.4,
-    "verified": true
-  },
-  {
-    "name": "Giorgi Beridze",
-    "club": "Guest — GE",
-    "division": "Hunter",
-    "date": "2026-05-17",
-    "caliber": ".300 Win Mag",
-    "hits": 5,
-    "misses": 0,
-    "time": 220.2,
-    "verified": true,
-    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF012"
-  },
-  {
     "name": "Armen Hakobyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-06-07",
     "caliber": "6.5 Creedmoor",
@@ -149,7 +126,7 @@
   },
   {
     "name": "Tigran Sargsyan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-05-11",
     "caliber": "6.5 Creedmoor",
@@ -160,7 +137,7 @@
   },
   {
     "name": "Narek Grigoryan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-07-13",
     "caliber": ".22LR",
@@ -173,7 +150,7 @@
   },
   {
     "name": "Gor Petrosyan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-09-21",
     "caliber": "6mm Dasher",
@@ -184,7 +161,7 @@
   },
   {
     "name": "Hayk Avetisyan",
-    "club": "Vayots Dzor Shooters",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-11-02",
     "caliber": ".308 Win",
@@ -195,7 +172,7 @@
   },
   {
     "name": "Davit Mkrtchyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-01-18",
     "caliber": "6.5 Creedmoor",

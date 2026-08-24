@@ -87,6 +87,9 @@ array element into its own collection entry and stamps the challenge id from the
 - `sortDirection` handles low-wins challenges without a special case.
 - A challenge declares its own `columns`, so two challenges can show completely different
   tables through the same component.
+- A column carrying the same value in every row earns no space: `club` is off the board
+  while the federation is the only club, and the club filter hides itself for the same
+  reason. Athlete cards fall back to hometown.
 
 The table is rendered server-side in full. Sorting, search, division/club/season filters
 and the all-time / current-season toggle are progressive enhancements over rows that are
@@ -107,8 +110,7 @@ Errors (build fails):
 Warnings (build continues):
 - a shooter name with no athlete profile
 
-The seed data ships with two guest shooters who have no profile, so the warning path is
-visible in a normal build. That is intentional.
+A normal build is clean: every name in every results file resolves to an athlete profile.
 
 Schemas also enforce alt text and the `/img/…` path convention, so an image can never be
 committed without a description.

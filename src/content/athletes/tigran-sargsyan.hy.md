@@ -1,7 +1,7 @@
 ---
 name: "Տիգրան Սարգսյան"
 slug: "tigran-sargsyan"
-club: "Գյումրի հրաձգության ակումբ"
+club: "ARMPRF"
 divisions: ["Open", "Hunter"]
 photo: "/img/brand/portraits/tigran-sargsyan.jpg"
 photoAlt: "Տիգրան Սարգսյան, Գյումրի հրաձգության ակումբ-ի հրաձիգ, դիմանկար"

@@ -1,7 +1,7 @@
 ---
 name: "Արմեն Հակոբյան"
 slug: "armen-hakobyan"
-club: "Երևան PRC"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/armen-hakobyan.jpg"
 photoAlt: "Արմեն Հակոբյան, Երևան PRC-ի հրաձիգ, դիմանկար"

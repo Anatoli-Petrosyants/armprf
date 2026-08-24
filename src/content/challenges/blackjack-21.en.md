@@ -9,7 +9,7 @@ unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "A shooter prone with a 21-point card and steel targets downrange"
-columns: ["rank", "name", "club", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
 active: true
 order: 10
 ---

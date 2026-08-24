@@ -1,7 +1,7 @@
 ---
 name: "Tigran Sargsyan"
 slug: "tigran-sargsyan"
-club: "Gyumri Rifle Club"
+club: "ARMPRF"
 divisions: ["Open", "Hunter"]
 photo: "/img/brand/portraits/tigran-sargsyan.jpg"
 photoAlt: "Tigran Sargsyan, Gyumri Rifle Club shooter, portrait"

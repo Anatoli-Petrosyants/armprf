@@ -1,7 +1,7 @@
 ---
 name: "Անի Մելքոնյան"
 slug: "ani-melkonyan"
-club: "Երևան PRC"
+club: "ARMPRF"
 divisions: ["Rimfire", "Production"]
 photo: "/img/brand/portraits/ani-melkonyan.jpg"
 photoAlt: "Անի Մելքոնյան, Երևան PRC-ի հրաձիգ, դիմանկար"

@@ -1,7 +1,7 @@
 ---
 name: "Armen Hakobyan"
 slug: "armen-hakobyan"
-club: "Yerevan PRC"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/armen-hakobyan.jpg"
 photoAlt: "Armen Hakobyan, Yerevan PRC shooter, portrait"

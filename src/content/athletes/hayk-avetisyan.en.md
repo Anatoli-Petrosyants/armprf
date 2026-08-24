@@ -1,7 +1,7 @@
 ---
 name: "Hayk Avetisyan"
 slug: "hayk-avetisyan"
-club: "Vayots Dzor Shooters"
+club: "ARMPRF"
 divisions: ["Hunter"]
 photo: "/img/brand/portraits/hayk-avetisyan.jpg"
 photoAlt: "Hayk Avetisyan, Vayots Dzor Shooters shooter, portrait"

@@ -1,7 +1,7 @@
 ---
 name: "Դավիթ Մկրտչյան"
 slug: "davit-mkrtchyan"
-club: "Երևան PRC"
+club: "ARMPRF"
 divisions: ["Open", "Rimfire"]
 photo: "/img/brand/portraits/davit-mkrtchyan.jpg"
 photoAlt: "Դավիթ Մկրտչյան, Երևան PRC-ի հրաձիգ, դիմանկար"

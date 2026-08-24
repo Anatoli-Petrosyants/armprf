@@ -12,8 +12,12 @@ interface Props {
   photo?: string;
   photoAlt?: string;
   bestFinishes: string[];
+  hometown?: string;
+  /** False while every athlete shares one club, when the line says nothing. */
+  showClub?: boolean;
 }
-const { lang, slug, name, club, divisions, photo, photoAlt, bestFinishes } = Astro.props;
+const { lang, slug, name, club, divisions, photo, photoAlt, bestFinishes, hometown, showClub = false } = Astro.props;
+const subtitle = showClub ? club : hometown;
 const t = useTranslations(lang);
 const href = localizePath(`/athletes/${slug}`, lang);
 ---
@@ -32,7 +36,7 @@ const href = localizePath(`/athletes/${slug}`, lang);
     <h3 class="text-base leading-snug">
       <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent-text)]">{name}</a>
     </h3>
-    <p class="mt-1 text-xs text-[var(--color-faint)]">{club}</p>
+    {subtitle && <p class="mt-1 text-xs text-[var(--color-faint)]">{subtitle}</p>}
     <p class="mt-2 flex flex-wrap gap-1">
       {divisions.map((d) => <span class="tag">{d}</span>)}
     </p>

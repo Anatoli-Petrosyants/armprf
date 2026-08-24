@@ -9,7 +9,7 @@ unit: "միավոր"
 videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "Հրաձիգը պառկած դիրքում՝ 21 միավորի քարտով և պողպատե թիրախներով"
-columns: ["rank", "name", "club", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
+columns: ["rank", "name", "division", "score", "date", "rifle", "caliber", "verified", "proof"]
 active: true
 order: 10
 ---

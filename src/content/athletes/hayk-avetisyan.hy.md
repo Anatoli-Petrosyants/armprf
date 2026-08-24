@@ -1,7 +1,7 @@
 ---
 name: "Հայկ Ավետիսյան"
 slug: "hayk-avetisyan"
-club: "Վայոց ձորի հրաձիգներ"
+club: "ARMPRF"
 divisions: ["Hunter"]
 photo: "/img/brand/portraits/hayk-avetisyan.jpg"
 photoAlt: "Հայկ Ավետիսյան, Վայոց ձորի հրաձիգներ-ի հրաձիգ, դիմանկար"

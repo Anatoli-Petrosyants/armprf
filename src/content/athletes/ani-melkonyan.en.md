@@ -1,7 +1,7 @@
 ---
 name: "Ani Melkonyan"
 slug: "ani-melkonyan"
-club: "Yerevan PRC"
+club: "ARMPRF"
 divisions: ["Rimfire", "Production"]
 photo: "/img/brand/portraits/ani-melkonyan.jpg"
 photoAlt: "Ani Melkonyan, Yerevan PRC shooter, portrait"

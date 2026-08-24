@@ -1,7 +1,7 @@
 ---
 name: "Լևոն Բաղդասարյան"
 slug: "levon-baghdasaryan"
-club: "Արարատ Հեռահար"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/levon-baghdasaryan.jpg"
 photoAlt: "Լևոն Բաղդասարյան, Արարատ Հեռահար-ի հրաձիգ, դիմանկար"

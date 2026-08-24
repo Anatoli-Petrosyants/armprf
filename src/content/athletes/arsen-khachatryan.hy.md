@@ -1,7 +1,7 @@
 ---
 name: "Արսեն Խաչատրյան"
 slug: "arsen-khachatryan"
-club: "Գյումրի հրաձգության ակումբ"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/arsen-khachatryan.jpg"
 photoAlt: "Արսեն Խաչատրյան, Գյումրի հրաձգության ակումբ-ի հրաձիգ, դիմանկար"

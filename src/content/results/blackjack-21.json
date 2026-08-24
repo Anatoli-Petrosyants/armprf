@@ -1,7 +1,7 @@
 [
   {
     "name": "Armen Hakobyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-01-18",
     "rifle": "Tikka T3x TAC A1",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Tigran Sargsyan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-02-15",
     "rifle": "Bergara B14 HMR",
@@ -22,7 +22,7 @@
   },
   {
     "name": "Narek Grigoryan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Rimfire",
     "date": "2026-03-08",
     "rifle": "CZ 457 MTR",
@@ -32,7 +32,7 @@
   },
   {
     "name": "Gor Petrosyan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-04-12",
     "rifle": "Defiance Deviant",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Hayk Avetisyan",
-    "club": "Vayots Dzor Shooters",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-05-17",
     "rifle": "Sako 85 Bavarian",
@@ -53,7 +53,7 @@
   },
   {
     "name": "Davit Mkrtchyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-06-07",
     "rifle": "Ruger Precision Rifle",
@@ -63,7 +63,7 @@
   },
   {
     "name": "Arsen Khachatryan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-05-11",
     "rifle": "Accuracy International AT",
@@ -74,7 +74,7 @@
   },
   {
     "name": "Ani Melkonyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Rimfire",
     "date": "2025-07-13",
     "rifle": "Vudoo V-22",
@@ -84,7 +84,7 @@
   },
   {
     "name": "Vahe Hovhannisyan",
-    "club": "Independent",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-09-21",
     "rifle": "Tikka T3x Lite",
@@ -94,7 +94,7 @@
   },
   {
     "name": "Levon Baghdasaryan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-11-02",
     "rifle": "MDT ACC / Rem 700",
@@ -104,28 +104,8 @@
     "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF009"
   },
   {
-    "name": "Marek Novak",
-    "club": "Guest — CZ",
-    "division": "Open",
-    "date": "2026-01-18",
-    "rifle": "Sako TRG 22",
-    "caliber": ".308 Win",
-    "score": 18,
-    "verified": true
-  },
-  {
-    "name": "Giorgi Beridze",
-    "club": "Guest — GE",
-    "division": "Hunter",
-    "date": "2026-02-15",
-    "rifle": "Blaser R8",
-    "caliber": ".300 Win Mag",
-    "score": 9,
-    "verified": false
-  },
-  {
     "name": "Armen Hakobyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-03-08",
     "rifle": "Tikka T3x TAC A1",
@@ -136,7 +116,7 @@
   },
   {
     "name": "Tigran Sargsyan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-04-12",
     "rifle": "Bergara B14 HMR",
@@ -147,7 +127,7 @@
   },
   {
     "name": "Narek Grigoryan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Rimfire",
     "date": "2026-05-17",
     "rifle": "CZ 457 MTR",
@@ -157,7 +137,7 @@
   },
   {
     "name": "Gor Petrosyan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-06-07",
     "rifle": "Defiance Deviant",
@@ -167,7 +147,7 @@
   },
   {
     "name": "Hayk Avetisyan",
-    "club": "Vayots Dzor Shooters",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2025-05-11",
     "rifle": "Sako 85 Bavarian",
@@ -177,7 +157,7 @@
   },
   {
     "name": "Davit Mkrtchyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-07-13",
     "rifle": "Ruger Precision Rifle",
@@ -187,7 +167,7 @@
   },
   {
     "name": "Arsen Khachatryan",
-    "club": "Gyumri Rifle Club",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2025-09-21",
     "rifle": "Accuracy International AT",
@@ -198,7 +178,7 @@
   },
   {
     "name": "Ani Melkonyan",
-    "club": "Yerevan PRC",
+    "club": "ARMPRF",
     "division": "Rimfire",
     "date": "2025-11-02",
     "rifle": "Vudoo V-22",
@@ -208,7 +188,7 @@
   },
   {
     "name": "Vahe Hovhannisyan",
-    "club": "Independent",
+    "club": "ARMPRF",
     "division": "Hunter",
     "date": "2026-01-18",
     "rifle": "Tikka T3x Lite",
@@ -218,7 +198,7 @@
   },
   {
     "name": "Levon Baghdasaryan",
-    "club": "Ararat Long Range",
+    "club": "ARMPRF",
     "division": "Open",
     "date": "2026-02-15",
     "rifle": "MDT ACC / Rem 700",

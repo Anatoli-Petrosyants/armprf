@@ -41,8 +41,11 @@ for (const challenge of challenges) {
   if (mine.length) appearances.push({ challenge, rows: mine });
 }
 
+const roster = await getAthletes(lang);
+const showClub = new Set(roster.map((a) => a.data.club)).size > 1;
+
 const facts = [
-  { label: t('athletes.club'), value: data.club },
+  ...(showClub ? [{ label: t('athletes.club'), value: data.club }] : []),
   { label: t('athletes.division'), value: data.divisions.join(' · ') },
   { label: t('athletes.since'), value: String(data.memberSince) },
   ...(data.hometown ? [{ label: t('common.location'), value: data.hometown }] : []),

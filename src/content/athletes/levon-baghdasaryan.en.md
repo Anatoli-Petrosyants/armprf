@@ -1,7 +1,7 @@
 ---
 name: "Levon Baghdasaryan"
 slug: "levon-baghdasaryan"
-club: "Ararat Long Range"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/levon-baghdasaryan.jpg"
 photoAlt: "Levon Baghdasaryan, Ararat Long Range shooter, portrait"

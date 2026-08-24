@@ -1,7 +1,7 @@
 ---
 name: "Narek Grigoryan"
 slug: "narek-grigoryan"
-club: "Yerevan PRC"
+club: "ARMPRF"
 divisions: ["Rimfire", "Open"]
 photo: "/img/brand/portraits/narek-grigoryan.jpg"
 photoAlt: "Narek Grigoryan, Yerevan PRC shooter, portrait"

@@ -82,7 +82,7 @@ paste it below, edit the numbers:
 ```json
 {
   "name": "Armen Hakobyan",
-  "club": "Yerevan PRC",
+  "club": "ARMPRF",
   "division": "Open",
   "date": "2026-05-17",
   "rifle": "Tikka T3x TAC A1",
@@ -97,6 +97,9 @@ Things worth knowing:
 
 - **Never write a rank.** Position is calculated from the scores every time the site
   builds. Equal scores share a rank and the next rank is skipped: 1, 2, 2, 4.
+- `club` is recorded on every row but only shown once more than one club exists. While
+  everyone is ARMPRF the column and its filter stay hidden — add a second club and both
+  come back on their own.
 - `name` should match the athlete's name in `src/content/athletes/`. If it does not, the
   result still shows, but the build prints a warning and the name will not link to a
   profile. Use the Latin spelling from the `.en.md` file — the site swaps in the Armenian

@@ -1,7 +1,7 @@
 ---
 name: "Գոռ Պետրոսյան"
 slug: "gor-petrosyan"
-club: "Արարատ Հեռահար"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/gor-petrosyan.jpg"
 photoAlt: "Գոռ Պետրոսյան, Արարատ Հեռահար-ի հրաձիգ, դիմանկար"

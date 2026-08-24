@@ -1,7 +1,7 @@
 ---
 name: "Arsen Khachatryan"
 slug: "arsen-khachatryan"
-club: "Gyumri Rifle Club"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/arsen-khachatryan.jpg"
 photoAlt: "Arsen Khachatryan, Gyumri Rifle Club shooter, portrait"

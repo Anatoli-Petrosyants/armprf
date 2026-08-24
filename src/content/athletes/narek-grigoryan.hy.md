@@ -1,7 +1,7 @@
 ---
 name: "Նարեկ Գրիգորյան"
 slug: "narek-grigoryan"
-club: "Երևան PRC"
+club: "ARMPRF"
 divisions: ["Rimfire", "Open"]
 photo: "/img/brand/portraits/narek-grigoryan.jpg"
 photoAlt: "Նարեկ Գրիգորյան, Երևան PRC-ի հրաձիգ, դիմանկար"

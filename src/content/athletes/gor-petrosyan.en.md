@@ -1,7 +1,7 @@
 ---
 name: "Gor Petrosyan"
 slug: "gor-petrosyan"
-club: "Ararat Long Range"
+club: "ARMPRF"
 divisions: ["Open"]
 photo: "/img/brand/portraits/gor-petrosyan.jpg"
 photoAlt: "Gor Petrosyan, Ararat Long Range shooter, portrait"

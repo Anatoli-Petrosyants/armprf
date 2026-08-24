@@ -1,7 +1,7 @@
 ---
 name: "Davit Mkrtchyan"
 slug: "davit-mkrtchyan"
-club: "Yerevan PRC"
+club: "ARMPRF"
 divisions: ["Open", "Rimfire"]
 photo: "/img/brand/portraits/davit-mkrtchyan.jpg"
 photoAlt: "Davit Mkrtchyan, Yerevan PRC shooter, portrait"

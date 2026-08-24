@@ -1,7 +1,7 @@
 ---
 name: "Vahe Hovhannisyan"
 slug: "vahe-hovhannisyan"
-club: "Independent"
+club: "ARMPRF"
 divisions: ["Hunter", "Open"]
 photo: "/img/brand/portraits/vahe-hovhannisyan.jpg"
 photoAlt: "Vahe Hovhannisyan, Independent shooter, portrait"

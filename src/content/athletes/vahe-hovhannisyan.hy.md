@@ -1,7 +1,7 @@
 ---
 name: "Վահե Հովհաննիսյան"
 slug: "vahe-hovhannisyan"
-club: "Անկախ"
+club: "ARMPRF"
 divisions: ["Hunter", "Open"]
 photo: "/img/brand/portraits/vahe-hovhannisyan.jpg"
 photoAlt: "Վահե Հովհաննիսյան, Անկախ-ի հրաձիգ, դիմանկար"
