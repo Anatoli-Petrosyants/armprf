@@ -113,30 +113,6 @@
       "photo": "/img/brand/portraits/board-04.jpg"
     }
   ],
-  "images": [
-    {
-      "src": "/img/about/flags.webp",
-      "alt": {
-        "hy": "Հայաստանի դրոշը և ARMPRF-ի դրոշը՝ հրաձգարանում, կանաչ բլուրների ֆոնին",
-        "en": "The Armenian flag and the ARMPRF flag over the range, green hills behind them"
-      },
-      "caption": {
-        "hy": "ARMPRF-ի դրոշը՝ Հայաստանի դրոշի կողքին, մրցումային հրաձգարանում։",
-        "en": "The ARMPRF flag beside the Armenian flag at the match range."
-      }
-    },
-    {
-      "src": "/img/about/prone-shooter.webp",
-      "alt": {
-        "hy": "Հրաձիգը ARMPRF-ի մարզաշապիկով՝ պառկած դիրքում կրակային գծին, թիրախային դաշտի ուղղությամբ",
-        "en": "A shooter in an ARMPRF jersey, prone on the firing line facing the target field"
-      },
-      "caption": {
-        "hy": "Դիրք, շնչառություն, ձգան․ ամեն կրակոց չափելի է։",
-        "en": "Position, breathing, trigger. Every shot is measurable."
-      }
-    }
-  ],
   "charterPdf": "/downloads/armprf-kanonadrutyun.pdf",
   "membership": {
     "title": {

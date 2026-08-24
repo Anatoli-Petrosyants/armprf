@@ -47,12 +47,12 @@ const icons: Record<string, string> = {
       aspect="16/9"
       loading="eager"
       fetchpriority="high"
-      class="absolute inset-0 -z-10 h-full w-full object-cover"
+      class="absolute inset-0 -z-10 h-full w-full object-cover [object-position:right_center]"
     />
     {/* The scrim has to carry the heading in both themes, so it stays strong
         across the text column and only thins out past it. */}
     <div
-      class="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-bg)] from-15% via-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] via-55% to-[color-mix(in_srgb,var(--color-bg)_30%,transparent)]"
+      class="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-bg)] from-15% via-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] via-45% to-[color-mix(in_srgb,var(--color-bg)_8%,transparent)]"
     >
     </div>
 

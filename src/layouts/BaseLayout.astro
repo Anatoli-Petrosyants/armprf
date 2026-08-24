@@ -74,6 +74,9 @@ const graph = [organizationLd(lang), ...jsonLd];
     <meta name="theme-color" content="#f4f5f4" />
 
     <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
+    {/* Browsers ask for /favicon.ico on their own; without one they fall back
+        to whatever icon they already have cached for this origin. */}
+    <link rel="icon" href="/favicon.ico?v=4" sizes="48x48" />
     <link rel="icon" href="/favicon-32.png?v=4" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" />
     <link rel="manifest" href="/site.webmanifest" />

@@ -22,47 +22,6 @@ const t = useTranslations(lang);
 >
   <PageHeader lang={lang} title={t('nav.about')} lead={about.intro[lang]} crumbs={[{ name: t('nav.about'), path: '/about' }]} />
 
-  <Section>
-    <ul class="grid gap-4 sm:grid-cols-2">
-      {about.images.map((image) => (
-        <li>
-          <figure>
-            <SmartImage
-              src={image.src}
-              alt={image.alt[lang]}
-              aspect="1/1"
-              widths={[400, 550]}
-              sizes="(min-width: 40rem) 45vw, 100vw"
-              class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)]"
-            />
-            <figcaption class="mt-2 text-sm text-[var(--color-muted)]">{image.caption[lang]}</figcaption>
-          </figure>
-        </li>
-      ))}
-    </ul>
-  </Section>
-
-  <Section eyebrow={t('about.goals')} title={t('about.goals')} id="goals">
-    <ol class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {about.goals.map((goal, index) => (
-        <li class="card p-6">
-          <span class="ring-num text-[var(--color-accent-text)]">{index + 1}</span>
-          <h3 class="mt-4 text-lg">{goal.title[lang]}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{goal.body[lang]}</p>
-        </li>
-      ))}
-    </ol>
-  </Section>
-
-  <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
-    <div class="wrap py-14 md:py-20">
-      <p class="eyebrow">{t('about.safety')}</p>
-      <blockquote class="mt-4 max-w-3xl border-s-2 border-[var(--color-accent)] ps-6 text-xl leading-relaxed md:text-2xl">
-        {about.safetyStatement[lang]}
-      </blockquote>
-    </div>
-  </section>
-
   <Section eyebrow={about.membership.org} title={about.membership.title[lang]} id="membership">
     <div class="card grid gap-8 p-6 md:p-8 lg:grid-cols-[1fr_26rem] lg:items-start">
       <div>
@@ -97,6 +56,27 @@ const t = useTranslations(lang);
       <a href={about.charterPdf} class="btn btn-primary" download>{t('common.download')}</a>
     </div>
   </Section>
+
+  <Section eyebrow={t('about.goals')} title={t('about.goals')} id="goals">
+    <ol class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {about.goals.map((goal, index) => (
+        <li class="card p-6">
+          <span class="ring-num text-[var(--color-accent-text)]">{index + 1}</span>
+          <h3 class="mt-4 text-lg">{goal.title[lang]}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{goal.body[lang]}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div class="wrap py-14 md:py-20">
+      <p class="eyebrow">{t('about.safety')}</p>
+      <blockquote class="mt-4 max-w-3xl border-s-2 border-[var(--color-accent)] ps-6 text-xl leading-relaxed md:text-2xl">
+        {about.safetyStatement[lang]}
+      </blockquote>
+    </div>
+  </section>
 
   <Section eyebrow={t('about.board')} title={t('about.board')} id="board">
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

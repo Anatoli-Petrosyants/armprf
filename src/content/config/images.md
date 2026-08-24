@@ -24,18 +24,9 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (79 total)
+## Slots (77 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
-
-### `/img/about/`
-
-Aspect **1:1** · minimum **1100×1100** · About page pair, shown side by side.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `flags.webp` | **real** | `about.json` |
-| `prone-shooter.webp` | **real** | `about.json` |
 
 ### `/img/brand/hero/`
 
