@@ -6,7 +6,7 @@ scoring: "hits"
 sortDirection: "desc"
 maxScore: 5
 unit: "hits"
-videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
+videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 yards"
 columns: ["rank", "name", "division", "hits", "misses", "date", "caliber"]
@@ -14,7 +14,7 @@ active: true
 order: 20
 ---
 
-The premise is simple: if you cannot reliably hit a vital-sized target at 500 yards from a field position, that is not your hunting range. The source video is embedded on this page.
+The premise is simple: if you cannot reliably hit a vital-sized target at 500 yards from a field position, that is not your hunting range. There is a video on this page showing what the challenge looks like.
 
 ## Format
 
