@@ -1,36 +1,49 @@
 ---
 id: "ethical-hunter-500"
 title: "500 Yard Ethical Hunter Challenge"
-summary: "Five shots from field positions, the first from a cold bore. It measures your honest hunting range, not your group size."
-scoring: "hits"
+summary: "One cold bore shot at a 5 inch vital zone, 500 yards out. It measures your honest hunting range, not your group size."
+scoring: "points"
 sortDirection: "desc"
-maxScore: 5
-unit: "hits"
+maxScore: 3
+unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 yards"
-columns: ["rank", "name", "division", "hits", "misses", "date", "caliber"]
+columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
 active: true
 order: 20
 ---
 
-The premise is simple: if you cannot reliably hit a vital-sized target at 500 yards from a field position, that is not your hunting range. There is a video on this page showing what the challenge looks like.
+The challenge was popularized by precision shooter Erik Cortina, and the premise is simple: if you cannot put your first cold bore shot into a vital zone at 500 yards, that is not your hunting range. There is a video on this page showing what it looks like.
 
 ## Format
 
-- Distance: **500 yards (457 m)**.
-- Target: an **8 inch (20 cm)** circle, vital-zone sized.
-- **5 shots**, each from a different position: pack, sticks, kneeling, seated, improvised rest.
-- The **first shot is from a cold, clean barrel** and always counts.
-- Total time: **5 minutes** from the first shot.
+- Distance: **exactly 500 yards (457 m)**.
+- Target: a **5 inch (13 cm)** circle — a **1 MOA** vital zone at that distance.
+- The shot: **one cold bore shot**, the first round out of a clean, un-warmed barrel, the way the shot presents itself in the field.
+- Follow-ups: **up to two more shots** if the cold bore shot misses the vital zone.
+- Rifle: your **precision competition rifle or a hunting rifle**. No weight limit, no gear restrictions — the test is practical field accuracy.
 
 ## Rules
 
-1. No bipod. Field supports only.
-2. The rifle must be in hunting configuration, with no dedicated match accessories.
-3. The distance is lasered and announced before the first shot.
-4. One attempt per shooter per day.
-5. Ties go to the shooter with the lower total elapsed time.
+1. Cold bore means cold bore. No fouling shot, no warm-up, no sighter on the day of the attempt.
+2. The distance is lasered and confirmed before the shot.
+3. A hit is any shot that breaks the 5 inch circle.
+4. One attempt per shooter per event.
+5. Every attempt is filmed and the target is photographed before and after, which is what makes a card verifiable.
+
+## Scoring
+
+Cortina's original is pass or fail on the cold bore shot. The point scale below exists only so cards can be ranked against each other on the leaderboard.
+
+| Shot that hits the vitals | Points |
+| --- | --- |
+| Cold bore, first shot | 3 |
+| Second shot | 2 |
+| Third shot | 1 |
+| No hit in three shots | 0 |
+
+Ties are broken on date — the earlier verified card ranks first.
 
 ## Why it matters
 

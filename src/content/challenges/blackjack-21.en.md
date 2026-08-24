@@ -42,6 +42,6 @@ A six-target rack shot against the clock. Clear the rack and you have 21 points 
 
 ## Alongside: the Ethical Hunter Challenge
 
-Everyone shooting the BlackJack Challenge is also given the opportunity to shoot the Ethical Hunter Challenge: one cold-bore shot at ~500 yards. You can use your BlackJack rifle for it or bring a separate hunting rifle.
+Everyone shooting the BlackJack Challenge is also given the opportunity to shoot the Ethical Hunter Challenge: one cold bore shot at a 5 inch vital zone, 500 yards out. You can use your BlackJack rifle for it or bring a separate hunting rifle.
 
 Both challenges are filmed, and the footage is used on social media.

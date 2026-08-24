@@ -29,5 +29,4 @@ export const socialLinks = [
   { id: 'instagram', label: 'Instagram', url: siteJson.social.instagram },
   { id: 'facebook', label: 'Facebook', url: siteJson.social.facebook },
   { id: 'youtube', label: 'YouTube', url: siteJson.social.youtube },
-  { id: 'telegram', label: 'Telegram', url: siteJson.social.telegram },
 ] as const;

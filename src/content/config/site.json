@@ -50,17 +50,16 @@
       "en": "Azatazen shooting range, Kotayk Province, Armenia"
     },
     "geo": {
-      "lat": 40.391897,
-      "lon": 44.708015
+      "lat": 40.157763,
+      "lon": 44.599457
     },
-    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=44.6480%2C40.3519%2C44.7680%2C40.4319&layer=mapnik&marker=40.391897%2C44.708015",
-    "mapLinkUrl": "https://yandex.com/maps/org/azatazen/123975783232/"
+    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=44.5395%2C40.1178%2C44.6595%2C40.1978&layer=mapnik&marker=40.157763%2C44.599457",
+    "mapLinkUrl": "https://www.google.com/maps/place/Azatazen/@40.157763,44.599457,847m/data=!3m2!1e3!4b1!4m6!3m5!1s0x406abb004baaf27f:0x9029ed1f4db3c461!8m2!3d40.157763!4d44.599457!16s%2Fg%2F11vpt737ty"
   },
   "social": {
     "instagram": "https://instagram.com/armprf",
     "facebook": "https://www.facebook.com/profile.php?id=61557950632485",
-    "youtube": "https://youtube.com/@armprf",
-    "telegram": "https://t.me/armprf"
+    "youtube": "https://youtube.com/@armprf"
   },
   "forms": {
     "contact": "https://docs.google.com/forms/d/e/TODO_CONTACT/viewform"
