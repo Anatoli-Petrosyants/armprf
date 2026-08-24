@@ -16,19 +16,36 @@ function stamp(date: Date, endOfDay = false): string {
   return d.toISOString().slice(0, 10).replace(/-/g, '');
 }
 
-/** RFC 5545 requires CRLF line endings and folding at 75 octets. */
+/**
+ * RFC 5545 folds at 75 *octets*, not characters. Armenian is three bytes per
+ * letter in UTF-8, so counting characters would produce lines that overflow —
+ * and splitting mid-sequence would corrupt them. Walk by code point, measure in
+ * bytes, and never break inside one.
+ */
 function fold(line: string): string {
   const escaped = line.replace(/\r?\n/g, '\\n');
-  if (escaped.length <= 73) return escaped;
+  const encoder = new TextEncoder();
+  if (encoder.encode(escaped).length <= 75) return escaped;
+
   const parts: string[] = [];
-  let rest = escaped;
-  parts.push(rest.slice(0, 73));
-  rest = rest.slice(73);
-  while (rest.length) {
-    parts.push(' ' + rest.slice(0, 72));
-    rest = rest.slice(72);
+  let current = '';
+  let bytes = 0;
+  let limit = 75;
+
+  for (const char of escaped) {
+    const size = encoder.encode(char).length;
+    if (bytes + size > limit) {
+      parts.push(current);
+      current = '';
+      bytes = 1; // the leading space on a continuation line counts
+      limit = 75;
+    }
+    current += char;
+    bytes += size;
   }
-  return parts.join('\r\n');
+  if (current) parts.push(current);
+
+  return parts.map((part, index) => (index === 0 ? part : ` ${part}`)).join('\r\n');
 }
 
 function escapeText(value: string): string {
