@@ -81,36 +81,44 @@
   },
   "board": [
     {
-      "name": "TODO(content): President",
+      "name": "Mishel Davudyan",
       "role": {
         "hy": "Նախագահ",
         "en": "President"
       },
-      "photo": "/img/brand/portraits/board-01.jpg"
+      "photo": "/img/brand/portraits/mishel-davudyan.jpg"
     },
     {
-      "name": "TODO(content): Match Director",
+      "name": "Artyom Mkrtchyan",
       "role": {
-        "hy": "Գլխավոր մրցավար",
-        "en": "Chief Match Director"
+        "hy": "Գործադիր տնօրեն",
+        "en": "Executive Director"
       },
-      "photo": "/img/brand/portraits/board-02.jpg"
+      "photo": "/img/brand/portraits/artyom-mkrtchyan.jpg"
     },
     {
-      "name": "TODO(content): Safety Officer",
-      "role": {
-        "hy": "Անվտանգության պատասխանատու",
-        "en": "Chief Safety Officer"
-      },
-      "photo": "/img/brand/portraits/board-03.jpg"
-    },
-    {
-      "name": "TODO(content): Secretary",
+      "name": "Arevik Mkrtchyan",
       "role": {
         "hy": "Քարտուղար",
         "en": "Secretary"
       },
-      "photo": "/img/brand/portraits/board-04.jpg"
+      "photo": "/img/brand/portraits/arevik-mkrtchyan.jpg"
+    },
+    {
+      "name": "Ishxan Gevorgyan",
+      "role": {
+        "hy": "Խորհրդի անդամ",
+        "en": "Board Member"
+      },
+      "photo": "/img/brand/portraits/ishxan-gevorgyan.jpg"
+    },
+    {
+      "name": "Sevan Iritsyan",
+      "role": {
+        "hy": "Խորհրդի անդամ",
+        "en": "Board Member"
+      },
+      "photo": "/img/brand/portraits/sevan-iritsyan.jpg"
     }
   ],
   "charterPdf": "/downloads/armprf-kanonadrutyun.pdf",

@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (74 total)
+## Slots (86 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -52,20 +52,32 @@ Aspect **1:1** · minimum **1000×1000** · Head and shoulders, eyes on the uppe
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `ani-melkonyan.jpg` | placeholder | `ani-melkonyan.en.md`, `ani-melkonyan.hy.md` |
-| `armen-hakobyan.jpg` | placeholder | `armen-hakobyan.en.md`, `armen-hakobyan.hy.md` |
-| `arsen-khachatryan.jpg` | placeholder | `arsen-khachatryan.en.md`, `arsen-khachatryan.hy.md` |
-| `board-01.jpg` | placeholder | `about.json` |
-| `board-02.jpg` | placeholder | `about.json` |
-| `board-03.jpg` | placeholder | `about.json` |
-| `board-04.jpg` | placeholder | `about.json` |
-| `davit-mkrtchyan.jpg` | placeholder | `davit-mkrtchyan.en.md`, `davit-mkrtchyan.hy.md` |
-| `gor-petrosyan.jpg` | placeholder | `gor-petrosyan.en.md`, `gor-petrosyan.hy.md` |
-| `hayk-avetisyan.jpg` | placeholder | `hayk-avetisyan.en.md`, `hayk-avetisyan.hy.md` |
-| `levon-baghdasaryan.jpg` | placeholder | `levon-baghdasaryan.en.md`, `levon-baghdasaryan.hy.md` |
-| `narek-grigoryan.jpg` | placeholder | `narek-grigoryan.en.md`, `narek-grigoryan.hy.md` |
-| `tigran-sargsyan.jpg` | placeholder | `tigran-sargsyan.en.md`, `tigran-sargsyan.hy.md` |
-| `vahe-hovhannisyan.jpg` | placeholder | `vahe-hovhannisyan.en.md`, `vahe-hovhannisyan.hy.md` |
+| `anatoli-petrosyants.jpg` | placeholder | `anatoli-petrosyants.en.md`, `anatoli-petrosyants.hy.md` |
+| `ara-hovhannisyan.jpg` | placeholder | `ara-hovhannisyan.en.md`, `ara-hovhannisyan.hy.md` |
+| `arbi-davudi.jpg` | placeholder | `arbi-davudi.en.md`, `arbi-davudi.hy.md` |
+| `arevik-mkrtchyan.jpg` | placeholder | `arevik-mkrtchyan.en.md`, `arevik-mkrtchyan.hy.md`, `about.json` |
+| `arman-gabrielyan.jpg` | placeholder | `arman-gabrielyan.en.md`, `arman-gabrielyan.hy.md` |
+| `arsen-durinyan.jpg` | placeholder | `arsen-durinyan.en.md`, `arsen-durinyan.hy.md` |
+| `arshak-khachaturyan.jpg` | placeholder | `arshak-khachaturyan.en.md`, `arshak-khachaturyan.hy.md` |
+| `artem-petrosyan.jpg` | placeholder | `artem-petrosyan.en.md`, `artem-petrosyan.hy.md` |
+| `artur-aleksanyan.jpg` | placeholder | `artur-aleksanyan.en.md`, `artur-aleksanyan.hy.md` |
+| `artur-shatvoryan.jpg` | placeholder | `artur-shatvoryan.en.md`, `artur-shatvoryan.hy.md` |
+| `artyom-mkrtchyan.jpg` | placeholder | `artyom-mkrtchyan.en.md`, `artyom-mkrtchyan.hy.md`, `about.json` |
+| `david-baghdasaryan.jpg` | placeholder | `david-baghdasaryan.en.md`, `david-baghdasaryan.hy.md` |
+| `edgar-sargsyan.jpg` | placeholder | `edgar-sargsyan.en.md`, `edgar-sargsyan.hy.md` |
+| `gevorg-ter-sahakyan.jpg` | placeholder | `gevorg-ter-sahakyan.en.md`, `gevorg-ter-sahakyan.hy.md` |
+| `gor-ispiryan.jpg` | placeholder | `gor-ispiryan.en.md`, `gor-ispiryan.hy.md` |
+| `hakob-ter-grigoryan.jpg` | placeholder | `hakob-ter-grigoryan.en.md`, `hakob-ter-grigoryan.hy.md` |
+| `hrachya-khachatryan.jpg` | placeholder | `hrachya-khachatryan.en.md`, `hrachya-khachatryan.hy.md` |
+| `ishxan-gevorgyan.jpg` | placeholder | `ishxan-gevorgyan.en.md`, `ishxan-gevorgyan.hy.md`, `about.json` |
+| `maria-marutyan.jpg` | placeholder | `maria-marutyan.en.md`, `maria-marutyan.hy.md` |
+| `mesrop-karapetyan.jpg` | placeholder | `mesrop-karapetyan.en.md`, `mesrop-karapetyan.hy.md` |
+| `mishel-davudyan.jpg` | placeholder | `mishel-davudyan.en.md`, `mishel-davudyan.hy.md`, `about.json` |
+| `narek-galstyan.jpg` | placeholder | `narek-galstyan.en.md`, `narek-galstyan.hy.md` |
+| `norayr-hovhannes.jpg` | placeholder | `norayr-hovhannes.en.md`, `norayr-hovhannes.hy.md` |
+| `ruben-gevorgyan.jpg` | placeholder | `ruben-gevorgyan.en.md`, `ruben-gevorgyan.hy.md` |
+| `sevak-sevanyan.jpg` | placeholder | `sevak-sevanyan.en.md`, `sevak-sevanyan.hy.md` |
+| `sevan-iritsyan.jpg` | placeholder | `sevan-iritsyan.en.md`, `sevan-iritsyan.hy.md`, `about.json` |
 
 ### `/img/challenges/`
 
