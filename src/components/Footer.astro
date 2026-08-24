@@ -1,7 +1,7 @@
 ---
 import Logo from '@/components/Logo.astro';
-import { localizePath, useTranslations, type Lang } from '@/lib/i18n';
-import { nav, site, siteName, slogan, socialLinks, visibleNav } from '@/lib/site';
+import { useTranslations, type Lang } from '@/lib/i18n';
+import { site, socialLinks } from '@/lib/site';
 
 interface Props {
   lang: Lang;
@@ -9,18 +9,13 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const year = new Date().getUTCFullYear();
-const links = visibleNav(nav.footer);
 ---
 
 <footer class="mt-24 border-t border-[var(--color-border)] bg-[var(--color-surface)]">
-  <div class="wrap grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
+  <div class="wrap grid gap-10 py-12 md:grid-cols-[1.4fr_1fr]">
     <div>
       <Logo class="h-12" />
-      <p class="mt-4 max-w-sm text-sm leading-relaxed text-[var(--color-muted)]">
-        {siteName(lang)}
-      </p>
-      <p class="mt-1 text-sm text-[var(--color-muted)]">{slogan(lang)}</p>
-      <ul class="mt-5 flex flex-wrap gap-3 text-sm">
+      <ul class="mt-6 flex flex-wrap gap-3 text-sm">
         {socialLinks.map((link) => (
           <li>
             <a
@@ -34,22 +29,6 @@ const links = visibleNav(nav.footer);
         ))}
       </ul>
     </div>
-
-    <nav aria-label={t('nav.menu')}>
-      <h2 class="eyebrow">{t('nav.menu')}</h2>
-      <ul class="mt-4 grid gap-2 text-sm">
-        {links.map((item) => (
-          <li>
-            <a
-              href={localizePath(item.path, lang)}
-              class="text-[var(--color-muted)] hover:text-[var(--color-ink)]"
-            >
-              {t(item.key)}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
 
     <div>
       <h2 class="eyebrow">{t('contact.title')}</h2>
