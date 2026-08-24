@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (77 total)
+## Slots (78 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -203,6 +203,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 | `2025-10-22-aro-periyan.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24-maria-marutyan.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+| `2026-06-18-tvank-175-mpa-vanquish.jpg` | placeholder | `2026-06-18-tvank-175-mpa-vanquish.en.md`, `2026-06-18-tvank-175-mpa-vanquish.hy.md` |
 | `2026-06-28-annual-meeting.jpg` | placeholder | `2026-06-28-annual-meeting.en.md`, `2026-06-28-annual-meeting.hy.md` |
 
 ### `/img/rimfire/matches/`
