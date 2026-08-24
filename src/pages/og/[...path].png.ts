@@ -6,19 +6,19 @@ import { LOCALES } from '@/lib/i18n';
 
 /**
  * Build-time social cards. The path mirrors the page it belongs to, minus the
- * locale — the Armenian card is the canonical one, since `/` is Armenian.
+ * locale — the English card is the canonical one, since `/` is English.
  */
 export async function getStaticPaths() {
   const paths: Array<{ params: { path: string }; props: { eyebrow: string; title: string; meta?: string } }> = [];
 
-  for (const post of await getPosts('hy')) {
+  for (const post of await getPosts('en')) {
     paths.push({
       params: { path: `blog/${post.slug}` },
-      props: { eyebrow: post.data.tags[0], title: post.data.title, meta: formatDateShort(post.data.date, 'hy') },
+      props: { eyebrow: post.data.tags[0], title: post.data.title, meta: formatDateShort(post.data.date, 'en') },
     });
   }
 
-  for (const challenge of await getChallenges('hy')) {
+  for (const challenge of await getChallenges('en')) {
     paths.push({
       params: { path: `leaderboards/${challenge.data.id}` },
       props: {

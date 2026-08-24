@@ -1,0 +1,45 @@
+---
+/**
+ * English used to live under `/en` while Armenian held the root. The default
+ * flipped, so every previously indexed `/en/...` URL keeps a stub here that
+ * forwards to the same page at the root instead of 404-ing.
+ */
+import { getChallenges, getPosts } from '@/lib/content';
+import { PER_PAGE, tagCounts } from '@/lib/news';
+import { absolute } from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const posts = await getPosts('en');
+  const challenges = await getChallenges('en');
+
+  const paths = ['', 'about', 'athletes', 'contact', 'blog', 'leaderboards'];
+  const pages = Math.max(1, Math.ceil(posts.length / PER_PAGE));
+  for (let page = 2; page <= pages; page += 1) paths.push(`blog/page/${page}`);
+  for (const { tag } of tagCounts(posts)) paths.push(`blog/tag/${tag}`);
+  for (const post of posts) paths.push(`blog/${post.slug}`);
+  for (const challenge of challenges) paths.push(`leaderboards/${challenge.data.id}`);
+
+  return paths.map((path) => ({
+    params: { path: path || undefined },
+    props: { target: `/${path}` },
+  }));
+}
+
+const { target } = Astro.props as { target: string };
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Moved</title>
+    <link rel="canonical" href={absolute(target)} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <meta name="robots" content="noindex, follow" />
+    <script is:inline define:vars={{ target }}>
+      location.replace(target + location.search + location.hash);
+    </script>
+  </head>
+  <body>
+    <p>This page moved to <a href={target}>{target}</a>.</p>
+  </body>
+</html>

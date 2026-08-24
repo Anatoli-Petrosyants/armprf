@@ -116,7 +116,7 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
   document.querySelectorAll<HTMLAnchorElement>('[data-lang-pick]').forEach((link) => {
     link.addEventListener('click', () => {
       try {
-        localStorage.setItem(KEY_LANG, link.dataset.langPick ?? 'hy');
+        localStorage.setItem(KEY_LANG, link.dataset.langPick ?? 'en');
       } catch {}
     });
   });

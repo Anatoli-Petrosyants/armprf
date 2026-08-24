@@ -1,9 +1,9 @@
 import hy from '@/content/config/i18n/hy.json';
 import en from '@/content/config/i18n/en.json';
 
-export const LOCALES = ['hy', 'en'] as const;
+export const LOCALES = ['en', 'hy'] as const;
 export type Lang = (typeof LOCALES)[number];
-export const DEFAULT_LANG: Lang = 'hy';
+export const DEFAULT_LANG: Lang = 'en';
 
 /** BCP-47 tags for <html lang> and hreflang. */
 export const HTML_LANG: Record<Lang, string> = { hy: 'hy-AM', en: 'en' };
@@ -15,7 +15,7 @@ export function isLang(value: unknown): value is Lang {
 }
 
 /**
- * Look up a UI string. Missing keys fall back to Armenian, then to the key
+ * Look up a UI string. Missing keys fall back to English, then to the key
  * itself — a missing translation degrades to readable text, never to a blank.
  */
 export function useTranslations(lang: Lang) {
@@ -30,17 +30,21 @@ export function useTranslations(lang: Lang) {
 }
 
 /**
- * Armenian lives at the site root, English under `/en`. Both are real static
+ * English lives at the site root, Armenian under `/hy`. Both are real static
  * pages, so language switching works with JavaScript disabled.
  */
 export function localizePath(path: string, lang: Lang): string {
   const clean = path === '/' ? '' : path.replace(/\/+$/, '');
-  return lang === DEFAULT_LANG ? clean || '/' : `/en${clean}` || '/en';
+  return lang === DEFAULT_LANG ? clean || '/' : `/${lang}${clean}`;
 }
+
+/** Every prefix a non-default language can occupy, e.g. `/hy`. */
+const PREFIXED = LOCALES.filter((lang) => lang !== DEFAULT_LANG);
+const PREFIX_RE = new RegExp(`^/(?:${PREFIXED.join('|')})(?=/|$)`);
 
 /** Strip the locale prefix, giving the language-neutral path. */
 export function neutralPath(pathname: string): string {
-  const stripped = pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+  const stripped = pathname.replace(PREFIX_RE, '') || '/';
   return stripped.replace(/\/+$/, '') || '/';
 }
 

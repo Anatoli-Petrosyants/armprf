@@ -101,11 +101,11 @@ const graph = [organizationLd(lang), ...jsonLd];
             document.documentElement.dataset.theme = theme;
           }
           // Language preference is only ever acted on at the site root, so every
-          // deep link keeps the language it was shared in and crawlers see hy.
+          // deep link keeps the language it was shared in and crawlers see en.
           var lang = localStorage.getItem('armprf:lang');
           var path = location.pathname.replace(/\/+$/, '');
-          if (lang === 'en' && (path === '' || path === '/index.html')) {
-            location.replace('/en' + location.search + location.hash);
+          if (lang === 'hy' && (path === '' || path === '/index.html')) {
+            location.replace('/hy' + location.search + location.hash);
           }
         } catch (e) {}
       })();

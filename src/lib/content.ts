@@ -12,7 +12,7 @@ export function slugOf(id: string): string {
 }
 
 /**
- * Load a bilingual collection for one language, falling back to the Armenian
+ * Load a bilingual collection for one language, falling back to the English
  * file when a translation is missing. `translated` is false on a fallback so
  * pages can show a "not translated yet" notice instead of silently lying.
  */

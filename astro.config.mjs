@@ -13,23 +13,26 @@ const { featuredChallenge } = JSON.parse(
 
 // armprf.com — static site, deployed to GitHub Pages.
 // Locale routing is handled manually via `[...locale]` rest params so that
-// Armenian lives at the root (`/about`) and English is prefixed (`/en/about`).
+// English lives at the root (`/about`) and Armenian is prefixed (`/hy/about`).
 export default defineConfig({
   site: 'https://armprf.com',
   trailingSlash: 'ignore',
   build: { format: 'directory' },
   redirects: {
     '/leaderboards': `/leaderboards/${featuredChallenge}`,
-    '/en/leaderboards': `/en/leaderboards/${featuredChallenge}`,
+    '/hy/leaderboards': `/hy/leaderboards/${featuredChallenge}`,
   },
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: 'hy',
-        locales: { hy: 'hy-AM', en: 'en' },
+        defaultLocale: 'en',
+        locales: { en: 'en', hy: 'hy-AM' },
       },
-      // The redirect stub is not a page anyone should land on from search.
-      filter: (page) => !page.includes('/404') && !/\/leaderboards\/?$/.test(page),
+      // Redirect stubs are not pages anyone should land on from search.
+      filter: (page) =>
+        !page.includes('/404') &&
+        !/\/leaderboards\/?$/.test(page) &&
+        !/\/en(\/|$)/.test(page),
     }),
   ],
   image: {

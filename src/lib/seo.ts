@@ -1,17 +1,17 @@
 import { site } from './site';
-import { HTML_LANG, LOCALES, localizePath, type Lang } from './i18n';
+import { DEFAULT_LANG, HTML_LANG, LOCALES, localizePath, type Lang } from './i18n';
 
 export function absolute(path: string): string {
   return new URL(path, site.url).href;
 }
 
-/** hreflang set for one language-neutral path, plus x-default on Armenian. */
+/** hreflang set for one language-neutral path, plus x-default on English. */
 export function alternates(neutral: string) {
   const links = LOCALES.map((lang) => ({
     hreflang: HTML_LANG[lang],
     href: absolute(localizePath(neutral, lang)),
   }));
-  links.push({ hreflang: 'x-default', href: absolute(localizePath(neutral, 'hy')) });
+  links.push({ hreflang: 'x-default', href: absolute(localizePath(neutral, DEFAULT_LANG)) });
   return links;
 }
 
