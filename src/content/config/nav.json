@@ -11,21 +11,16 @@
     { "key": "nav.disciplines", "path": "/disciplines" },
     { "key": "nav.gettingStarted", "path": "/getting-started" },
     { "key": "nav.rules", "path": "/rules-and-safety" },
-    { "key": "nav.range", "path": "/range" },
-    { "key": "nav.sponsors", "path": "/sponsors" },
-    { "key": "nav.downloads", "path": "/downloads" },
-    { "key": "nav.faq", "path": "/faq" },
     { "key": "nav.shop", "path": "/shop", "flag": "showShop" }
   ],
-  "cta": { "key": "nav.join", "path": "/join" },
+  "cta": { "key": "nav.contact", "path": "/contact" },
   "footer": [
     { "key": "nav.about", "path": "/about" },
     { "key": "nav.events", "path": "/events" },
     { "key": "nav.leaderboards", "path": "/leaderboards" },
     { "key": "nav.news", "path": "/news" },
+    { "key": "nav.gallery", "path": "/gallery" },
     { "key": "nav.rules", "path": "/rules-and-safety" },
-    { "key": "nav.downloads", "path": "/downloads" },
-    { "key": "nav.join", "path": "/join" },
     { "key": "nav.contact", "path": "/contact" }
   ]
 }

@@ -4,7 +4,6 @@ import Section from '@/components/Section.astro';
 import PostCard from '@/components/PostCard.astro';
 import EventCard from '@/components/EventCard.astro';
 import Leaderboard from '@/components/Leaderboard.astro';
-import SponsorStrip from '@/components/SponsorStrip.astro';
 import SmartImage from '@/components/SmartImage.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges, getEvents, getPosts, splitEvents } from '@/lib/content';
@@ -65,18 +64,9 @@ const icons: Record<string, string> = {
         {site.description[lang]}
       </p>
       <div class="mt-9 flex flex-wrap gap-3">
-        <a href={localizePath('/join', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
+        <a href={localizePath('/contact', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
         <a href={localizePath('/leaderboards', lang)} class="btn btn-ghost">{t('home.hero.secondary')}</a>
       </div>
-
-      <dl class="mt-14 flex flex-wrap gap-x-12 gap-y-4">
-        {home.stats.map((stat) => (
-          <div>
-            <dt class="text-[0.6875rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{stat.label[lang]}</dt>
-            <dd class="tnum mt-1 text-3xl font-bold text-[var(--color-accent)]">{stat.value}</dd>
-          </div>
-        ))}
-      </dl>
     </div>
   </section>
 
@@ -167,19 +157,13 @@ const icons: Record<string, string> = {
     </div>
   </Section>
 
-  {site.flags.showSponsorStrip && (
-    <Section eyebrow={t('home.sponsors.eyebrow')} href={localizePath('/sponsors', lang)} linkLabel={t('common.viewAll')}>
-      <SponsorStrip lang={lang} />
-    </Section>
-  )}
-
   <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
     <div class="wrap flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between">
       <div>
         <p class="eyebrow">{t('home.join.eyebrow')}</p>
-        <h2 class="mt-2 max-w-xl text-3xl md:text-4xl">{t('join.title')}</h2>
+        <h2 class="mt-2 max-w-xl text-3xl md:text-4xl">{t('contact.write')}</h2>
       </div>
-      <a href={localizePath('/join', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
+      <a href={localizePath('/contact', lang)} class="btn btn-primary">{t('home.hero.cta')}</a>
     </div>
   </section>
 </BaseLayout>

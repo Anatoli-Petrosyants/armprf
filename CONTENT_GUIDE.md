@@ -253,14 +253,14 @@ Everything site-wide lives in `src/content/config/site.json`.
   `1` or `2`, or edit the text.
 - **Email, phone, address, map** — under `contact`.
 - **Instagram, Facebook, YouTube, Telegram** — under `social`.
-- **Google Form links** — under `forms`. Replace every `TODO_` placeholder with the real
-  form URL.
+- **Google Form links** — under `forms`: `scoreSubmission` for the leaderboard "submit your
+  score" button, `contact` for the optional form on the Contact page. Replace both `TODO_`
+  placeholders with the real form URLs.
 - **Switches** — under `flags`:
   - `showShop` — turns the Shop page and its nav link on or off.
   - `showContactForm` — adds a Google Form button next to the email link on Contact.
   - `showAthletePhotos` — hides every athlete portrait if you would rather not publish
     faces.
-  - `showSponsorStrip` — the sponsor row on the home page.
 - **Featured challenge and current season** — `featuredChallenge`, `currentSeason`.
 
 Other settings files, all in `src/content/config/`:
@@ -271,12 +271,7 @@ Other settings files, all in `src/content/config/`:
 | `home.json` | Home page mission tiles and the three numbers under the hero |
 | `about.json` | Mission text, goals, board, history, safety statement |
 | `rules.json` | The Rules & Safety page |
-| `membership.json` | Membership tiers and requirements |
-| `sponsors.json` | Sponsors, tiers, and the sponsorship pitch |
-| `range.json` | Range specs, build-out timeline, facilities |
 | `disciplines.json` | Disciplines, the getting-started steps, the glossary |
-| `faq.json` | FAQ |
-| `downloads.json` | The Downloads page |
 | `gallery.json` | Gallery photos, tags and videos |
 | `i18n/hy.json`, `i18n/en.json` | Every button and label on the site |
 

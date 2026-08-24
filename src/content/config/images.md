@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (107 total)
+## Slots (99 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -75,19 +75,6 @@ Aspect **1:1** · minimum **1000×1000** · Head and shoulders, eyes on the uppe
 | `narek-grigoryan.jpg` | placeholder | `narek-grigoryan.en.md`, `narek-grigoryan.hy.md` |
 | `tigran-sargsyan.jpg` | placeholder | `tigran-sargsyan.en.md`, `tigran-sargsyan.hy.md` |
 | `vahe-hovhannisyan.jpg` | placeholder | `vahe-hovhannisyan.en.md`, `vahe-hovhannisyan.hy.md` |
-
-### `/img/brand/sponsors/`
-
-Aspect **12:5** · minimum **SVG or 480×200** · Monochrome, uses currentColor when SVG.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `sponsor-ammo.svg` | placeholder | `sponsors.json` |
-| `sponsor-gunsmith.svg` | placeholder | `sponsors.json` |
-| `sponsor-logistics.svg` | placeholder | `sponsors.json` |
-| `sponsor-optics.svg` | placeholder | `sponsors.json` |
-| `sponsor-outdoor.svg` | placeholder | `sponsors.json` |
-| `sponsor-steel.svg` | placeholder | `sponsors.json` |
 
 ### `/img/challenges/`
 
@@ -259,6 +246,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | `2025-07-13_match-targets_todo-content_02.jpg` | placeholder | `gallery.json` |
 | `2025-09-21_match-targets_todo-content_01.jpg` | placeholder | `gallery.json` |
 | `2026-05-17_match-targets_todo-content_01.jpg` | placeholder | `2026-05-17-gyumri-round-2.en.md`, `2026-05-17-gyumri-round-2.hy.md` |
+| `photo.jpg` | missing | `images.md` |
 
 ### `/img/match/timers-and-scoring/`
 
@@ -289,8 +277,6 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2025-06_site_after.jpg` | placeholder | `range.json` |
-| `2025-06_site_before.jpg` | placeholder | `range.json` |
 | `2026-04-12_range-before-after_todo-content_02.jpg` | placeholder | `gallery.json` |
 | `2026-05-17_range-before-after_todo-content_01.jpg` | placeholder | `gallery.json` |
 
@@ -302,8 +288,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | --- | --- | --- |
 | `2025-07-13_range-construction-progress_todo-content_02.jpg` | placeholder | `gallery.json` |
 | `2025-09-21_range-construction-progress_todo-content_01.jpg` | placeholder | `gallery.json` |
-| `2025-09_earthworks_01.jpg` | placeholder | `range.json` |
-| `2026-03_berms_01.jpg` | placeholder | `range.json`, `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
+| `2026-03_berms_01.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
 
 ### `/img/range/facilities/`
 

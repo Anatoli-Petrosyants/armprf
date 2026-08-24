@@ -42,7 +42,7 @@ src/
 │  ├─ challenges/   <id>.hy.md   + <id>.en.md        standing challenges (rules in the body)
 │  ├─ athletes/     <slug>.hy.md + <slug>.en.md      shooter profiles
 │  ├─ results/      <challenge-id>.json              flat arrays of leaderboard rows
-│  └─ config/       site.json, nav.json, i18n/*.json, and the per-page data files
+│  └─ config/       site.json, nav.json, i18n/*.json, home/about/rules/disciplines/gallery data
 ├─ assets/img/      every photograph, optimized by the build
 ├─ components/      presentational Astro components
 ├─ layouts/         BaseLayout — head, meta, JSON-LD, header, footer

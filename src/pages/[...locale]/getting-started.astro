@@ -5,7 +5,6 @@ import Section from '@/components/Section.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { breadcrumbLd } from '@/lib/seo';
 import disciplines from '@/content/config/disciplines.json';
-import { site } from '@/lib/site';
 
 export const getStaticPaths = localePaths;
 const { lang } = Astro.props as { lang: Lang };
@@ -64,7 +63,7 @@ const gs = disciplines.gettingStarted;
     <div class="flex flex-wrap gap-3">
       <a href={localizePath('/events', lang)} class="btn btn-primary">{t('events.title')}</a>
       <a href={localizePath('/disciplines#glossary', lang)} class="btn btn-ghost">{lang === 'hy' ? 'Տերմիններ' : 'Glossary'}</a>
-      <a href={site.forms.membership} rel="noopener" class="btn btn-ghost">{t('join.apply')}</a>
+      <a href={localizePath('/contact', lang)} class="btn btn-ghost">{t('contact.title')}</a>
     </div>
   </Section>
 </BaseLayout>

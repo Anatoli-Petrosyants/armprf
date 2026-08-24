@@ -5,7 +5,6 @@ import Section from '@/components/Section.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { breadcrumbLd } from '@/lib/seo';
 import { site, socialLinks } from '@/lib/site';
-import sponsors from '@/content/config/sponsors.json';
 
 export const getStaticPaths = localePaths;
 const { lang } = Astro.props as { lang: Lang };
@@ -75,15 +74,4 @@ const mailto = `mailto:${site.contact.email}?subject=${subject}`;
     </div>
     <a href={site.contact.mapLinkUrl} rel="noopener" class="btn btn-ghost mt-4">{t('events.map')} ↗</a>
   </Section>
-
-  <section class="border-y border-[var(--color-border)] bg-[var(--color-surface)]">
-    <div class="wrap py-14">
-      <p class="eyebrow">{t('contact.sponsorBlock')}</p>
-      <p class="mt-4 max-w-2xl leading-relaxed text-[var(--color-muted)]">{sponsors.pitch[lang]}</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href={site.forms.sponsorship} rel="noopener" class="btn btn-primary">{t('sponsors.become')}</a>
-        <a href={localizePath('/sponsors', lang)} class="btn btn-ghost">{t('sponsors.title')}</a>
-      </div>
-    </div>
-  </section>
 </BaseLayout>

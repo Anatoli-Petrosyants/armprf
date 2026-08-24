@@ -15,14 +15,21 @@
     "en": "The Armenian Precision Rifle Federation develops long-range precision rifle shooting as a disciplined sport — transparent matches, published results, and a safety standard that comes before any score."
   },
   "foundingYear": 2023,
-
   "slogans": [
-    { "hy": "Ճշգրտությունը սովորություն է", "en": "Precision is a habit." },
-    { "hy": "Մեկ կրակոց․ մեկ չափանիշ", "en": "One shot. One standard." },
-    { "hy": "Կերտիր հրաձիգին, ոչ թե միավորը", "en": "Build the shooter, not the score." }
+    {
+      "hy": "Ճշգրտությունը սովորություն է",
+      "en": "Precision is a habit."
+    },
+    {
+      "hy": "Մեկ կրակոց․ մեկ չափանիշ",
+      "en": "One shot. One standard."
+    },
+    {
+      "hy": "Կերտիր հրաձիգին, ոչ թե միավորը",
+      "en": "Build the shooter, not the score."
+    }
   ],
   "activeSloganIndex": 0,
-
   "hero": {
     "image": "/img/brand/hero/hero-01.jpg",
     "alt": {
@@ -34,7 +41,6 @@
       "en": "Armenian Precision Rifle Federation"
     }
   },
-
   "contact": {
     "email": "info@armprf.com",
     "phone": "+374 00 000000",
@@ -43,35 +49,30 @@
       "hy": "TODO(content): հրաձգարանի հասցեն, Հայաստան",
       "en": "TODO(content): range address, Armenia"
     },
-    "geo": { "lat": 40.1772, "lon": 44.5035 },
+    "geo": {
+      "lat": 40.1772,
+      "lon": 44.5035
+    },
     "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=44.35%2C40.05%2C44.65%2C40.30&layer=mapnik&marker=40.1772%2C44.5035",
     "mapLinkUrl": "https://www.openstreetmap.org/?mlat=40.1772&mlon=44.5035#map=11/40.1772/44.5035"
   },
-
   "social": {
     "instagram": "https://instagram.com/armprf",
     "facebook": "https://facebook.com/armprf",
     "youtube": "https://youtube.com/@armprf",
     "telegram": "https://t.me/armprf"
   },
-
   "forms": {
-    "membership": "https://docs.google.com/forms/d/e/TODO_MEMBERSHIP/viewform",
     "scoreSubmission": "https://docs.google.com/forms/d/e/TODO_SCORE/viewform",
-    "sponsorship": "https://docs.google.com/forms/d/e/TODO_SPONSOR/viewform",
     "contact": "https://docs.google.com/forms/d/e/TODO_CONTACT/viewform"
   },
-
   "flags": {
     "showContactForm": false,
     "showShop": false,
-    "showAthletePhotos": true,
-    "showSponsorStrip": true
+    "showAthletePhotos": true
   },
-
   "featuredChallenge": "blackjack-21",
   "currentSeason": 2026,
-
   "og": {
     "defaultImage": "/og-default.jpg"
   }
