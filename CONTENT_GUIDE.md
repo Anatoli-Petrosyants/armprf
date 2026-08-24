@@ -150,8 +150,9 @@ by themselves. Available column names: `rank`, `name`, `club`, `division`, `scor
 `hits`, `misses`, `percent`, `time`, `date`, `rifle`, `caliber`, `notes`, `proof`,
 `verified`.
 
-To feature a different challenge on the home page, change `featuredChallenge` in
-`src/content/config/site.json` to its `id`.
+To feature a different challenge, change `featuredChallenge` in
+`src/content/config/site.json` to its `id`. That id decides both the table shown on the
+home page and which challenge `/leaderboards` opens on.
 
 ---
 

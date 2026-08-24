@@ -87,6 +87,10 @@ array element into its own collection entry and stamps the challenge id from the
 - `sortDirection` handles low-wins challenges without a special case.
 - A challenge declares its own `columns`, so two challenges can show completely different
   tables through the same component.
+- There is no overview page. `/leaderboards` is a redirect to the challenge named by
+  `featuredChallenge` in site.json — astro.config reads that same file, so the id lives in
+  one place — and the tab strip on the challenge page switches between them. The redirect
+  stub is `noindex`, canonicalised to its target, and excluded from the sitemap.
 - A column carrying the same value in every row earns no space: `club` is off the board
   while the federation is the only club, and the club filter hides itself for the same
   reason. `verified` and `proofUrl` are recorded on every row but not displayed; they are
