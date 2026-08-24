@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (74 total)
+## Slots (77 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -108,6 +108,8 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | `2025-10-22_community-group-photos_aro-periyan_01.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+| `2026-06-28_community-group-photos_annual-meeting_01.jpg` | placeholder | `2026-06-28-annual-meeting.en.md`, `2026-06-28-annual-meeting.hy.md` |
+| `2026-06-28_community-group-photos_annual-meeting_02.jpg` | placeholder | `2026-06-28-annual-meeting.en.md`, `2026-06-28-annual-meeting.hy.md` |
 
 ### `/img/community/international-guests/`
 
@@ -115,7 +117,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `2024-11-13_community-international-guests_iprf-membership_01.jpg` | placeholder | `2024-11-13-iprf-membership.en.md`, `2024-11-13-iprf-membership.hy.md` |
+| `2024-11-13_community-international-guests_iprf-membership_01.jpg` | placeholder | `about.json`, `2024-11-13-iprf-membership.en.md`, `2024-11-13-iprf-membership.hy.md` |
 | `2025-05-07_community-international-guests_geprf_01.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
 | `2025-05-07_community-international-guests_geprf_02.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
 | `2025-05-07_community-international-guests_geprf_03.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
@@ -201,6 +203,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 | `2025-10-22-aro-periyan.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24-maria-marutyan.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+| `2026-06-28-annual-meeting.jpg` | placeholder | `2026-06-28-annual-meeting.en.md`, `2026-06-28-annual-meeting.hy.md` |
 
 ### `/img/rimfire/matches/`
 
