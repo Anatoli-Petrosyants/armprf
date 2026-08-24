@@ -89,18 +89,14 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
       <h1 class="mt-5 max-w-3xl text-4xl leading-tight md:text-5xl">{data.title}</h1>
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">{data.summary}</p>
 
-      <dl class="mt-8 flex flex-wrap gap-x-10 gap-y-4">
-        <div>
-          <dt class="text-[0.625rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{t('lb.scoring')}</dt>
-          <dd class="mt-1 font-bold">{t(`lb.${data.scoring === 'points' ? 'score' : data.scoring}`)}</dd>
-        </div>
-        {data.maxScore !== undefined && (
-          <div>
-            <dt class="text-[0.625rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{t('lb.maxScore')}</dt>
-            <dd class="tnum mt-1 font-bold text-[var(--color-accent-text)]">{data.maxScore}</dd>
-          </div>
-        )}
-      </dl>
+      {data.maxScore !== undefined && (
+        <dl class="mt-8 inline-flex items-center gap-4 rounded-[var(--radius-card)] border border-[var(--color-accent)] bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)] px-5 py-3">
+          <dt class="text-[0.625rem] uppercase leading-tight tracking-[0.14em] text-[var(--color-muted)]">
+            {t('lb.maxScore')}
+          </dt>
+          <dd class="tnum text-4xl font-bold leading-none text-[var(--color-accent-text)]">{data.maxScore}</dd>
+        </dl>
+      )}
     </div>
   </header>
 
