@@ -11,7 +11,6 @@ const { lang } = Astro.props as { lang: Lang };
 const t = useTranslations(lang);
 
 const athletes = await getAthletes(lang);
-const showClub = new Set(athletes.map((a) => a.data.club)).size > 1;
 ---
 
 <BaseLayout
@@ -31,15 +30,11 @@ const showClub = new Set(athletes.map((a) => a.data.club)).size > 1;
         <li>
           <AthleteCard
             lang={lang}
-            slug={athlete.data.slug}
             name={athlete.data.name}
-            club={athlete.data.club}
-            divisions={athlete.data.divisions}
             photo={athlete.data.photo}
             photoAlt={athlete.data.photoAlt}
-            bestFinishes={athlete.data.bestFinishes}
             hometown={athlete.data.hometown}
-            showClub={showClub}
+            memberSince={athlete.data.memberSince}
           />
         </li>
       ))}

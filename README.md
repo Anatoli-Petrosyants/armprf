@@ -40,7 +40,7 @@ src/
 ├─ content/
 │  ├─ posts/        <slug>.hy.md + <slug>.en.md      blog
 │  ├─ challenges/   <id>.hy.md   + <id>.en.md        standing challenges (rules in the body)
-│  ├─ athletes/     <slug>.hy.md + <slug>.en.md      shooter profiles
+│  ├─ athletes/     <slug>.hy.md + <slug>.en.md      roster: photo, name, city, year
 │  ├─ results/      <challenge-id>.json              flat arrays of leaderboard rows
 │  └─ config/       site.json, nav.json, i18n/*.json, home and about data
 ├─ assets/img/      every photograph, optimized by the build
@@ -89,7 +89,10 @@ array element into its own collection entry and stamps the challenge id from the
   tables through the same component.
 - A column carrying the same value in every row earns no space: `club` is off the board
   while the federation is the only club, and the club filter hides itself for the same
-  reason. Athlete cards fall back to hometown.
+  reason.
+- Names are shown, not linked. Athletes are a roster of cards with no detail page, so
+  `athleteNames()` only maps the Latin spelling recorded at a match to the reader's
+  language.
 
 The table is rendered server-side in full. Sorting, search, division/club/season filters
 and the all-time / current-season toggle are progressive enhancements over rows that are

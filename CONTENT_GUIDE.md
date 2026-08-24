@@ -156,31 +156,26 @@ To feature a different challenge on the home page, change `featuredChallenge` in
 
 ## Add an athlete
 
-Two files in `src/content/athletes/`, named after the slug:
+Athletes are a roster, not a set of profile pages: a photograph, a name, a city and the
+year they joined. Two files in `src/content/athletes/`, named after the slug:
 
 ```markdown
 ---
 name: "Armen Hakobyan"
 slug: "armen-hakobyan"      # same in both language files
-club: "Yerevan PRC"
-divisions: ["Open"]
+club: "ARMPRF"
 photo: "/img/brand/portraits/armen-hakobyan.jpg"
-photoAlt: "Armen Hakobyan, Yerevan PRC shooter, portrait"
+photoAlt: "Armen Hakobyan, ARMPRF shooter, portrait"
 memberSince: 2023
 hometown: "Yerevan"
-rifle: "Tikka T3x TAC A1"
-caliber: "6.5 Creedmoor"
-bestFinishes:
-  - "1st — Gyumri 2026"
-instagram: "https://instagram.com/..."   # optional
 ---
-
-A short paragraph about them.
 ```
 
-Their leaderboard appearances are collected automatically from the results files.
+Nothing goes below the second `---`. There is no body to write.
 
----
+Write the name in Armenian in the `.hy.md` file and in Latin in the `.en.md` file. Results
+files record the Latin spelling, and the leaderboard swaps in the Armenian one on Armenian
+pages by matching the slug — so you never repeat a name in a results file.
 
 ## Add a photo
 

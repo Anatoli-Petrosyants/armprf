@@ -8,7 +8,7 @@ import SmartImage from '@/components/SmartImage.astro';
 import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
-import { athleteMaps } from '@/lib/athletes';
+import { athleteNames } from '@/lib/athletes';
 import { breadcrumbLd } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -32,7 +32,7 @@ await assertResultsValid();
 const data = challenge.data;
 const { Content } = await render(challenge);
 const rows = await getRankedRows(data);
-const { slugs, names } = await athleteMaps(lang);
+const names = await athleteNames(lang);
 const neutral = `/leaderboards/${data.id}`;
 const others = (await getChallenges(lang)).filter((c) => c.data.id !== data.id);
 ---
@@ -111,7 +111,6 @@ const others = (await getChallenges(lang)).filter((c) => c.data.id !== data.id);
       scoring={data.scoring}
       unit={data.unit}
       seasonal={data.seasonal}
-      athleteSlugs={slugs}
       displayNames={names}
     />
   </section>

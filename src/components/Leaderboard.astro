@@ -14,14 +14,13 @@ interface Props {
   seasonal?: boolean;
   /** Show only the first N rows and hide the controls (home page teaser). */
   limit?: number;
-  athleteSlugs?: Record<string, string>;
   /** Localized display names keyed by the lowercase name used in results. */
   displayNames?: Record<string, string>;
 }
 
 const {
   lang, challengeId, columns, rows, scoring, unit,
-  seasonal = false, limit, athleteSlugs = {}, displayNames = {},
+  seasonal = false, limit, displayNames = {},
 } = Astro.props;
 const t = useTranslations(lang);
 
@@ -190,16 +189,10 @@ function sortValue(row: RankedRow, column: string): string {
                 );
               }
               if (column === 'name') {
-                const key = row.name.trim().toLowerCase();
-                const slug = athleteSlugs[key];
-                const shown = displayNames[key] ?? row.name;
+                const shown = displayNames[row.name.trim().toLowerCase()] ?? row.name;
                 return (
                   <td class={`${base} font-bold`} data-label={t('lb.name')}>
-                    {slug ? (
-                      <a href={slug} class="underline-offset-4 hover:text-[var(--color-accent-text)] hover:underline">{shown}</a>
-                    ) : (
-                      shown
-                    )}
+                    {shown}
                   </td>
                 );
               }

@@ -5,7 +5,7 @@ import Leaderboard from '@/components/Leaderboard.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
-import { athleteMaps } from '@/lib/athletes';
+import { athleteNames } from '@/lib/athletes';
 import { breadcrumbLd } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -18,7 +18,7 @@ await assertResultsValid();
 const challenges = await getChallenges(lang);
 const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
 const rows = featured ? await getRankedRows(featured.data) : [];
-const { slugs, names } = await athleteMaps(lang);
+const names = await athleteNames(lang);
 
 const counts = await Promise.all(
   challenges.map(async (challenge) => ({
@@ -83,7 +83,6 @@ const counts = await Promise.all(
         scoring={featured.data.scoring}
         unit={featured.data.unit}
         seasonal={featured.data.seasonal}
-        athleteSlugs={slugs}
         displayNames={names}
       />
     </section>

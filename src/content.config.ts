@@ -106,16 +106,10 @@ const athletes = defineCollection({
     name: z.string(),
     slug: z.string(),
     club: z.string(),
-    divisions: z.array(z.string()).min(1),
     photo: imagePath.optional(),
     photoAlt: altText.optional(),
     memberSince: z.number().int(),
     hometown: z.string().optional(),
-    rifle: z.string().optional(),
-    caliber: z.string().optional(),
-    bestFinishes: z.array(z.string()).default([]),
-    instagram: z.url().optional(),
-    board: z.boolean().default(false),
   }),
 });
 
