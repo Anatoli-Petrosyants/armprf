@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (43 total)
+## Slots (45 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -88,6 +88,14 @@ Aspect **16:9** · minimum **1920×1080** · Challenge hero; shown at 21:9 with 
 | `blackjack-21.jpg` | placeholder | `blackjack-21.en.md`, `blackjack-21.hy.md` |
 | `ethical-hunter-500.jpg` | placeholder | `ethical-hunter-500.en.md`, `ethical-hunter-500.hy.md` |
 
+### `/img/community/group-photos/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+
 ### `/img/events/`
 
 Aspect **16:9** · minimum **1920×1080** · Event cover; also cropped to 3:4 in list view.
@@ -144,6 +152,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
 | `2026-03-12-rimfire.jpg` | placeholder | `2026-03-12-why-we-start-with-22lr.en.md`, `2026-03-12-why-we-start-with-22lr.hy.md` |
 | `2026-05-19-gyumri-report.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
 | `2026-06-24-wind.jpg` | placeholder | `2026-06-24-wind-without-a-kestrel.en.md`, `2026-06-24-wind-without-a-kestrel.hy.md` |
