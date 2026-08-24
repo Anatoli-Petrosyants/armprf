@@ -17,7 +17,7 @@ const trail = [{ name: t('nav.home'), path: '/' }, ...items];
         {i === trail.length - 1 ? (
           <span aria-current="page" class="text-[var(--color-muted)]">{item.name}</span>
         ) : (
-          <a href={localizePath(item.path, lang)} class="hover:text-[var(--color-accent)]">{item.name}</a>
+          <a href={localizePath(item.path, lang)} class="hover:text-[var(--color-accent-text)]">{item.name}</a>
         )}
       </li>
     ))}

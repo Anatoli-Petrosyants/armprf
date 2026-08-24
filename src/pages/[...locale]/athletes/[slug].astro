@@ -110,7 +110,7 @@ function display(row: { score?: number; hits?: number; percent?: number; time?: 
       {data.bestFinishes.length > 0 && (
         <ul class="mt-4 flex flex-wrap gap-2">
           {data.bestFinishes.map((finish) => (
-            <li class="tag border-[var(--color-accent)] text-[var(--color-accent)]">{finish}</li>
+            <li class="tag border-[var(--color-accent)] text-[var(--color-accent-text)]">{finish}</li>
           ))}
         </ul>
       )}
@@ -126,7 +126,7 @@ function display(row: { score?: number; hits?: number; percent?: number; time?: 
             {appearances.map(({ challenge, rows }) => (
               <div class="card overflow-hidden">
                 <div class="flex items-center justify-between gap-3 border-b border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-2.5">
-                  <a href={localizePath(`/leaderboards/${challenge.data.id}`, lang)} class="text-sm font-bold hover:text-[var(--color-accent)]">
+                  <a href={localizePath(`/leaderboards/${challenge.data.id}`, lang)} class="text-sm font-bold hover:text-[var(--color-accent-text)]">
                     {challenge.data.title}
                   </a>
                   <span class="tnum text-xs text-[var(--color-faint)]">{rows.length} {t('lb.attempts')}</span>
@@ -134,10 +134,10 @@ function display(row: { score?: number; hits?: number; percent?: number; time?: 
                 <ul class="divide-y divide-[var(--color-border)]">
                   {rows.map((row) => (
                     <li class="flex items-center justify-between gap-4 px-4 py-2.5 text-sm">
-                      <span class="tnum w-10 shrink-0 font-bold text-[var(--color-accent)]">#{row.rank}</span>
+                      <span class="tnum w-10 shrink-0 font-bold text-[var(--color-accent-text)]">#{row.rank}</span>
                       <span class="flex-1 text-[var(--color-muted)]">{formatDateShort(row.date, lang)}</span>
                       <span class="tnum font-bold">{display(row, challenge.data.scoring, challenge.data.unit)}</span>
-                      {row.verified && <span class="tag border-[var(--color-accent)] text-[var(--color-accent)]">✓</span>}
+                      {row.verified && <span class="tag border-[var(--color-accent)] text-[var(--color-accent-text)]">✓</span>}
                     </li>
                   ))}
                 </ul>

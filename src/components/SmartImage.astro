@@ -25,9 +25,15 @@ const {
 } = Astro.props;
 
 const image = resolveImage(src);
-// Never ask sharp for a width larger than the source — it would upscale.
-const usable = image ? widths.filter((w) => w <= image.width) : [];
-const finalWidths = usable.length ? usable : image ? [image.width] : [];
+// Never ask sharp to upscale, but do keep the source's own width as the top
+// step — otherwise a 1440px photo asked for [960, 1600, 2560] would ship only
+// 960w and look soft on any desktop.
+const smaller = image ? widths.filter((w) => w < image.width) : [];
+const finalWidths = image
+  ? [...new Set([...smaller, ...(widths.some((w) => w >= image.width) ? [image.width] : [])])].sort(
+      (a, b) => a - b,
+    )
+  : [];
 ---
 {
   image ? (
@@ -37,6 +43,8 @@ const finalWidths = usable.length ? usable : image ? [image.width] : [];
       widths={finalWidths}
       sizes={sizes}
       formats={['avif', 'webp']}
+      fallbackFormat="jpeg"
+      quality={72}
       loading={loading}
       decoding={loading === 'eager' ? 'sync' : 'async'}
       fetchpriority={fetchpriority}

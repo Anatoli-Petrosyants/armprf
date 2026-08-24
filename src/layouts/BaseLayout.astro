@@ -71,8 +71,7 @@ const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={social} />
 
-    <meta name="theme-color" content="#0e1113" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f4f5f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#f4f5f4" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
@@ -92,7 +91,7 @@ const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
     )}
 
     <script is:inline>
-      // Runs before paint: dark is the default, an explicit choice wins.
+      // Runs before paint: light is the default, an explicit choice wins.
       (function () {
         try {
           var theme = localStorage.getItem('armprf:theme');

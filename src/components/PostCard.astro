@@ -32,13 +32,13 @@ const href = localizePath(`/news/${slug}`, lang);
   <div class="flex flex-1 flex-col p-5">
     <div class="flex flex-wrap items-center gap-2 text-[0.6875rem] uppercase tracking-[0.1em] text-[var(--color-faint)]">
       <time datetime={date.toISOString().slice(0, 10)}>{formatDateShort(date, lang)}</time>
-      {tags.slice(0, 2).map((tag) => <span class="text-[var(--color-accent)]">#{tag}</span>)}
+      {tags.slice(0, 2).map((tag) => <span class="text-[var(--color-accent-text)]">#{tag}</span>)}
     </div>
     <h3 class="mt-2 text-xl leading-snug">
-      <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">{title}</a>
+      <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent-text)]">{title}</a>
     </h3>
     <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-[var(--color-muted)]">{excerpt}</p>
-    <span class="mt-auto pt-4 text-xs font-bold uppercase tracking-[0.08em] text-[var(--color-accent)]">
+    <span class="mt-auto pt-4 text-xs font-bold uppercase tracking-[0.08em] text-[var(--color-accent-text)]">
       {t('common.readMore')} →
     </span>
   </div>

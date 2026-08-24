@@ -1,14 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="72" fill="#0e1113"/>
-  <g fill="none" stroke="#6d7a80" stroke-width="24">
-    <circle cx="256" cy="256" r="168"/>
-    <circle cx="256" cy="256" r="96"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ARMPRF">
+  <!-- Armenian tricolour in the federation's own brand values, so the tab icon
+       reads at 16px and still matches the wordmark. -->
+  <defs>
+    <clipPath id="r"><rect width="512" height="512" rx="96"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="170.67" y="0" fill="#ED1A38"/>
+    <rect width="512" height="170.67" y="170.67" fill="#1E4389"/>
+    <rect width="512" height="170.67" y="341.33" fill="#F78F1E"/>
   </g>
-  <g stroke="#f2a800" stroke-width="30" stroke-linecap="square">
-    <line x1="256" y1="52" x2="256" y2="140"/>
-    <line x1="256" y1="372" x2="256" y2="460"/>
-    <line x1="52" y1="256" x2="140" y2="256"/>
-    <line x1="372" y1="256" x2="460" y2="256"/>
-  </g>
-  <circle cx="256" cy="256" r="30" fill="#f2a800"/>
+  <rect x="4" y="4" width="504" height="504" rx="92" fill="none" stroke="#00000022" stroke-width="8"/>
 </svg>

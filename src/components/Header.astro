@@ -25,7 +25,7 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
         <a
           href={localizePath(item.path, lang)}
           aria-current={isCurrent(item.path) ? 'page' : undefined}
-          class="px-2.5 py-2 text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-accent)]"
+          class="px-2.5 py-2 text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-accent-text)]"
         >
           {t(item.key)}
         </a>
@@ -40,7 +40,7 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
             hreflang={l}
             data-lang-pick={l}
             aria-current={l === lang ? 'true' : undefined}
-            class="px-2 py-1.5 text-[var(--color-faint)] transition-colors hover:text-[var(--color-ink)] aria-[current=true]:bg-[var(--color-surface-2)] aria-[current=true]:text-[var(--color-accent)]"
+            class="px-2 py-1.5 text-[var(--color-faint)] transition-colors hover:text-[var(--color-ink)] aria-[current=true]:bg-[var(--color-surface-2)] aria-[current=true]:text-[var(--color-accent-text)]"
           >
             {l === 'hy' ? 'ՀԱՅ' : 'ENG'}
           </a>
@@ -79,7 +79,7 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
                 <a
                   href={localizePath(item.path, lang)}
                   aria-current={isCurrent(item.path) ? 'page' : undefined}
-                  class="block border-b border-[var(--color-border)] py-3 text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] aria-[current=page]:text-[var(--color-accent)]"
+                  class="block border-b border-[var(--color-border)] py-3 text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] aria-[current=page]:text-[var(--color-accent-text)]"
                 >
                   {t(item.key)}
                 </a>

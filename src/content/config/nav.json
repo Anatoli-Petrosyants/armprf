@@ -1,58 +1,22 @@
 {
   "primary": [
-    {
-      "key": "nav.about",
-      "path": "/about"
-    },
-    {
-      "key": "nav.events",
-      "path": "/events"
-    },
-    {
-      "key": "nav.leaderboards",
-      "path": "/leaderboards"
-    },
-    {
-      "key": "nav.news",
-      "path": "/news"
-    },
-    {
-      "key": "nav.gallery",
-      "path": "/gallery"
-    },
-    {
-      "key": "nav.athletes",
-      "path": "/athletes"
-    }
+    { "key": "nav.home", "path": "/" },
+    { "key": "nav.events", "path": "/events" },
+    { "key": "nav.leaderboards", "path": "/leaderboards" },
+    { "key": "nav.news", "path": "/news" },
+    { "key": "nav.gallery", "path": "/gallery" },
+    { "key": "nav.athletes", "path": "/athletes" },
+    { "key": "nav.about", "path": "/about" }
   ],
-  "cta": {
-    "key": "nav.contact",
-    "path": "/contact"
-  },
+  "cta": { "key": "nav.contact", "path": "/contact" },
   "footer": [
-    {
-      "key": "nav.about",
-      "path": "/about"
-    },
-    {
-      "key": "nav.events",
-      "path": "/events"
-    },
-    {
-      "key": "nav.leaderboards",
-      "path": "/leaderboards"
-    },
-    {
-      "key": "nav.news",
-      "path": "/news"
-    },
-    {
-      "key": "nav.gallery",
-      "path": "/gallery"
-    },
-    {
-      "key": "nav.contact",
-      "path": "/contact"
-    }
+    { "key": "nav.home", "path": "/" },
+    { "key": "nav.events", "path": "/events" },
+    { "key": "nav.leaderboards", "path": "/leaderboards" },
+    { "key": "nav.news", "path": "/news" },
+    { "key": "nav.gallery", "path": "/gallery" },
+    { "key": "nav.athletes", "path": "/athletes" },
+    { "key": "nav.about", "path": "/about" },
+    { "key": "nav.contact", "path": "/contact" }
   ]
 }

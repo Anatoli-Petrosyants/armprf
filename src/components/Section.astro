@@ -17,7 +17,7 @@ const { eyebrow, title, href, linkLabel, class: className = '', id } = Astro.pro
         {title && <h2 class="mt-2 text-3xl md:text-4xl">{title}</h2>}
       </div>
       {href && linkLabel && (
-        <a href={href} class="text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-accent)] underline-offset-4 hover:underline">
+        <a href={href} class="text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-accent-text)] underline-offset-4 hover:underline">
           {linkLabel} →
         </a>
       )}

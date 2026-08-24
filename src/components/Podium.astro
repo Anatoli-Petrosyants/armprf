@@ -42,14 +42,14 @@ function display(row: RankedRow): string {
             <li
               class={`card flex flex-col items-center p-5 text-center ${first ? 'border-[var(--color-accent)] sm:-mt-3 sm:pb-8' : ''}`}
             >
-              <span class={`ring-num ${first ? 'border-[var(--color-accent)] text-[var(--color-accent)]' : ''}`}>{place}</span>
+              <span class={`ring-num ${first ? 'border-[var(--color-accent)] text-[var(--color-accent-text)]' : ''}`}>{place}</span>
               {entries.map((row, index) => (
                 <div class={index > 0 ? 'mt-4 w-full border-t border-[var(--color-border)] pt-4' : 'contents'}>
                   <p class="mt-3 text-lg font-bold leading-tight">{row.name}</p>
                   {row.club && <p class="mt-0.5 text-xs text-[var(--color-faint)]">{row.club}</p>}
-                  <p class={`tnum mt-3 text-2xl font-bold ${first ? 'text-[var(--color-accent)]' : ''}`}>{display(row)}</p>
+                  <p class={`tnum mt-3 text-2xl font-bold ${first ? 'text-[var(--color-accent-text)]' : ''}`}>{display(row)}</p>
                   {row.verified && (
-                    <span class="tag mt-3 border-[var(--color-accent)] text-[var(--color-accent)]">✓ {t('lb.verified')}</span>
+                    <span class="tag mt-3 border-[var(--color-accent)] text-[var(--color-accent-text)]">✓ {t('lb.verified')}</span>
                   )}
                 </div>
               ))}

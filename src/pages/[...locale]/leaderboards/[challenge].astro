@@ -86,7 +86,7 @@ const others = (await getChallenges(lang)).filter((c) => c.data.id !== data.id);
         {data.maxScore !== undefined && (
           <div>
             <dt class="text-[0.625rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{t('lb.maxScore')}</dt>
-            <dd class="tnum mt-1 font-bold text-[var(--color-accent)]">{data.maxScore}</dd>
+            <dd class="tnum mt-1 font-bold text-[var(--color-accent-text)]">{data.maxScore}</dd>
           </div>
         )}
         <div>

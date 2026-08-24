@@ -9,8 +9,8 @@ const { lang, status } = Astro.props;
 const t = useTranslations(lang);
 
 const styles: Record<Props['status'], string> = {
-  open: 'border-[var(--color-accent)] text-[var(--color-accent)]',
-  full: 'border-[var(--color-alert)] text-[var(--color-alert)]',
+  open: 'border-[var(--color-accent)] text-[var(--color-accent-text)]',
+  full: 'border-[var(--color-alert)] text-[var(--color-alert-text)]',
   closed: 'border-[var(--color-border-strong)] text-[var(--color-faint)]',
   completed: 'border-[var(--color-border-strong)] text-[var(--color-muted)]',
 };

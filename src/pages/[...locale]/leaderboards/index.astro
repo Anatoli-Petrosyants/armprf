@@ -54,7 +54,7 @@ const counts = await Promise.all(
       {counts.map((challenge) => (
         <a
           href={localizePath(`/leaderboards/${challenge.id}`, lang)}
-          class="tag whitespace-nowrap px-3 py-2 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          class="tag whitespace-nowrap px-3 py-2 hover:border-[var(--color-accent)] hover:text-[var(--color-accent-text)]"
           data-active={challenge.id === featured?.data.id ? 'true' : 'false'}
         >
           {challenge.title}
@@ -99,7 +99,7 @@ const counts = await Promise.all(
       {counts.map((challenge) => (
         <li class="card relative p-6">
           <h3 class="text-xl">
-            <a href={localizePath(`/leaderboards/${challenge.id}`, lang)} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">
+            <a href={localizePath(`/leaderboards/${challenge.id}`, lang)} class="after:absolute after:inset-0 hover:text-[var(--color-accent-text)]">
               {challenge.title}
             </a>
           </h3>

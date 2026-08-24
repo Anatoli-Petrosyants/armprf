@@ -50,8 +50,10 @@ const icons: Record<string, string> = {
       fetchpriority="high"
       class="absolute inset-0 -z-10 h-full w-full object-cover"
     />
+    {/* The scrim has to carry the heading in both themes, so it stays strong
+        across the text column and only thins out past it. */}
     <div
-      class="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-bg)] via-[color-mix(in_srgb,var(--color-bg)_75%,transparent)] to-transparent"
+      class="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--color-bg)] from-15% via-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] via-55% to-[color-mix(in_srgb,var(--color-bg)_30%,transparent)]"
     >
     </div>
 

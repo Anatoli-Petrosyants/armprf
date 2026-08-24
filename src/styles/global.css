@@ -48,27 +48,20 @@
   --font-sans: "Archivo", "Noto Sans Armenian", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
 
-  /* Brand constants — identical in both themes. */
+  /* Brand constants — identical in both themes, used for fills and borders. */
   --color-accent: #f2a800;
   --color-accent-ink: #1a1400;
   --color-alert: #d90012;
 
-  /* Semantic ramp — redefined under [data-theme="light"] below. */
-  --color-bg: #0e1113;
-  --color-surface: #161a1d;
-  --color-surface-2: #1f2529;
-  --color-border: #2c3439;
-  --color-border-strong: #3d474d;
-  --color-ink: #eef1f2;
-  --color-muted: #9aa6ac;
-  --color-faint: #6d7a80;
+  /* Accent and alert as *text*. The brand apricot on a light surface is about
+     1.9:1 and the brand crimson on a dark one about 2.9:1 — both far under
+     WCAG AA. These two tokens carry a value tuned per theme; use them for any
+     coloured text, and keep --color-accent / --color-alert for fills, borders
+     and icons where the brand value must stay exact. */
+  --color-accent-text: #8a5a00;
+  --color-alert-text: #c00010;
 
-  --radius-card: 0.25rem;
-
-  --breakpoint-xs: 26rem;
-}
-
-:root[data-theme="light"] {
+  /* Semantic ramp — light is the base; [data-theme="dark"] swaps it below. */
   --color-bg: #f4f5f4;
   --color-surface: #ffffff;
   --color-surface-2: #e9ebea;
@@ -76,7 +69,24 @@
   --color-border-strong: #b3baba;
   --color-ink: #14181a;
   --color-muted: #4d585d;
-  --color-faint: #6c7a80;
+  --color-faint: #5d6a70;
+
+  --radius-card: 0.25rem;
+
+  --breakpoint-xs: 26rem;
+}
+
+:root[data-theme="dark"] {
+  --color-accent-text: #f2a800;
+  --color-alert-text: #ff6b7a;
+  --color-bg: #0e1113;
+  --color-surface: #161a1d;
+  --color-surface-2: #1f2529;
+  --color-border: #2c3439;
+  --color-border-strong: #3d474d;
+  --color-ink: #eef1f2;
+  --color-muted: #9aa6ac;
+  --color-faint: #939ea4;
 }
 
 /* ---------------------------------------------------------------------------
@@ -84,11 +94,11 @@
 --------------------------------------------------------------------------- */
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
   }
-  :root[data-theme="light"] {
-    color-scheme: light;
+  :root[data-theme="dark"] {
+    color-scheme: dark;
   }
 
   html {
@@ -186,7 +196,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     font-stretch: 100%;
   }
 
@@ -214,7 +224,7 @@
     border-color: var(--color-border-strong);
     color: var(--color-ink);
   }
-  .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent-text); }
 
   .card {
     background: var(--color-surface);
@@ -294,14 +304,14 @@
   }
   .prose-armprf h3 { font-size: 1.1875rem; margin-top: 1.9em; }
   .prose-armprf a {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     text-decoration: underline;
     text-underline-offset: 0.2em;
   }
   .prose-armprf ul, .prose-armprf ol { padding-inline-start: 1.35em; }
   .prose-armprf ul { list-style: square; }
   .prose-armprf ol { list-style: decimal; }
-  .prose-armprf li::marker { color: var(--color-accent); }
+  .prose-armprf li::marker { color: var(--color-accent-text); }
   .prose-armprf li + li { margin-top: 0.4em; }
   .prose-armprf blockquote {
     border-inline-start: 2px solid var(--color-accent);

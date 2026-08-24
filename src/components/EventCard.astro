@@ -45,7 +45,7 @@ const month = new Intl.DateTimeFormat(lang === 'hy' ? 'hy-AM' : 'en', { month: '
   )}
   <div class="flex flex-1 gap-4 p-5">
     <div class="shrink-0 text-center">
-      <div class="tnum text-3xl font-bold leading-none text-[var(--color-accent)]">{day}</div>
+      <div class="tnum text-3xl font-bold leading-none text-[var(--color-accent-text)]">{day}</div>
       <div class="mt-1 text-[0.6875rem] uppercase tracking-[0.12em] text-[var(--color-faint)]">{month}</div>
       <div class="tnum mt-0.5 text-[0.6875rem] text-[var(--color-faint)]">{date.getUTCFullYear()}</div>
     </div>
@@ -55,7 +55,7 @@ const month = new Intl.DateTimeFormat(lang === 'hy' ? 'hy-AM' : 'en', { month: '
         <span class="text-[0.6875rem] uppercase tracking-[0.1em] text-[var(--color-faint)]">{discipline}</span>
       </div>
       <h3 class="mt-2 text-xl leading-snug">
-        <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">{title}</a>
+        <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent-text)]">{title}</a>
       </h3>
       <p class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-[var(--color-muted)]">{summary}</p>
       <dl class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-[var(--color-faint)]">

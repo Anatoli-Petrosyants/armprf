@@ -161,7 +161,7 @@ function sortValue(row: RankedRow, column: string): string {
               ) : (
                 <button type="button" data-lb-sort={column} class="inline-flex items-center gap-1 uppercase hover:text-[var(--color-ink)]">
                   {t(`lb.${column}`)}
-                  <span class="sort-arrow text-[var(--color-accent)]" aria-hidden="true"></span>
+                  <span class="sort-arrow text-[var(--color-accent-text)]" aria-hidden="true"></span>
                 </button>
               )}
             </th>
@@ -185,7 +185,7 @@ function sortValue(row: RankedRow, column: string): string {
               if (column === 'rank') {
                 return (
                   <td class={`${base} font-bold`} data-label={t('lb.rank')}>
-                    <span class={row.rank <= 3 ? 'text-[var(--color-accent)]' : ''}>{row.rank}</span>
+                    <span class={row.rank <= 3 ? 'text-[var(--color-accent-text)]' : ''}>{row.rank}</span>
                   </td>
                 );
               }
@@ -196,7 +196,7 @@ function sortValue(row: RankedRow, column: string): string {
                 return (
                   <td class={`${base} font-bold`} data-label={t('lb.name')}>
                     {slug ? (
-                      <a href={slug} class="underline-offset-4 hover:text-[var(--color-accent)] hover:underline">{shown}</a>
+                      <a href={slug} class="underline-offset-4 hover:text-[var(--color-accent-text)] hover:underline">{shown}</a>
                     ) : (
                       shown
                     )}
@@ -207,7 +207,7 @@ function sortValue(row: RankedRow, column: string): string {
                 return (
                   <td class={base} data-label={t('lb.verified')}>
                     {row.verified ? (
-                      <span class="tag border-[var(--color-accent)] text-[var(--color-accent)]" title={t('lb.verified')}>✓ {t('lb.verified')}</span>
+                      <span class="tag border-[var(--color-accent)] text-[var(--color-accent-text)]" title={t('lb.verified')}>✓ {t('lb.verified')}</span>
                     ) : (
                       <span class="tag" title={t('lb.unverified')}>{t('lb.unverified')}</span>
                     )}
@@ -218,7 +218,7 @@ function sortValue(row: RankedRow, column: string): string {
                 return (
                   <td class={base} data-label={t('lb.proof')}>
                     {row.proofUrl ? (
-                      <a href={row.proofUrl} rel="noopener" class="text-[var(--color-accent)] underline-offset-4 hover:underline">↗</a>
+                      <a href={row.proofUrl} rel="noopener" class="text-[var(--color-accent-text)] underline-offset-4 hover:underline">↗</a>
                     ) : (
                       <span class="text-[var(--color-faint)]">—</span>
                     )}
