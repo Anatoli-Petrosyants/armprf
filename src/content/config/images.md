@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (30 total)
+## Slots (39 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -97,6 +97,19 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
 
+### `/img/match/stage-firing/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_01.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_02.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_03.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_04.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_05.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-stage-firing_vanadzor-dmr_06.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+
 ### `/img/match/targets/`
 
 Aspect **3:2** · minimum **1600×1067** · Gallery photo.
@@ -105,12 +118,22 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | --- | --- | --- |
 | `photo.jpg` | missing | `images.md` |
 
+### `/img/match/timers-and-scoring/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-08-16_match-timers-and-scoring_vanadzor-dmr_01.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-08-16_match-timers-and-scoring_vanadzor-dmr_02.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+
 ### `/img/posts/`
 
 Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-08-18-vanadzor-dmr-match.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 | `2025-10-24-maria-marutyan.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
 
