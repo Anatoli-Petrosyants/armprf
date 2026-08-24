@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (45 total)
+## Slots (30 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -94,41 +94,8 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
-
-### `/img/events/`
-
-Aspect **16:9** · minimum **1920×1080** · Event cover; also cropped to 3:4 in list view.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2025-11-final.jpg` | placeholder | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
-| `2026-03-rimfire.jpg` | placeholder | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
-| `2026-09-ararat.jpg` | placeholder | `2026-08-10-ararat-long-range-open-announced.en.md`, `2026-08-10-ararat-long-range-open-announced.hy.md` |
-
-### `/img/match/gear-line/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_match-gear-line_todo-content_01.jpg` | missing | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
-
-### `/img/match/podium/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_match-podium_todo-content_02.jpg` | missing | `2025-11-04-season-final-2025-report.en.md`, `2025-11-04-season-final-2025-report.hy.md` |
-
-### `/img/match/stage-firing/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-05-17_match-stage-firing_todo-content_01.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
 
 ### `/img/match/targets/`
 
@@ -138,59 +105,14 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 | --- | --- | --- |
 | `photo.jpg` | missing | `images.md` |
 
-### `/img/match/timers-and-scoring/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-05-17_match-timers-and-scoring_todo-content_01.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
-
 ### `/img/posts/`
 
 Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-10-24-maria-marutyan.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
-| `2026-03-12-rimfire.jpg` | placeholder | `2026-03-12-why-we-start-with-22lr.en.md`, `2026-03-12-why-we-start-with-22lr.hy.md` |
-| `2026-05-19-gyumri-report.jpg` | placeholder | `2026-05-19-gyumri-round-2-report.en.md`, `2026-05-19-gyumri-round-2-report.hy.md` |
-| `2026-06-24-wind.jpg` | placeholder | `2026-06-24-wind-without-a-kestrel.en.md`, `2026-06-24-wind-without-a-kestrel.hy.md` |
-| `2026-07-08-first-rifle.jpg` | placeholder | `2026-07-08-your-first-precision-rifle.en.md`, `2026-07-08-your-first-precision-rifle.hy.md` |
-| `2026-08-02-range-update.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
-| `2026-08-15-final-registration.jpg` | placeholder | `2026-08-15-season-final-registration.en.md`, `2026-08-15-season-final-registration.hy.md` |
-
-### `/img/range/construction-progress/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03_berms_01.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
-
-### `/img/range/facilities/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_range-facilities_todo-content_01.jpg` | placeholder | `2026-08-02-range-build-out-summer-update.en.md`, `2026-08-02-range-build-out-summer-update.hy.md` |
-
-### `/img/rimfire/kids-and-newcomers/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-04-12_rimfire-kids-and-newcomers_todo-content_01.jpg` | missing | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
-
-### `/img/rimfire/matches/`
-
-Aspect **3:2** · minimum **1600×1067** · Gallery photo.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `2026-03-08_rimfire-matches_todo-content_01.jpg` | missing | `2026-03-10-winter-rimfire-report.en.md`, `2026-03-10-winter-rimfire-report.hy.md` |
 
 ## What to shoot
 
