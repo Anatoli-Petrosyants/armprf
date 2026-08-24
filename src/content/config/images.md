@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (47 total)
+## Slots (62 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -94,9 +94,40 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-05-17_community-group-photos_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_community-group-photos_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-10-22_community-group-photos_aro-periyan_01.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+
+### `/img/match/gear-line/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-05-17_match-gear-line_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-gear-line_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-gear-line_internal-match_03.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+
+### `/img/match/podium/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-05-17_match-podium_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-podium_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+
+### `/img/match/prone-positional/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-05-17_match-prone-positional_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-prone-positional_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-prone-positional_internal-match_03.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 
 ### `/img/match/stage-firing/`
 
@@ -104,6 +135,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-05-17_match-stage-firing_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-08-16_match-stage-firing_vanadzor-dmr_01.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 | `2025-08-16_match-stage-firing_vanadzor-dmr_02.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 | `2025-08-16_match-stage-firing_vanadzor-dmr_03.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
@@ -125,6 +157,9 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-05-17_match-timers-and-scoring_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-timers-and-scoring_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
+| `2025-05-17_match-timers-and-scoring_internal-match_03.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-08-16_match-timers-and-scoring_vanadzor-dmr_01.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 | `2025-08-16_match-timers-and-scoring_vanadzor-dmr_02.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 
@@ -134,6 +169,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-05-21-internal-match-17-may.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-08-11-internal-22lr-match.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
 | `2025-08-18-vanadzor-dmr-match.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
 | `2025-10-22-aro-periyan.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
