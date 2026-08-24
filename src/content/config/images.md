@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (78 total)
+## Slots (79 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -34,8 +34,8 @@ Aspect **1:1** · minimum **1100×1100** · About page pair, shown side by side.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `flags.webp` | **real** | `about.json` |
 | `prone-shooter.webp` | **real** | `about.json` |
-| `spotter.webp` | **real** | `about.json` |
 
 ### `/img/brand/hero/`
 
@@ -43,7 +43,7 @@ Aspect **16:9** · minimum **2560×1440** · Text-safe area on the left third.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `hero-01.webp` | **real** | `site.json` |
+| `hero-flags.webp` | **real** | `site.json` |
 
 ### `/img/brand/logo/`
 
@@ -193,6 +193,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2024-06-21-ballistiq-shooters-assistant.jpg` | placeholder | `2024-06-21-ballistiq-shooters-assistant.en.md`, `2024-06-21-ballistiq-shooters-assistant.hy.md` |
 | `2024-11-13-iprf-membership.jpg` | placeholder | `2024-11-13-iprf-membership.en.md`, `2024-11-13-iprf-membership.hy.md` |
 | `2025-05-01-artyom-presents-his-rifle.jpg` | placeholder | `2025-05-01-artyom-presents-his-rifle.en.md`, `2025-05-01-artyom-presents-his-rifle.hy.md` |
 | `2025-05-07-guests-of-geprf.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |

@@ -1,37 +1,47 @@
 ---
 id: "blackjack-21"
-title: "Blackjack 21 Challenge"
-summary: "A 21-point card, one session per attempt. Stopping on 21 is easy on paper and hard on the firing line."
+title: "BlackJack Challenge"
+summary: "Six steel targets from 12 inches down to 2, two minutes on the clock, 21 points for a clean rack. What you do with the time left over is the rest of the challenge."
 scoring: "points"
 sortDirection: "desc"
-maxScore: 21
 unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=-OQQWgB3rfU"
 heroImage: "/img/challenges/blackjack-21.jpg"
-heroAlt: "A shooter prone with a 21-point card and steel targets downrange"
+heroAlt: "A shooter prone behind a rifle with a rack of steel targets downrange"
 columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
 active: true
 order: 10
 ---
 
-The challenge was created by Erik Cortina. ARMPRF uses it as a single standard for precision and decision-making: equipment matters, but closing the card matters more.
+A six-target rack shot against the clock. Clear the rack and you have 21 points — a BlackJack. Everything after that is what you can do with the time and ammunition you have left.
 
 ## Format
 
-- Distance: **500 metres**, one steel target at 2 MOA.
-- Maximum **21 points** in a session.
-- Every hit scores **+1**, every miss scores **−1**.
-- The shooter decides when to stop. Once you stop, the session is closed.
-- **Going over 21 busts the card:** the result becomes 0.
+- Target distance: **~500 yards**.
+- Total time to complete the stage: **2 minutes**.
+- **Six targets**, shot largest to smallest. You must hit a target before moving to the next one.
+- Clearing all six targets scores **21 points (BlackJack)**.
+
+| Target | Size | Points |
+| --- | --- | --- |
+| 1 | 12″ | 1 |
+| 2 | 10″ | 2 |
+| 3 | 8″ | 3 |
+| 4 | 6″ | 4 |
+| 5 | 4″ | 5 |
+| 6 | 2″ | 6 |
+| **Total** | | **21** |
 
 ## Rules
 
-1. Position: prone, off a bipod and rear bag. No other support is allowed.
-2. There is no time limit, but the session is continuous, and leaving the line closes the card.
-3. Impacts are called by a range officer or shown on video.
-4. One session per day. Your best result stays on the board.
-5. Any calibre, any division. The calibre is recorded on the board.
+1. Targets are engaged in order, largest to smallest. A hit is required before you move on.
+2. The targets may be shot back down in reverse order, for a total of **42 points**.
+3. After clearing the rack you return to the smallest target and keep shooting for additional BlackJacks: **+21 points for every further hit on the 2″**.
+4. With ammunition and time left, you keep shooting until the 2 minutes are up.
+5. Ties are broken on time — the shooter with the shorter time wins.
 
-## Submitting a score
+## Alongside: the Ethical Hunter Challenge
 
-Film the whole session in one take, with the target and the score card visible, and send it in with your score.
+Everyone shooting the BlackJack Challenge is also given the opportunity to shoot the Ethical Hunter Challenge: one cold-bore shot at ~500 yards. You can use your BlackJack rifle for it or bring a separate hunting rifle.
+
+Both challenges are filmed, and the footage is used on social media.

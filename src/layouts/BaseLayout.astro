@@ -37,7 +37,8 @@ const t = useTranslations(lang);
 const canonical = absolute(localizePath(neutral, lang));
 const hreflangs = alternates(neutral);
 const social = absolute(ogImage ?? site.og.defaultImage);
-const fullTitle = neutral === '/' ? title : `${title} · ${site.shortName}`;
+// The home tab is the bare brand; every other page is `<page> · <brand>`.
+const fullTitle = neutral === '/' ? site.shortName : `${title} · ${site.shortName}`;
 const graph = [organizationLd(lang), ...jsonLd];
 ---
 
@@ -72,9 +73,9 @@ const graph = [organizationLd(lang), ...jsonLd];
 
     <meta name="theme-color" content="#f4f5f4" />
 
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png?v=4" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />

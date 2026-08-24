@@ -44,7 +44,14 @@ export function rank(rows: ResultRow[], challenge: ChallengeShape): RankedRow[] 
     if (a.value === undefined) return 1;
     if (b.value === undefined) return -1;
     if (a.value !== b.value) return (a.value - b.value) * dir;
-    // Same score: the earlier date got there first.
+    // Same score: both challenges break the tie on elapsed time, shorter first.
+    // A row with no recorded time cannot win the tie, so it falls back to date.
+    const at = a.row.time;
+    const bt = b.row.time;
+    if (typeof at === 'number' && typeof bt === 'number' && at !== bt) return at - bt;
+    if (typeof at === 'number' && typeof bt !== 'number') return -1;
+    if (typeof at !== 'number' && typeof bt === 'number') return 1;
+    // Neither timed: the earlier date got there first.
     return a.row.date.getTime() - b.row.date.getTime();
   });
 

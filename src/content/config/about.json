@@ -115,25 +115,25 @@
   ],
   "images": [
     {
+      "src": "/img/about/flags.webp",
+      "alt": {
+        "hy": "Հայաստանի դրոշը և ARMPRF-ի դրոշը՝ հրաձգարանում, կանաչ բլուրների ֆոնին",
+        "en": "The Armenian flag and the ARMPRF flag over the range, green hills behind them"
+      },
+      "caption": {
+        "hy": "ARMPRF-ի դրոշը՝ Հայաստանի դրոշի կողքին, մրցումային հրաձգարանում։",
+        "en": "The ARMPRF flag beside the Armenian flag at the match range."
+      }
+    },
+    {
       "src": "/img/about/prone-shooter.webp",
       "alt": {
-        "hy": "Հրաձիգը պառկած դիրքում՝ ականջակալներով և օպտիկայով, կրակային գծին",
-        "en": "A shooter prone on the firing line, in ear protection behind the scope"
+        "hy": "Հրաձիգը ARMPRF-ի մարզաշապիկով՝ պառկած դիրքում կրակային գծին, թիրախային դաշտի ուղղությամբ",
+        "en": "A shooter in an ARMPRF jersey, prone on the firing line facing the target field"
       },
       "caption": {
         "hy": "Դիրք, շնչառություն, ձգան․ ամեն կրակոց չափելի է։",
         "en": "Position, breathing, trigger. Every shot is measurable."
-      }
-    },
-    {
-      "src": "/img/about/spotter.webp",
-      "alt": {
-        "hy": "Դիտորդը դիտողական դիտակի հետևում՝ եռոտանիի վրա, մրցումի ընթացքում",
-        "en": "A spotter behind a tripod-mounted spotting scope during a match"
-      },
-      "caption": {
-        "hy": "Դիտորդը կարդում է քամին և գրանցում խոցումները։",
-        "en": "The spotter reads the wind and calls the impacts."
       }
     }
   ],

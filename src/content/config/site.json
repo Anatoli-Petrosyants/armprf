@@ -1,7 +1,7 @@
 {
   "domain": "armprf.com",
   "url": "https://armprf.com",
-  "shortName": "ARMPRF",
+  "shortName": "ArmPRF",
   "name": {
     "hy": "Հայաստանի ճշգրիտ հրաձգության ֆեդերացիա",
     "en": "Armenian Precision Rifle Federation"
@@ -31,10 +31,10 @@
   ],
   "activeSloganIndex": 0,
   "hero": {
-    "image": "/img/brand/hero/hero-01.webp",
+    "image": "/img/brand/hero/hero-flags.webp",
     "alt": {
-      "hy": "Հրաձիգը պառկած դիրքում՝ երկոտանիով հեռահար հրացանի հետևում, հայկական դաշտային տեղանք",
-      "en": "A shooter prone behind a bipod-mounted long-range rifle in Armenian field terrain"
+      "hy": "Հայաստանի դրոշը և ARMPRF-ի դրոշը՝ հրաձգարանում, կանաչ բլուրների ֆոնին",
+      "en": "The Armenian flag and the ARMPRF flag over the range, green hills behind them"
     },
     "kicker": {
       "hy": "Հայաստանի ճշգրիտ հրաձգության ֆեդերացիա",

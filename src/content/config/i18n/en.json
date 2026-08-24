@@ -54,6 +54,8 @@
   "lb.searchPlaceholder": "Search by name…",
   "lb.entries": "entries",
   "lb.maxScore": "Max score",
+  "lb.comingSoon": "No results yet",
+  "lb.comingSoonNote": "Nobody has shot this challenge yet. The table opens as soon as the first scorecard is verified.",
   "lb.noRows": "No results match these filters.",
   "lb.watchVideo": "Watch the video",
   "athletes.title": "Athletes",

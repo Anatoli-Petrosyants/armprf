@@ -26,6 +26,9 @@ const t = useTranslations(lang);
 
 const visible = limit ? rows.slice(0, limit) : rows;
 const compact = Boolean(limit);
+/** A challenge with no verified scorecards yet gets a placeholder, not an empty
+ *  table with sort controls that do nothing. */
+const pending = rows.length === 0;
 
 const divisions = [...new Set(rows.map((r) => r.division).filter(Boolean))].sort();
 const clubs = [...new Set(rows.map((r) => r.club).filter(Boolean))].sort();
@@ -97,6 +100,13 @@ function sortValue(row: RankedRow, column: string): string {
 ---
 
 <div class="leaderboard" data-leaderboard={challengeId} data-season={site.currentSeason}>
+  {pending ? (
+    <div class="grid justify-items-center gap-2 rounded-[var(--radius-card)] border border-dashed border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-12 text-center">
+      <p class="eyebrow">{t('lb.comingSoon')}</p>
+      <p class="max-w-md text-sm leading-relaxed text-[var(--color-muted)]">{t('lb.comingSoonNote')}</p>
+    </div>
+  ) : (
+  <>
   {!compact && (
     <div class="mb-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -239,6 +249,8 @@ function sortValue(row: RankedRow, column: string): string {
     <p class="mt-3 text-xs text-[var(--color-faint)]">
       <span data-lb-count>{rows.length}</span> {t('lb.entries')}
     </p>
+  )}
+  </>
   )}
 </div>
 
