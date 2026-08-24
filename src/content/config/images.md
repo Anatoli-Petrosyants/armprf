@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (39 total)
+## Slots (47 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -94,6 +94,7 @@ Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-10-22_community-group-photos_aro-periyan_01.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
 
@@ -133,9 +134,23 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-08-11-internal-22lr-match.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
 | `2025-08-18-vanadzor-dmr-match.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
+| `2025-10-22-aro-periyan.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24-maria-marutyan.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28-national-sniper-competition.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+
+### `/img/rimfire/matches/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-08-09_rimfire-matches_internal-22lr_01.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
+| `2025-08-09_rimfire-matches_internal-22lr_02.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
+| `2025-08-09_rimfire-matches_internal-22lr_03.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
+| `2025-08-09_rimfire-matches_internal-22lr_04.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
+| `2025-08-09_rimfire-matches_internal-22lr_05.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
 
 ## What to shoot
 
