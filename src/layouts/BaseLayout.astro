@@ -1,0 +1,127 @@
+---
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { HTML_LANG, LOCALES, localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { absolute, alternates, organizationLd } from '@/lib/seo';
+import { site, siteName } from '@/lib/site';
+
+interface Props {
+  lang: Lang;
+  /** Language-neutral path for this page, e.g. `/news/gyumri-round-2`. */
+  neutral: string;
+  title: string;
+  description: string;
+  /** Absolute or root-relative social image. Falls back to the generated default. */
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  /** Extra JSON-LD blocks appended after the organization graph. */
+  jsonLd?: unknown[];
+  noindex?: boolean;
+  bodyClass?: string;
+}
+
+const {
+  lang,
+  neutral,
+  title,
+  description,
+  ogImage,
+  ogType = 'website',
+  jsonLd = [],
+  noindex = false,
+  bodyClass = '',
+} = Astro.props;
+
+const t = useTranslations(lang);
+const canonical = absolute(localizePath(neutral, lang));
+const hreflangs = alternates(neutral);
+const social = absolute(ogImage ?? site.og.defaultImage);
+const fullTitle = neutral === '/' ? `${siteName(lang)} — ${title}` : `${title} · ${site.shortName}`;
+const graph = [organizationLd(lang), ...jsonLd];
+const rssHref = lang === 'hy' ? '/rss.xml' : '/en/rss.xml';
+---
+
+<!doctype html>
+<html lang={HTML_LANG[lang]} data-neutral={neutral}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+
+    {hreflangs.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.shortName} />
+    <meta property="og:locale" content={HTML_LANG[lang].replace('-', '_')} />
+    {LOCALES.filter((l) => l !== lang).map((l) => (
+      <meta property="og:locale:alternate" content={HTML_LANG[l].replace('-', '_')} />
+    ))}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={social} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={social} />
+
+    <meta name="theme-color" content="#0e1113" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f5f4" media="(prefers-color-scheme: light)" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title={`${site.shortName} — ${t('news.title')}`} href={rssHref} />
+
+    <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {lang === 'hy' && (
+      <link
+        rel="preload"
+        href="/fonts/noto-sans-armenian-armenian.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+      />
+    )}
+
+    <script is:inline>
+      // Runs before paint: dark is the default, an explicit choice wins.
+      (function () {
+        try {
+          var theme = localStorage.getItem('armprf:theme');
+          if (theme === 'light' || theme === 'dark') {
+            document.documentElement.dataset.theme = theme;
+          }
+          // Language preference is only ever acted on at the site root, so every
+          // deep link keeps the language it was shared in and crawlers see hy.
+          var lang = localStorage.getItem('armprf:lang');
+          var path = location.pathname.replace(/\/+$/, '');
+          if (lang === 'en' && (path === '' || path === '/index.html')) {
+            location.replace('/en' + location.search + location.hash);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <slot name="head" />
+
+    {graph.map((node) => <script type="application/ld+json" set:html={JSON.stringify(node)} />)}
+  </head>
+  <body class={bodyClass}>
+    <a href="#main" class="sr-only focus:not-sr-only fixed start-4 top-4 z-50 btn btn-primary">
+      {t('skip.content')}
+    </a>
+    <Header lang={lang} neutral={neutral} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

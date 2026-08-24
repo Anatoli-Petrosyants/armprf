@@ -1,0 +1,25 @@
+---
+import { localizePath, useTranslations, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  items: Array<{ name: string; path: string }>;
+}
+const { lang, items } = Astro.props;
+const t = useTranslations(lang);
+const trail = [{ name: t('nav.home'), path: '/' }, ...items];
+---
+<nav aria-label="Breadcrumb">
+  <ol class="flex flex-wrap items-center gap-2 text-xs text-[var(--color-faint)]">
+    {trail.map((item, i) => (
+      <li class="flex items-center gap-2">
+        {i > 0 && <span aria-hidden="true">/</span>}
+        {i === trail.length - 1 ? (
+          <span aria-current="page" class="text-[var(--color-muted)]">{item.name}</span>
+        ) : (
+          <a href={localizePath(item.path, lang)} class="hover:text-[var(--color-accent)]">{item.name}</a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

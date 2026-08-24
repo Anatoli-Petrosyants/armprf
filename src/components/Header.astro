@@ -1,0 +1,160 @@
+---
+import Logo from '@/components/Logo.astro';
+import { localizePath, useTranslations, LOCALES, type Lang } from '@/lib/i18n';
+import { nav, visibleNav } from '@/lib/site';
+
+interface Props {
+  lang: Lang;
+  neutral: string;
+}
+const { lang, neutral } = Astro.props;
+const t = useTranslations(lang);
+
+const primary = visibleNav(nav.primary);
+const secondary = visibleNav(nav.secondary);
+const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${path}/`);
+---
+
+<header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] backdrop-blur">
+  <div class="wrap flex h-16 items-center gap-4">
+    <a href={localizePath('/', lang)} class="shrink-0" aria-label="ARMPRF">
+      <Logo />
+    </a>
+
+    <nav class="ms-auto hidden items-center gap-1 lg:flex" aria-label={t('nav.menu')}>
+      {primary.map((item) => (
+        <a
+          href={localizePath(item.path, lang)}
+          aria-current={isCurrent(item.path) ? 'page' : undefined}
+          class="px-2.5 py-2 text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-accent)]"
+        >
+          {t(item.key)}
+        </a>
+      ))}
+
+      <details class="group relative" name="hdr">
+        <summary
+          class="cursor-pointer list-none px-2.5 py-2 text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
+        >
+          {t('nav.more')}
+          <span aria-hidden="true" class="ms-1 inline-block transition-transform group-open:rotate-180">▾</span>
+        </summary>
+        <ul class="card absolute end-0 mt-2 w-60 p-1.5 shadow-2xl">
+          {secondary.map((item) => (
+            <li>
+              <a
+                href={localizePath(item.path, lang)}
+                aria-current={isCurrent(item.path) ? 'page' : undefined}
+                class="block rounded px-3 py-2 text-sm text-[var(--color-muted)] hover:bg-[var(--color-surface-2)] hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-accent)]"
+              >
+                {t(item.key)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </nav>
+
+    <div class="ms-auto flex items-center gap-2 lg:ms-0">
+      <div class="flex items-center rounded border border-[var(--color-border)] text-[0.6875rem] font-bold uppercase">
+        {LOCALES.map((l) => (
+          <a
+            href={localizePath(neutral, l)}
+            hreflang={l}
+            data-lang-pick={l}
+            aria-current={l === lang ? 'true' : undefined}
+            class="px-2 py-1.5 text-[var(--color-faint)] transition-colors hover:text-[var(--color-ink)] aria-[current=true]:bg-[var(--color-surface-2)] aria-[current=true]:text-[var(--color-accent)]"
+          >
+            {l === 'hy' ? 'ՀԱՅ' : 'ENG'}
+          </a>
+        ))}
+      </div>
+
+      <button
+        type="button"
+        data-theme-toggle
+        class="grid h-8 w-8 place-items-center rounded border border-[var(--color-border)] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
+        aria-label={t('theme.toggle')}
+      >
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6M4.8 4.8l1.9 1.9M17.3 17.3l1.9 1.9M19.2 4.8l-1.9 1.9M6.7 17.3l-1.9 1.9" />
+        </svg>
+      </button>
+
+      <a href={localizePath(nav.cta.path, lang)} class="btn btn-primary hidden text-[0.75rem] sm:inline-flex">
+        {t(nav.cta.key)}
+      </a>
+
+      <details class="lg:hidden" name="hdr">
+        <summary
+          class="grid h-8 w-8 cursor-pointer list-none place-items-center rounded border border-[var(--color-border)] text-[var(--color-muted)]"
+          aria-label={t('nav.menu')}
+        >
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </summary>
+        <div class="fixed inset-x-0 top-16 z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-y border-[var(--color-border)] bg-[var(--color-bg)] p-5">
+          <ul class="grid gap-1">
+            {[...primary, ...secondary, nav.cta].map((item) => (
+              <li>
+                <a
+                  href={localizePath(item.path, lang)}
+                  aria-current={isCurrent(item.path) ? 'page' : undefined}
+                  class="block border-b border-[var(--color-border)] py-3 text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] aria-[current=page]:text-[var(--color-accent)]"
+                >
+                  {t(item.key)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Theme toggle + language preference. Everything here is an enhancement:
+  // with JS off the site stays dark and both language URLs still work.
+  const KEY_THEME = 'armprf:theme';
+  const KEY_LANG = 'armprf:lang';
+
+  function currentTheme(): 'dark' | 'light' {
+    return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const next = currentTheme() === 'light' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = next;
+      try {
+        localStorage.setItem(KEY_THEME, next);
+      } catch {}
+      button.setAttribute('aria-pressed', String(next === 'light'));
+    });
+  });
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-lang-pick]').forEach((link) => {
+    link.addEventListener('click', () => {
+      try {
+        localStorage.setItem(KEY_LANG, link.dataset.langPick ?? 'hy');
+      } catch {}
+    });
+  });
+
+  // Close the dropdown / mobile menu on outside click or Escape.
+  document.addEventListener('click', (event) => {
+    const target = event.target as Node;
+    document.querySelectorAll<HTMLDetailsElement>('details[name="hdr"][open]').forEach((d) => {
+      if (!d.contains(target)) d.open = false;
+    });
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    document.querySelectorAll<HTMLDetailsElement>('details[name="hdr"][open]').forEach((d) => {
+      d.open = false;
+    });
+  });
+</script>

@@ -1,0 +1,18 @@
+---
+import { useTranslations, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  status: 'open' | 'full' | 'closed' | 'completed';
+}
+const { lang, status } = Astro.props;
+const t = useTranslations(lang);
+
+const styles: Record<Props['status'], string> = {
+  open: 'border-[var(--color-accent)] text-[var(--color-accent)]',
+  full: 'border-[var(--color-alert)] text-[var(--color-alert)]',
+  closed: 'border-[var(--color-border-strong)] text-[var(--color-faint)]',
+  completed: 'border-[var(--color-border-strong)] text-[var(--color-muted)]',
+};
+---
+<span class={`tag ${styles[status]}`}>{t(`events.status.${status}`)}</span>

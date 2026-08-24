@@ -1,0 +1,45 @@
+---
+import SmartImage from '@/components/SmartImage.astro';
+import { localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { flag } from '@/lib/site';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+  name: string;
+  club: string;
+  divisions: string[];
+  photo?: string;
+  photoAlt?: string;
+  bestFinishes: string[];
+}
+const { lang, slug, name, club, divisions, photo, photoAlt, bestFinishes } = Astro.props;
+const t = useTranslations(lang);
+const href = localizePath(`/athletes/${slug}`, lang);
+---
+<article class="card group relative overflow-hidden transition-colors hover:border-[var(--color-border-strong)]">
+  {flag('showAthletePhotos') && (
+    <SmartImage
+      src={photo}
+      alt={photoAlt ?? name}
+      aspect="1/1"
+      widths={[240, 480]}
+      sizes="(min-width: 64rem) 20vw, (min-width: 40rem) 33vw, 50vw"
+      class="w-full transition-transform duration-500 group-hover:scale-[1.04]"
+    />
+  )}
+  <div class="p-4">
+    <h3 class="text-base leading-snug">
+      <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">{name}</a>
+    </h3>
+    <p class="mt-1 text-xs text-[var(--color-faint)]">{club}</p>
+    <p class="mt-2 flex flex-wrap gap-1">
+      {divisions.map((d) => <span class="tag">{d}</span>)}
+    </p>
+    {bestFinishes.length > 0 && (
+      <p class="mt-3 border-t border-[var(--color-border)] pt-2 text-xs text-[var(--color-muted)]">
+        <span class="text-[var(--color-faint)]">{t('athletes.best')}: </span>{bestFinishes[0]}
+      </p>
+    )}
+  </div>
+</article>

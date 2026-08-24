@@ -1,0 +1,30 @@
+---
+import { useTranslations, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  current: number;
+  total: number;
+  prev?: string;
+  next?: string;
+}
+const { lang, current, total, prev, next } = Astro.props;
+const t = useTranslations(lang);
+---
+{
+  total > 1 && (
+    <nav class="mt-12 flex items-center justify-between gap-4" aria-label={t('common.page')}>
+      {prev ? (
+        <a href={prev} rel="prev" class="btn btn-ghost">← {t('common.previous')}</a>
+      ) : (
+        <span></span>
+      )}
+      <p class="tnum text-sm text-[var(--color-muted)]">{t('common.page')} {current} {t('common.of')} {total}</p>
+      {next ? (
+        <a href={next} rel="next" class="btn btn-ghost">{t('common.next')} →</a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  )
+}

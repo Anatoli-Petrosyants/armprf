@@ -1,0 +1,81 @@
+---
+import { resolveImage } from '@/lib/images';
+import { youtubeId } from '@/lib/format';
+import { useTranslations, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  url: string;
+  title: string;
+  /** Local poster frame; falls back to YouTube's thumbnail when absent. */
+  poster?: string;
+  class?: string;
+}
+const { lang, url, title, poster, class: className = '' } = Astro.props;
+const t = useTranslations(lang);
+const id = youtubeId(url);
+const localPoster = resolveImage(poster);
+const remotePoster = id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : undefined;
+const watchUrl = id ? `https://www.youtube.com/watch?v=${id}` : url;
+---
+{
+  id ? (
+    <figure class={className}>
+      {/* Nothing is requested from youtube.com until the facade is activated. */}
+      <div
+        class="lite-yt relative aspect-video w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-surface-2)]"
+        data-youtube-id={id}
+        data-title={title}
+      >
+        {localPoster ? (
+          <img src={localPoster.src} alt="" width={localPoster.width} height={localPoster.height} loading="lazy" decoding="async" class="h-full w-full object-cover" />
+        ) : (
+          <img src={remotePoster} alt="" width="480" height="360" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+        )}
+        <button
+          type="button"
+          class="absolute inset-0 grid place-items-center bg-black/35 transition-colors hover:bg-black/20"
+          aria-label={`${t('gallery.watchOn')}: ${title}`}
+        >
+          <span class="grid h-16 w-16 place-items-center rounded-full border-2 border-[var(--color-accent)] bg-black/55 text-[var(--color-accent)]">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+              <path d="M8 5.5v13l11-6.5z" />
+            </svg>
+          </span>
+        </button>
+        <noscript>
+          <a href={watchUrl} rel="noopener" class="absolute inset-x-0 bottom-0 block bg-black/70 p-2 text-center text-sm text-white">
+            {t('gallery.watchOn')}
+          </a>
+        </noscript>
+      </div>
+      <figcaption class="mt-2 text-sm text-[var(--color-muted)]">{title}</figcaption>
+    </figure>
+  ) : (
+    <p class="text-sm text-[var(--color-faint)]">TODO(content): {title}</p>
+  )
+}
+
+<script>
+  // Swap the facade for a real iframe only on click. No autoplay before that,
+  // and no youtube.com/ytimg script ever runs on first paint.
+  document.querySelectorAll<HTMLElement>('.lite-yt').forEach((node) => {
+    const button = node.querySelector('button');
+    button?.addEventListener(
+      'click',
+      () => {
+        const id = node.dataset.youtubeId;
+        if (!id) return;
+        const frame = document.createElement('iframe');
+        frame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+        frame.title = node.dataset.title ?? 'YouTube';
+        frame.allow = 'accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+        frame.allowFullscreen = true;
+        frame.loading = 'eager';
+        frame.className = 'absolute inset-0 h-full w-full border-0';
+        node.replaceChildren(frame);
+      },
+      { once: true },
+    );
+  });
+</script>

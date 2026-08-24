@@ -1,0 +1,54 @@
+---
+import SmartImage from '@/components/SmartImage.astro';
+import type { Lang } from '@/lib/i18n';
+
+interface Entry {
+  date: string;
+  status: 'done' | 'in-progress' | 'planned';
+  title: Record<string, string>;
+  body: Record<string, string>;
+  photo?: string;
+  before?: string;
+  after?: string;
+}
+interface Props {
+  lang: Lang;
+  entries: Entry[];
+  labels: Record<'done' | 'in-progress' | 'planned', string>;
+}
+const { lang, entries, labels } = Astro.props;
+
+const dot: Record<Entry['status'], string> = {
+  done: 'bg-[var(--color-accent)] border-[var(--color-accent)]',
+  'in-progress': 'bg-[var(--color-bg)] border-[var(--color-accent)]',
+  planned: 'bg-[var(--color-bg)] border-[var(--color-border-strong)]',
+};
+---
+<ol class="relative ms-3 border-s border-[var(--color-border)]">
+  {entries.map((entry) => (
+    <li class="relative ps-8 pb-12 last:pb-0">
+      <span class={`absolute -start-[7px] top-1.5 block h-3 w-3 rounded-full border-2 ${dot[entry.status]}`} aria-hidden="true"></span>
+      <div class="flex flex-wrap items-center gap-3">
+        <time class="tnum text-sm font-bold text-[var(--color-accent)]" datetime={entry.date}>{entry.date}</time>
+        <span class="tag">{labels[entry.status]}</span>
+      </div>
+      <h3 class="mt-2 text-xl">{entry.title[lang]}</h3>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-muted)]">{entry.body[lang]}</p>
+      {entry.before && entry.after && (
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          <figure>
+            <SmartImage src={entry.before} alt={`${entry.title[lang]} — before`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
+            <figcaption class="mt-1 text-xs uppercase tracking-[0.12em] text-[var(--color-faint)]">Before</figcaption>
+          </figure>
+          <figure>
+            <SmartImage src={entry.after} alt={`${entry.title[lang]} — after`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
+            <figcaption class="mt-1 text-xs uppercase tracking-[0.12em] text-[var(--color-faint)]">After</figcaption>
+          </figure>
+        </div>
+      )}
+      {entry.photo && !entry.before && (
+        <SmartImage src={entry.photo} alt={entry.title[lang]} aspect="16/9" widths={[600, 1000]} sizes="(min-width:48rem) 60vw, 100vw" class="mt-4 w-full rounded-[var(--radius-card)]" />
+      )}
+    </li>
+  ))}
+</ol>

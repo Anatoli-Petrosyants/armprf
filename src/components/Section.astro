@@ -1,0 +1,27 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  href?: string;
+  linkLabel?: string;
+  class?: string;
+  id?: string;
+}
+const { eyebrow, title, href, linkLabel, class: className = '', id } = Astro.props;
+---
+<section id={id} class={`wrap py-14 md:py-20 ${className}`}>
+  {(eyebrow || title) && (
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        {title && <h2 class="mt-2 text-3xl md:text-4xl">{title}</h2>}
+      </div>
+      {href && linkLabel && (
+        <a href={href} class="text-sm font-bold uppercase tracking-[0.06em] text-[var(--color-accent)] underline-offset-4 hover:underline">
+          {linkLabel} →
+        </a>
+      )}
+    </div>
+  )}
+  <slot />
+</section>

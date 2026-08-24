@@ -1,0 +1,56 @@
+---
+import { Picture } from 'astro:assets';
+import { resolveImage } from '@/lib/images';
+
+interface Props {
+  src: string | undefined;
+  alt: string;
+  widths?: number[];
+  sizes?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  aspect?: string;
+}
+
+const {
+  src,
+  alt,
+  widths = [480, 800, 1200],
+  sizes = '(min-width: 64rem) 33vw, 100vw',
+  class: className = '',
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  aspect,
+} = Astro.props;
+
+const image = resolveImage(src);
+// Never ask sharp for a width larger than the source — it would upscale.
+const usable = image ? widths.filter((w) => w <= image.width) : [];
+const finalWidths = usable.length ? usable : image ? [image.width] : [];
+---
+{
+  image ? (
+    <Picture
+      src={image}
+      alt={alt}
+      widths={finalWidths}
+      sizes={sizes}
+      formats={['avif', 'webp']}
+      loading={loading}
+      decoding={loading === 'eager' ? 'sync' : 'async'}
+      fetchpriority={fetchpriority}
+      class={className}
+      style={aspect ? `aspect-ratio:${aspect};object-fit:cover` : undefined}
+    />
+  ) : (
+    <div
+      class={`moa-grid grid place-items-center bg-[var(--color-surface-2)] text-[0.625rem] uppercase tracking-[0.2em] text-[var(--color-faint)] ${className}`}
+      style={aspect ? `aspect-ratio:${aspect}` : 'aspect-ratio:3/2'}
+      role="img"
+      aria-label={alt}
+    >
+      TODO(content)
+    </div>
+  )
+}

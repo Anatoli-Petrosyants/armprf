@@ -1,0 +1,45 @@
+---
+import SmartImage from '@/components/SmartImage.astro';
+import { localizePath, useTranslations, type Lang } from '@/lib/i18n';
+import { formatDateShort } from '@/lib/format';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: Date;
+  tags: string[];
+  cover?: string;
+  coverAlt?: string;
+  featured?: boolean;
+}
+const { lang, slug, title, excerpt, date, tags, cover, coverAlt, featured = false } = Astro.props;
+const t = useTranslations(lang);
+const href = localizePath(`/news/${slug}`, lang);
+---
+<article class={`card group relative flex h-full flex-col overflow-hidden transition-colors hover:border-[var(--color-border-strong)] ${featured ? 'md:col-span-2' : ''}`}>
+  <a href={href} class="block overflow-hidden" tabindex="-1" aria-hidden="true">
+    <SmartImage
+      src={cover}
+      alt={coverAlt ?? ''}
+      aspect={featured ? '21/9' : '3/2'}
+      widths={featured ? [800, 1200, 1600] : [400, 640, 900]}
+      sizes={featured ? '(min-width: 48rem) 66vw, 100vw' : '(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw'}
+      class="w-full transition-transform duration-500 group-hover:scale-[1.03]"
+    />
+  </a>
+  <div class="flex flex-1 flex-col p-5">
+    <div class="flex flex-wrap items-center gap-2 text-[0.6875rem] uppercase tracking-[0.1em] text-[var(--color-faint)]">
+      <time datetime={date.toISOString().slice(0, 10)}>{formatDateShort(date, lang)}</time>
+      {tags.slice(0, 2).map((tag) => <span class="text-[var(--color-accent)]">#{tag}</span>)}
+    </div>
+    <h3 class="mt-2 text-xl leading-snug">
+      <a href={href} class="after:absolute after:inset-0 hover:text-[var(--color-accent)]">{title}</a>
+    </h3>
+    <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-[var(--color-muted)]">{excerpt}</p>
+    <span class="mt-auto pt-4 text-xs font-bold uppercase tracking-[0.08em] text-[var(--color-accent)]">
+      {t('common.readMore')} →
+    </span>
+  </div>
+</article>

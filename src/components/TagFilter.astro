@@ -1,0 +1,50 @@
+---
+interface Props {
+  items: Array<{ id: string; label: string; href?: string; count?: number }>;
+  active?: string;
+  /** When true the buttons filter in place instead of navigating. */
+  client?: boolean;
+  target?: string;
+}
+const { items, active = '', client = false, target } = Astro.props;
+---
+<div class="flex flex-wrap gap-2" data-tag-filter={client ? target : undefined}>
+  {items.map((item) =>
+    client ? (
+      <button type="button" class="tag" data-tag-value={item.id} data-active={item.id === active ? 'true' : 'false'}>
+        {item.label}
+        {item.count !== undefined && <span class="ms-1.5 opacity-60">{item.count}</span>}
+      </button>
+    ) : (
+      <a href={item.href} class="tag" data-active={item.id === active ? 'true' : 'false'}>
+        {item.label}
+        {item.count !== undefined && <span class="ms-1.5 opacity-60">{item.count}</span>}
+      </a>
+    ),
+  )}
+</div>
+
+<script>
+  // In-place tag filtering for the gallery grid. The non-client variant renders
+  // real links, so tag pages stay crawlable.
+  document.querySelectorAll<HTMLElement>('[data-tag-filter]').forEach((bar) => {
+    const targetSelector = bar.dataset.tagFilter;
+    if (!targetSelector) return;
+    const target = document.querySelector<HTMLElement>(targetSelector);
+    if (!target) return;
+
+    const items = Array.from(target.querySelectorAll<HTMLElement>('[data-tag]'));
+    bar.querySelectorAll<HTMLButtonElement>('[data-tag-value]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const value = button.dataset.tagValue ?? '';
+        bar.querySelectorAll<HTMLButtonElement>('[data-tag-value]').forEach((other) => {
+          other.dataset.active = String(other === button);
+        });
+        for (const item of items) {
+          const tag = item.dataset.tag ?? '';
+          item.hidden = Boolean(value) && !(tag === value || tag.startsWith(`${value}/`));
+        }
+      });
+    });
+  });
+</script>

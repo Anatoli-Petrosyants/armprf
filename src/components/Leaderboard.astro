@@ -1,0 +1,386 @@
+---
+import { useTranslations, type Lang } from '@/lib/i18n';
+import { formatDateShort, formatTime, isoDate } from '@/lib/format';
+import type { RankedRow } from '@/lib/leaderboard';
+import { site } from '@/lib/site';
+
+interface Props {
+  lang: Lang;
+  challengeId: string;
+  columns: string[];
+  rows: RankedRow[];
+  scoring: 'points' | 'hits' | 'time' | 'percent';
+  unit?: string;
+  seasonal?: boolean;
+  /** Show only the first N rows and hide the controls (home page teaser). */
+  limit?: number;
+  athleteSlugs?: Record<string, string>;
+  /** Localized display names keyed by the lowercase name used in results. */
+  displayNames?: Record<string, string>;
+}
+
+const {
+  lang, challengeId, columns, rows, scoring, unit,
+  seasonal = false, limit, athleteSlugs = {}, displayNames = {},
+} = Astro.props;
+const t = useTranslations(lang);
+
+const visible = limit ? rows.slice(0, limit) : rows;
+const compact = Boolean(limit);
+
+const divisions = [...new Set(rows.map((r) => r.division).filter(Boolean))].sort();
+const clubs = [...new Set(rows.map((r) => r.club).filter(Boolean))].sort();
+const years = [...new Set(rows.map((r) => r.season))].sort((a, b) => b - a);
+
+/** Numeric columns get tabular figures and sort numerically. */
+const NUMERIC = new Set(['rank', 'score', 'hits', 'misses', 'percent', 'time']);
+
+function cellValue(row: RankedRow, column: string): string {
+  switch (column) {
+    case 'rank':
+      return String(row.rank);
+    case 'name':
+      return row.name;
+    case 'club':
+      return row.club || '—';
+    case 'division':
+      return row.division || '—';
+    case 'score':
+      return row.score !== undefined ? `${row.score}${unit ? ` ${unit}` : ''}` : '—';
+    case 'hits':
+      return row.hits !== undefined ? String(row.hits) : '—';
+    case 'misses':
+      return row.misses !== undefined ? String(row.misses) : '—';
+    case 'percent':
+      return row.percent !== undefined ? `${row.percent}%` : '—';
+    case 'time':
+      return row.time !== undefined ? formatTime(row.time) : '—';
+    case 'date':
+      return formatDateShort(row.date, lang);
+    case 'rifle':
+      return row.rifle || '—';
+    case 'caliber':
+      return row.caliber || '—';
+    case 'notes':
+      return row.notes || '—';
+    default:
+      return '';
+  }
+}
+
+/** The value the client sorts on — numbers stay numbers. */
+function sortValue(row: RankedRow, column: string): string {
+  switch (column) {
+    case 'rank':
+      return String(row.rank);
+    case 'score':
+      return String(row.score ?? '');
+    case 'hits':
+      return String(row.hits ?? '');
+    case 'misses':
+      return String(row.misses ?? '');
+    case 'percent':
+      return String(row.percent ?? '');
+    case 'time':
+      return String(row.time ?? '');
+    case 'date':
+      return isoDate(row.date);
+    case 'verified':
+      return row.verified ? '1' : '0';
+    default:
+      return cellValue(row, column).toLowerCase();
+  }
+}
+---
+
+<div class="leaderboard" data-leaderboard={challengeId} data-season={site.currentSeason}>
+  {!compact && (
+    <div class="mb-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <label class="grid gap-1.5">
+          <span class="eyebrow">{t('common.search')}</span>
+          <input
+            type="search"
+            data-lb-search
+            placeholder={t('lb.searchPlaceholder')}
+            class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]"
+          />
+        </label>
+
+        {divisions.length > 1 && (
+          <label class="grid gap-1.5">
+            <span class="eyebrow">{t('lb.division')}</span>
+            <select data-lb-filter="division" class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]">
+              <option value="">{t('common.all')}</option>
+              {divisions.map((d) => <option value={d}>{d}</option>)}
+            </select>
+          </label>
+        )}
+
+        {clubs.length > 1 && (
+          <label class="grid gap-1.5">
+            <span class="eyebrow">{t('lb.club')}</span>
+            <select data-lb-filter="club" class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]">
+              <option value="">{t('common.all')}</option>
+              {clubs.map((c) => <option value={c}>{c}</option>)}
+            </select>
+          </label>
+        )}
+
+        {years.length > 1 && (
+          <label class="grid gap-1.5">
+            <span class="eyebrow">{t('lb.date')}</span>
+            <select data-lb-filter="season" class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm outline-none focus:border-[var(--color-accent)]">
+              <option value="">{t('lb.allTime')}</option>
+              {years.map((y) => <option value={String(y)} selected={seasonal && y === site.currentSeason}>{y}</option>)}
+            </select>
+          </label>
+        )}
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button type="button" data-lb-scope="all" class="tag" data-active="true">{t('lb.allTime')}</button>
+        <button type="button" data-lb-scope="season" class="tag">{t('lb.season')}</button>
+      </div>
+    </div>
+  )}
+
+  <div class="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)]">
+    <table class="lb-table w-full text-sm">
+      <caption class="sr-only">{t('lb.title')} — {challengeId}</caption>
+      <thead class="hidden bg-[var(--color-surface-2)] md:table-header-group">
+        <tr>
+          {columns.map((column) => (
+            <th
+              scope="col"
+              data-lb-col={column}
+              class={`whitespace-nowrap px-3 py-2.5 text-start text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-[var(--color-muted)] ${NUMERIC.has(column) ? 'text-end' : ''}`}
+            >
+              {compact ? (
+                <span>{t(`lb.${column}`)}</span>
+              ) : (
+                <button type="button" data-lb-sort={column} class="inline-flex items-center gap-1 uppercase hover:text-[var(--color-ink)]">
+                  {t(`lb.${column}`)}
+                  <span class="sort-arrow text-[var(--color-accent)]" aria-hidden="true"></span>
+                </button>
+              )}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody data-lb-body>
+        {visible.map((row) => (
+          <tr
+            class="lb-row border-t border-[var(--color-border)] align-middle data-[podium]:bg-[color-mix(in_srgb,var(--color-accent)_7%,transparent)]"
+            data-name={row.name.toLowerCase()}
+            data-division={row.division}
+            data-club={row.club}
+            data-season={row.season}
+            data-podium={row.rank <= 3 ? String(row.rank) : undefined}
+            {...Object.fromEntries(columns.map((c) => [`data-v-${c}`, sortValue(row, c)]))}
+          >
+            {columns.map((column) => {
+              const numeric = NUMERIC.has(column);
+              const base = `px-3 py-2.5 ${numeric ? 'tnum md:text-end' : ''}`;
+              if (column === 'rank') {
+                return (
+                  <td class={`${base} font-bold`} data-label={t('lb.rank')}>
+                    <span class={row.rank <= 3 ? 'text-[var(--color-accent)]' : ''}>{row.rank}</span>
+                  </td>
+                );
+              }
+              if (column === 'name') {
+                const key = row.name.trim().toLowerCase();
+                const slug = athleteSlugs[key];
+                const shown = displayNames[key] ?? row.name;
+                return (
+                  <td class={`${base} font-bold`} data-label={t('lb.name')}>
+                    {slug ? (
+                      <a href={slug} class="underline-offset-4 hover:text-[var(--color-accent)] hover:underline">{shown}</a>
+                    ) : (
+                      shown
+                    )}
+                  </td>
+                );
+              }
+              if (column === 'verified') {
+                return (
+                  <td class={base} data-label={t('lb.verified')}>
+                    {row.verified ? (
+                      <span class="tag border-[var(--color-accent)] text-[var(--color-accent)]" title={t('lb.verified')}>✓ {t('lb.verified')}</span>
+                    ) : (
+                      <span class="tag" title={t('lb.unverified')}>{t('lb.unverified')}</span>
+                    )}
+                  </td>
+                );
+              }
+              if (column === 'proof') {
+                return (
+                  <td class={base} data-label={t('lb.proof')}>
+                    {row.proofUrl ? (
+                      <a href={row.proofUrl} rel="noopener" class="text-[var(--color-accent)] underline-offset-4 hover:underline">↗</a>
+                    ) : (
+                      <span class="text-[var(--color-faint)]">—</span>
+                    )}
+                  </td>
+                );
+              }
+              return (
+                <td class={base} data-label={t(`lb.${column}`)}>
+                  {cellValue(row, column)}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p data-lb-empty hidden class="p-6 text-center text-sm text-[var(--color-muted)]">{t('lb.noRows')}</p>
+  </div>
+
+  {!compact && (
+    <p class="mt-3 text-xs text-[var(--color-faint)]">
+      <span data-lb-count>{rows.length}</span> {t('lb.entries')}
+    </p>
+  )}
+</div>
+
+<style>
+  /* Mobile: every row becomes a card. No horizontal scroll, no duplicated DOM. */
+  @media (max-width: 47.99rem) {
+    .lb-table,
+    .lb-table tbody,
+    .lb-table tr,
+    .lb-table td {
+      display: block;
+      width: 100%;
+    }
+    .lb-table tr {
+      padding: 0.75rem 0.25rem;
+    }
+    .lb-table td {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 0.3rem;
+      text-align: end;
+    }
+    .lb-table td::before {
+      content: attr(data-label);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-faint);
+      text-align: start;
+    }
+    .lb-table td[data-label]:first-child {
+      font-size: 1.125rem;
+    }
+  }
+  .lb-table tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--color-surface) 55%, transparent);
+  }
+  .lb-table tbody tr[data-podium] {
+    box-shadow: inset 3px 0 0 var(--color-accent);
+  }
+</style>
+
+<script>
+  // Client-side sort/filter over rows that are already in the DOM, so the full
+  // table is readable — and indexable — with JavaScript disabled.
+  type Dir = 'asc' | 'desc';
+
+  document.querySelectorAll<HTMLElement>('[data-leaderboard]').forEach((root) => {
+    const body = root.querySelector<HTMLTableSectionElement>('[data-lb-body]');
+    if (!body) return;
+    const tbody = body;
+
+    const rows = Array.from(body.querySelectorAll<HTMLTableRowElement>('tr'));
+    const empty = root.querySelector<HTMLElement>('[data-lb-empty]');
+    const count = root.querySelector<HTMLElement>('[data-lb-count]');
+    const search = root.querySelector<HTMLInputElement>('[data-lb-search]');
+    const filters = Array.from(root.querySelectorAll<HTMLSelectElement>('[data-lb-filter]'));
+    const scopeButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-lb-scope]'));
+    const currentSeason = root.dataset.season ?? '';
+
+    let scope: 'all' | 'season' = 'all';
+    let sortCol: string | null = null;
+    let sortDir: Dir = 'asc';
+
+    const numeric = new Set(['rank', 'score', 'hits', 'misses', 'percent', 'time', 'verified']);
+
+    function apply() {
+      const term = (search?.value ?? '').trim().toLowerCase();
+      let shown = 0;
+
+      for (const row of rows) {
+        let visible = true;
+
+        if (term && !(row.dataset.name ?? '').includes(term)) visible = false;
+
+        for (const filter of filters) {
+          const key = filter.dataset.lbFilter!;
+          const want = filter.value;
+          if (!want) continue;
+          if ((row.dataset[key] ?? '') !== want) visible = false;
+        }
+
+        if (scope === 'season' && (row.dataset.season ?? '') !== currentSeason) visible = false;
+
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      }
+
+      if (empty) empty.hidden = shown !== 0;
+      if (count) count.textContent = String(shown);
+    }
+
+    function sortBy(column: string) {
+      if (sortCol === column) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+      else {
+        sortCol = column;
+        sortDir = 'asc';
+      }
+
+      const factor = sortDir === 'asc' ? 1 : -1;
+      const sorted = [...rows].sort((a, b) => {
+        const av = a.dataset[`v${column.charAt(0).toUpperCase()}${column.slice(1)}`] ?? '';
+        const bv = b.dataset[`v${column.charAt(0).toUpperCase()}${column.slice(1)}`] ?? '';
+        if (av === '' && bv === '') return 0;
+        if (av === '') return 1;
+        if (bv === '') return -1;
+        if (numeric.has(column)) return (Number(av) - Number(bv)) * factor;
+        return av.localeCompare(bv) * factor;
+      });
+
+      for (const row of sorted) tbody.appendChild(row);
+
+      root.querySelectorAll<HTMLElement>('[data-lb-sort]').forEach((button) => {
+        const arrow = button.querySelector('.sort-arrow');
+        const active = button.dataset.lbSort === column;
+        if (arrow) arrow.textContent = active ? (sortDir === 'asc' ? '▲' : '▼') : '';
+        button.closest('th')?.setAttribute('aria-sort', active ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none');
+      });
+    }
+
+    search?.addEventListener('input', apply);
+    filters.forEach((filter) => filter.addEventListener('change', apply));
+
+    scopeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        scope = button.dataset.lbScope === 'season' ? 'season' : 'all';
+        scopeButtons.forEach((other) => other.setAttribute('data-active', String(other === button)));
+        apply();
+      });
+    });
+
+    root.querySelectorAll<HTMLButtonElement>('[data-lb-sort]').forEach((button) => {
+      button.addEventListener('click', () => sortBy(button.dataset.lbSort!));
+    });
+
+    // A pre-selected season filter (seasonal challenges) needs one pass on load.
+    apply();
+  });
+</script>

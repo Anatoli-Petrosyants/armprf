@@ -1,0 +1,22 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import type { Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  crumbs?: Array<{ name: string; path: string }>;
+}
+const { lang, eyebrow, title, lead, crumbs = [] } = Astro.props;
+---
+<section class="moa-grid border-b border-[var(--color-border)]">
+  <div class="wrap py-12 md:py-16">
+    {crumbs.length > 0 && <Breadcrumbs lang={lang} items={crumbs} />}
+    {eyebrow && <p class="eyebrow mt-4">{eyebrow}</p>}
+    <h1 class="mt-2 text-4xl md:text-5xl">{title}</h1>
+    {lead && <p class="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">{lead}</p>}
+    <slot />
+  </div>
+</section>

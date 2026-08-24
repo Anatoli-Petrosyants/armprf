@@ -1,0 +1,115 @@
+---
+import SmartImage from '@/components/SmartImage.astro';
+import { resolveImage } from '@/lib/images';
+import { useTranslations, type Lang } from '@/lib/i18n';
+
+interface Item {
+  src: string;
+  alt: string;
+  caption?: string;
+  tag?: string;
+  date?: string;
+}
+interface Props {
+  lang: Lang;
+  items: Item[];
+  columns?: 2 | 3 | 4;
+}
+const { lang, items, columns = 3 } = Astro.props;
+const t = useTranslations(lang);
+
+const grid: Record<number, string> = {
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-2 lg:grid-cols-3',
+  4: 'sm:grid-cols-2 lg:grid-cols-4',
+};
+---
+<ul class={`grid gap-3 ${grid[columns]}`} data-gallery>
+  {items.map((item, index) => {
+    const full = resolveImage(item.src);
+    return (
+      <li data-gallery-item={index} data-tag={item.tag}>
+        <button
+          type="button"
+          class="group block w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)] text-start"
+          data-full={full?.src}
+          data-alt={item.alt}
+          data-caption={item.caption ?? ''}
+        >
+          <SmartImage
+            src={item.src}
+            alt={item.alt}
+            aspect="3/2"
+            widths={[400, 700, 1000]}
+            sizes="(min-width: 64rem) 33vw, (min-width: 40rem) 50vw, 100vw"
+            class="w-full transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        </button>
+        {item.caption && <p class="mt-1.5 text-xs text-[var(--color-faint)]">{item.caption}</p>}
+      </li>
+    );
+  })}
+</ul>
+
+<dialog
+  data-lightbox
+  class="max-h-[92dvh] max-w-[94vw] border border-[var(--color-border)] bg-[var(--color-bg)] p-0 text-[var(--color-ink)] backdrop:bg-black/80"
+>
+  <div class="relative">
+    <img data-lightbox-img src="" alt="" class="max-h-[80dvh] w-auto max-w-full" />
+    <p data-lightbox-caption class="px-4 py-3 text-sm text-[var(--color-muted)]"></p>
+    <div class="absolute inset-x-0 top-0 flex justify-between p-2">
+      <div class="flex gap-2">
+        <button type="button" data-lightbox-prev class="btn btn-ghost bg-[var(--color-bg)]/80 px-3 py-1.5" aria-label={t('gallery.prev')}>←</button>
+        <button type="button" data-lightbox-next class="btn btn-ghost bg-[var(--color-bg)]/80 px-3 py-1.5" aria-label={t('gallery.next')}>→</button>
+      </div>
+      <button type="button" data-lightbox-close class="btn btn-ghost bg-[var(--color-bg)]/80 px-3 py-1.5" aria-label={t('gallery.close')}>✕</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  // Lightbox over a native <dialog>: focus trapping, Escape and the backdrop
+  // come from the platform, so the island stays tiny.
+  const dialog = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+  const grid = document.querySelector<HTMLElement>('[data-gallery]');
+  if (dialog && grid) {
+    const image = dialog.querySelector<HTMLImageElement>('[data-lightbox-img]')!;
+    const caption = dialog.querySelector<HTMLElement>('[data-lightbox-caption]')!;
+    const buttons = Array.from(grid.querySelectorAll<HTMLButtonElement>('button[data-full]'));
+    let index = 0;
+
+    function show(next: number) {
+      const visible = buttons.filter((b) => !(b.closest('li') as HTMLElement).hidden);
+      if (!visible.length) return;
+      index = (next + visible.length) % visible.length;
+      const button = visible[index];
+      image.src = button.dataset.full ?? '';
+      image.alt = button.dataset.alt ?? '';
+      caption.textContent = button.dataset.caption ?? '';
+      caption.hidden = !button.dataset.caption;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const visible = buttons.filter((b) => !(b.closest('li') as HTMLElement).hidden);
+        show(visible.indexOf(button));
+        dialog.showModal();
+      });
+    });
+
+    dialog.querySelector('[data-lightbox-close]')?.addEventListener('click', () => dialog.close());
+    dialog.querySelector('[data-lightbox-prev]')?.addEventListener('click', () => show(index - 1));
+    dialog.querySelector('[data-lightbox-next]')?.addEventListener('click', () => show(index + 1));
+
+    dialog.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') show(index - 1);
+      if (event.key === 'ArrowRight') show(index + 1);
+    });
+
+    // Clicking the backdrop (outside the image block) closes.
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+</script>
