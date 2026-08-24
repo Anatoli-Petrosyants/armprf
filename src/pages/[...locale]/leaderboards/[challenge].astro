@@ -100,17 +100,7 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
             <dd class="tnum mt-1 font-bold text-[var(--color-accent-text)]">{data.maxScore}</dd>
           </div>
         )}
-        <div>
-          <dt class="text-[0.625rem] uppercase tracking-[0.14em] text-[var(--color-faint)]">{t('lb.entries')}</dt>
-          <dd class="tnum mt-1 font-bold">{rows.length}</dd>
-        </div>
       </dl>
-
-      {data.videoUrl && (
-        <div class="mt-8">
-          <a href="#video" class="btn btn-ghost">{t('lb.watchVideo')}</a>
-        </div>
-      )}
     </div>
   </header>
 
