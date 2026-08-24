@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Armen Hakobyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2026-01-18",
+    "rifle": "Tikka T3x TAC A1",
+    "caliber": "6.5 Creedmoor",
+    "score": 12,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF000"
+  },
+  {
+    "name": "Tigran Sargsyan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2026-02-15",
+    "rifle": "Bergara B14 HMR",
+    "caliber": "6.5 Creedmoor",
+    "score": 14,
+    "verified": true
+  },
+  {
+    "name": "Narek Grigoryan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2026-03-08",
+    "rifle": "CZ 457 MTR",
+    "caliber": ".22LR",
+    "score": 14,
+    "verified": true
+  },
+  {
+    "name": "Gor Petrosyan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2026-04-12",
+    "rifle": "Defiance Deviant",
+    "caliber": "6mm Dasher",
+    "score": 13,
+    "verified": false
+  },
+  {
+    "name": "Hayk Avetisyan",
+    "club": "Vayots Dzor Shooters",
+    "division": "Hunter",
+    "date": "2026-05-17",
+    "rifle": "Sako 85 Bavarian",
+    "caliber": ".308 Win",
+    "score": 0,
+    "verified": true,
+    "notes": "Busted — went over 21"
+  },
+  {
+    "name": "Davit Mkrtchyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2026-06-07",
+    "rifle": "Ruger Precision Rifle",
+    "caliber": "6.5 Creedmoor",
+    "score": 13,
+    "verified": true
+  },
+  {
+    "name": "Arsen Khachatryan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2025-05-11",
+    "rifle": "Accuracy International AT",
+    "caliber": ".308 Win",
+    "score": 13,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF006"
+  },
+  {
+    "name": "Ani Melkonyan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2025-07-13",
+    "rifle": "Vudoo V-22",
+    "caliber": ".22LR",
+    "score": 15,
+    "verified": false
+  },
+  {
+    "name": "Vahe Hovhannisyan",
+    "club": "Independent",
+    "division": "Hunter",
+    "date": "2025-09-21",
+    "rifle": "Tikka T3x Lite",
+    "caliber": ".30-06",
+    "score": 12,
+    "verified": true
+  },
+  {
+    "name": "Levon Baghdasaryan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2025-11-02",
+    "rifle": "MDT ACC / Rem 700",
+    "caliber": "6.5 PRC",
+    "score": 10,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF009"
+  },
+  {
+    "name": "Marek Novak",
+    "club": "Guest — CZ",
+    "division": "Open",
+    "date": "2026-01-18",
+    "rifle": "Sako TRG 22",
+    "caliber": ".308 Win",
+    "score": 18,
+    "verified": true
+  },
+  {
+    "name": "Giorgi Beridze",
+    "club": "Guest — GE",
+    "division": "Hunter",
+    "date": "2026-02-15",
+    "rifle": "Blaser R8",
+    "caliber": ".300 Win Mag",
+    "score": 9,
+    "verified": false
+  },
+  {
+    "name": "Armen Hakobyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2026-03-08",
+    "rifle": "Tikka T3x TAC A1",
+    "caliber": "6.5 Creedmoor",
+    "score": 13,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF012"
+  },
+  {
+    "name": "Tigran Sargsyan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2026-04-12",
+    "rifle": "Bergara B14 HMR",
+    "caliber": "6.5 Creedmoor",
+    "score": 0,
+    "verified": true,
+    "notes": "Busted — went over 21"
+  },
+  {
+    "name": "Narek Grigoryan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2026-05-17",
+    "rifle": "CZ 457 MTR",
+    "caliber": ".22LR",
+    "score": 13,
+    "verified": true
+  },
+  {
+    "name": "Gor Petrosyan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2026-06-07",
+    "rifle": "Defiance Deviant",
+    "caliber": "6mm Dasher",
+    "score": 9,
+    "verified": false
+  },
+  {
+    "name": "Hayk Avetisyan",
+    "club": "Vayots Dzor Shooters",
+    "division": "Hunter",
+    "date": "2025-05-11",
+    "rifle": "Sako 85 Bavarian",
+    "caliber": ".308 Win",
+    "score": 16,
+    "verified": true
+  },
+  {
+    "name": "Davit Mkrtchyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2025-07-13",
+    "rifle": "Ruger Precision Rifle",
+    "caliber": "6.5 Creedmoor",
+    "score": 18,
+    "verified": true
+  },
+  {
+    "name": "Arsen Khachatryan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2025-09-21",
+    "rifle": "Accuracy International AT",
+    "caliber": ".308 Win",
+    "score": 11,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF018"
+  },
+  {
+    "name": "Ani Melkonyan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2025-11-02",
+    "rifle": "Vudoo V-22",
+    "caliber": ".22LR",
+    "score": 15,
+    "verified": false
+  },
+  {
+    "name": "Vahe Hovhannisyan",
+    "club": "Independent",
+    "division": "Hunter",
+    "date": "2026-01-18",
+    "rifle": "Tikka T3x Lite",
+    "caliber": ".30-06",
+    "score": 20,
+    "verified": true
+  },
+  {
+    "name": "Levon Baghdasaryan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2026-02-15",
+    "rifle": "MDT ACC / Rem 700",
+    "caliber": "6.5 PRC",
+    "score": 17,
+    "verified": true,
+    "proofUrl": "https://www.youtube.com/watch?v=TODOPROOF021"
+  }
+]

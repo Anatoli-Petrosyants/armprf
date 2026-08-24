@@ -1,0 +1,98 @@
+{
+  "groups": [
+    {
+      "id": "starting",
+      "title": { "hy": "Սկսելը", "en": "Starting out" },
+      "items": [
+        {
+          "q": { "hy": "Ինձ ի՞նչ է պետք առաջին մրցմանը մասնակցելու համար։", "en": "What do I need for my first match?" },
+          "a": {
+            "hy": "Ճշգրիտ հրացան՝ 1 MOA-ից լավ ճշգրտությամբ, օպտիկա՝ ուղղիչ մեխանիզմով և MIL կամ MOA ցանցով, երկոտանի կամ պայուսակ, աչքի և ականջի պաշտպանություն, 60–120 փամփուշտ և ձեր զրոյացման տվյալները։ Մնացածը կարելի է փոխառել։",
+            "en": "A rifle that shoots better than 1 MOA, a scope with usable turrets and a MIL or MOA reticle, a bipod or a bag, eye and ear protection, 60–120 rounds, and your zero data. Most of the rest can be borrowed."
+          }
+        },
+        {
+          "q": { "hy": "Կարո՞ղ եմ գալ առանց հրացանի։", "en": "Can I come without a rifle?" },
+          "a": {
+            "hy": "Այո։ .22LR պարապմունքներին տրամադրվում է հրացան և փամփուշտ։ Կենտրոնական բռնկման մրցումներում փոխառու հրացանը հնարավոր է, բայց պետք է նախապես համաձայնեցնել մրցավարի հետ։",
+            "en": "Yes. At .22LR practice we provide a rifle and ammunition. For centerfire matches a loaner is sometimes possible, but arrange it with the match director in advance."
+          }
+        },
+        {
+          "q": { "hy": "Ո՞րն է ամենաէժան մուտքը սպորտ։", "en": "What is the cheapest way in?" },
+          "a": {
+            "hy": ".22LR rimfire-ը։ Նույն դիրքերը, նույն քամու ընթերցումը, նույն ժամանակի ճնշումը՝ կրակոցի արժեքի մոտ 5%-ով։",
+            "en": ".22LR rimfire. The same positions, the same wind reading, the same time pressure — at roughly 5% of the cost per shot."
+          }
+        }
+      ]
+    },
+    {
+      "id": "matches",
+      "title": { "hy": "Մրցումներ", "en": "Matches" },
+      "items": [
+        {
+          "q": { "hy": "Ինչպե՞ս է հաշվարկվում միավորը։", "en": "How is scoring done?" },
+          "a": {
+            "hy": "Յուրաքանչյուր փուլ ունի հայտարարված թիրախներ և ժամանակ։ Խոցումը գրանցում է մրցավարը՝ ձայնով և տեսողականորեն։ Վիճելի դեպքում որոշում է մրցավարը, փուլը չի կրկնվում։ Մրցաշրջանի ընդհանուր աղյուսակում փուլային միավորները վերածվում են տոկոսի։",
+            "en": "Every stage has declared targets and a time limit. Impacts are called by the range officer, by sound and by sight. Disputes are settled by the RO on the spot; stages are not re-run. For the season series, stage points are normalised to a percentage."
+          }
+        },
+        {
+          "q": { "hy": "Ի՞նչ է նշանակում «հաստատված» աղյուսակում։", "en": "What does “verified” mean on a leaderboard?" },
+          "a": {
+            "hy": "Արդյունքը գրանցվել է ARMPRF-ի մրցավարի կողմից մրցումի ընթացքում, կամ ուղարկվել է տեսագրությամբ, որտեղ երևում են բոլոր կրակոցները և խոցումները։ Առանց ապացույցի արդյունքները ցուցադրվում են, բայց նշվում են որպես չհաստատված։",
+            "en": "The score was recorded by an ARMPRF range officer at a match, or submitted with video showing every shot and every impact. Scores without proof are still shown, but flagged as unverified."
+          }
+        },
+        {
+          "q": { "hy": "Ի՞նչ է լինում հավասար միավորների դեպքում։", "en": "How are ties handled?" },
+          "a": {
+            "hy": "Հավասար միավորները ստանում են նույն տեղը, և հաջորդ տեղը բաց է թողնվում։ Երկու երկրորդ տեղից հետո գալիս է չորրորդը։",
+            "en": "Equal scores share the same rank and the next rank is skipped. After two second places, the next shooter is fourth."
+          }
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": { "hy": "Անվտանգություն և իրավական հարցեր", "en": "Safety and legal" },
+      "items": [
+        {
+          "q": { "hy": "Ի՞նչ անվտանգության կանոններ են գործում։", "en": "What safety rules apply?" },
+          "a": {
+            "hy": "Փողը միշտ ապահով ուղղությամբ, փականը դուրս, պահոցը դատարկ՝ բացի կրակելու հրամանից հետո։ Աչքի և ականջի պաշտպանությունը պարտադիր է կրակային գծին մոտ բոլորի համար։ Կոպիտ խախտումը՝ անմիջական հեռացում։",
+            "en": "Muzzle in a safe direction, bolt out, chamber empty except between load and unload commands. Eye and ear protection is mandatory for everyone near the firing line. A gross violation means immediate removal."
+          }
+        },
+        {
+          "q": { "hy": "Զենքի փոխադրման կանոնները։", "en": "Rules for transporting a rifle?" },
+          "a": {
+            "hy": "TODO(content): ՀՀ օրենսդրության պահանջները՝ պատյան, առանձնացված փամփուշտ, փաստաթղթեր։ Ստուգեք գործող կարգավորումը մրցումից առաջ։",
+            "en": "TODO(content): Armenian legal requirements — cased, ammunition separate, papers on you. Check the current regulation before travelling to a match."
+          }
+        }
+      ]
+    },
+    {
+      "id": "site",
+      "title": { "hy": "Կայք և արդյունքներ", "en": "Site and results" },
+      "items": [
+        {
+          "q": { "hy": "Իմ արդյունքը սխալ է նշված։ Ի՞նչ անեմ։", "en": "My result is wrong. What now?" },
+          "a": {
+            "hy": "Գրեք մեզ էլ. փոստով՝ նշելով մարտահրավերի անունը, ամսաթիվը և ճիշտ միավորը։ Ուղղումները կատարվում են ձեռքով, սովորաբար նույն շաբաթվա ընթացքում։",
+            "en": "Email us with the challenge name, the date and the correct score. Corrections are made by hand, usually within the same week."
+          }
+        },
+        {
+          "q": { "hy": "Ինչպե՞ս ներկայացնեմ իմ արդյունքը մարտահրավերում։", "en": "How do I submit a challenge score?" },
+          "a": {
+            "hy": "Օգտագործեք «Ներկայացնել քո արդյունքը» կոճակը համապատասխան մարտահրավերի էջում։ Կցեք տեսանյութ կամ լուսանկար՝ թիրախով և միավորի քարտով։",
+            "en": "Use the “Submit your score” button on the challenge page. Attach video or a photo showing the target and the score card."
+          }
+        }
+      ]
+    }
+  ]
+}

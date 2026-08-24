@@ -1,0 +1,71 @@
+{
+  "intro": {
+    "hy": "Հայաստանում 1000 մետրից ավելի հեռավորության վրա օրինական և ապահով կրակելու տեղերը քիչ են։ ARMPRF-ը կառուցում է սեփական հրաձգարանը՝ ապահով կրակային գծով, ամրացված պատվարներով և մշտական թիրախային դաշտով։ Ստորև՝ շինարարության իրական ընթացքը։",
+    "en": "There are very few places in Armenia where you can legally and safely shoot past 1000 metres. ARMPRF is building its own range — a safe firing line, engineered berms and a permanent target field. Below is the actual build-out progress."
+  },
+  "specs": [
+    { "label": { "hy": "Առավելագույն հեռավորություն", "en": "Max distance" }, "value": "1200 m" },
+    { "label": { "hy": "Կրակային գիծ", "en": "Firing line" }, "value": "TODO(content) — 12 pos." },
+    { "label": { "hy": "Rimfire գիծ", "en": "Rimfire line" }, "value": "25–200 m" },
+    { "label": { "hy": "Բարձրություն ծ. մ.", "en": "Elevation" }, "value": "TODO(content) m ASL" }
+  ],
+  "timeline": [
+    {
+      "date": "2025-06",
+      "status": "done",
+      "title": { "hy": "Հողատարածքի ընտրություն", "en": "Site selection" },
+      "body": {
+        "hy": "TODO(content): գնահատվել են երեք հնարավոր տեղանքներ՝ ըստ ապահով հետնախորքի, հասանելիության և քամու պայմանների։",
+        "en": "TODO(content): three candidate sites assessed for safe backstop, access and wind conditions."
+      },
+      "before": "/img/range/before-after/2025-06_site_before.jpg",
+      "after": "/img/range/before-after/2025-06_site_after.jpg"
+    },
+    {
+      "date": "2025-09",
+      "status": "done",
+      "title": { "hy": "Հողային աշխատանքներ", "en": "Earthworks" },
+      "body": {
+        "hy": "TODO(content): կրակային գծի հարթեցում և մուտքի ճանապարհի բացում։",
+        "en": "TODO(content): firing line levelled and the access track cut in."
+      },
+      "photo": "/img/range/construction-progress/2025-09_earthworks_01.jpg"
+    },
+    {
+      "date": "2026-03",
+      "status": "in-progress",
+      "title": { "hy": "Պատվարներ և հետնախորք", "en": "Berms and backstop" },
+      "body": {
+        "hy": "TODO(content): կողային պատվարների կառուցում և հետնախորքի ամրացում։",
+        "en": "TODO(content): side berms built and the backstop reinforced."
+      },
+      "photo": "/img/range/construction-progress/2026-03_berms_01.jpg"
+    },
+    {
+      "date": "2026-07",
+      "status": "planned",
+      "title": { "hy": "Թիրախային շրջանակներ", "en": "Target frames" },
+      "body": {
+        "hy": "TODO(content): մշտական AR500 թիրախներ 300-ից 1200 մ հեռավորությունների վրա։",
+        "en": "TODO(content): permanent AR500 targets from 300 to 1200 m."
+      }
+    },
+    {
+      "date": "2026-10",
+      "status": "planned",
+      "title": { "hy": "Ծածկ և ենթակառուցվածք", "en": "Shelter and facilities" },
+      "body": {
+        "hy": "TODO(content): ծածկ կրակային գծի վրա, նստարաններ, ցուցանակներ, ավտոկայանատեղի։",
+        "en": "TODO(content): shade over the firing line, benches, signage and parking."
+      }
+    }
+  ],
+  "facilities": [
+    { "title": { "hy": "Կրակային գիծ ծածկով", "en": "Covered firing line" }, "status": "planned" },
+    { "title": { "hy": "Rimfire հատված", "en": "Rimfire bay" }, "status": "in-progress" },
+    { "title": { "hy": "Անվտանգության գոտի", "en": "Safety area" }, "status": "done" },
+    { "title": { "hy": "Ավտոկայանատեղի", "en": "Parking" }, "status": "in-progress" },
+    { "title": { "hy": "Ցուցանակներ և նշագծում", "en": "Signage and marking" }, "status": "planned" },
+    { "title": { "hy": "Ջուր և ստվեր", "en": "Water and shade" }, "status": "planned" }
+  ]
+}

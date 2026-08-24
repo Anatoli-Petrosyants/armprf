@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "id": "centerfire-long-range",
+      "title": { "hy": "Կենտրոնական բռնկում, հեռահար", "en": "Centerfire long range" },
+      "distance": "300–1200 m",
+      "summary": {
+        "hy": "Ֆեդերացիայի հիմնական ուղղությունը՝ պողպատե թիրախներ ժամանակի սահմանափակմամբ, հայտնի և անհայտ հեռավորությունների վրա։",
+        "en": "The federation's core discipline: steel targets against the clock, at known and unknown distances."
+      },
+      "gear": {
+        "hy": "6–6.5 մմ տրամաչափ, 1 MOA-ից լավ հրացան, 25+ MIL ուղղիչ պաշար, երկոտանի և հետնապայուսակ",
+        "en": "6–6.5 mm calibre, sub-MOA rifle, 25+ MIL of elevation, bipod and rear bag"
+      }
+    },
+    {
+      "id": "rimfire-prs",
+      "title": { "hy": ".22LR Rimfire PRS", "en": ".22LR rimfire PRS" },
+      "distance": "25–200 m",
+      "summary": {
+        "hy": "Նույն խաղը, փոքրացված։ Մատչելի փամփուշտ, փոքր հետհարված, նույն դիրքային և քամու պահանջները։ Սա մուտքն է սպորտ։",
+        "en": "The same game, scaled down. Cheap ammunition, no recoil, the same positional and wind demands. This is the way in."
+      },
+      "gear": {
+        "hy": ".22LR հրացան, 10+ MIL ուղղիչ պաշար, մրցումային փամփուշտ",
+        "en": ".22LR rifle, 10+ MIL of elevation, match-grade ammunition"
+      }
+    },
+    {
+      "id": "hunter",
+      "title": { "hy": "Որսորդական դասակարգ", "en": "Hunter class" },
+      "distance": "100–600 m",
+      "summary": {
+        "hy": "Գործարանային որսորդական հրացան, սահմանափակ քաշ և օպտիկա։ Դաշտային դիրքեր՝ ուսապարկ, ձող, տեղանք։ Ոչ թե ամենալավ սարքավորումը, այլ ամենալավ հրաձիգը։",
+        "en": "A factory hunting rifle, capped weight and optics. Field positions off a pack, a stick, the terrain. Not the best equipment — the best shooter."
+      },
+      "gear": {
+        "hy": "Գործարանային հրացան մինչև 6.5 կգ, առանց երկոտանիի սահմանափակում ըստ կանոնագրքի",
+        "en": "Factory rifle under 6.5 kg; bipod restrictions per the rulebook"
+      }
+    },
+    {
+      "id": "kyl-known-distance",
+      "title": { "hy": "KYL և հայտնի հեռավորություն", "en": "KYL / known distance" },
+      "distance": "100–600 m",
+      "summary": {
+        "hy": "«Know Your Limits» կանգնակ՝ նվազող չափի թիրախներով։ Խոցումը տանում է առաջ, վրիպումը դադարեցնում է շարքը։ Մաքուր որոշումների խաղ։",
+        "en": "A Know Your Limits rack of shrinking targets. A hit moves you on, a miss ends the string. A pure discipline of decisions."
+      },
+      "gear": {
+        "hy": "Ցանկացած դասակարգի հրացան, ճշգրիտ զրոյացում պարտադիր",
+        "en": "Any division rifle; an honest zero is mandatory"
+      }
+    },
+    {
+      "id": "field-positional",
+      "title": { "hy": "Դաշտային և դիրքային", "en": "Field / positional" },
+      "distance": "200–800 m",
+      "summary": {
+        "hy": "Արգելապատնեշ, տանիք, հակատանկային խոչընդոտ, եռոտանի։ Ժամանակը սեղմ է, դիրքը՝ անհարմար։ Այստեղ է որոշվում մրցաշրջանը։",
+        "en": "Barricades, roof props, tank traps, tripods. Tight time, awkward positions. This is where the season is decided."
+      },
+      "gear": {
+        "hy": "Դիրքային պայուսակներ, եռոտանի, արագ հարմարվող երկոտանի",
+        "en": "Positional bags, a tripod, a bipod that adjusts fast"
+      }
+    }
+  ],
+  "gettingStarted": {
+    "steps": [
+      {
+        "title": { "hy": "Եկեք որպես դիտորդ", "en": "Come and watch first" },
+        "body": {
+          "hy": "Մեկ մրցում դիտելը փոխարինում է տասը հոդված կարդալուն։ Բերեք աչքի և ականջի պաշտպանություն։ Հարցրեք ամեն ինչ։",
+          "en": "Watching one match replaces reading ten articles. Bring eye and ear protection. Ask anything."
+        }
+      },
+      {
+        "title": { "hy": "Անցեք անվտանգության ճեպազրույցը", "en": "Take the safety briefing" },
+        "body": {
+          "hy": "Պարտադիր է առաջին կրակոցից առաջ։ Տևում է մոտ 30 րոպե և ընդգրկում է հրամանները, փողի կառավարումը և վրիպակի դեպքում գործողությունները։",
+          "en": "Mandatory before your first shot. Around 30 minutes: range commands, muzzle control, and what to do with a malfunction."
+        }
+      },
+      {
+        "title": { "hy": "Սկսեք .22LR-ով", "en": "Start with .22LR" },
+        "body": {
+          "hy": "Նույն հմտությունները, կրակոցի արժեքը՝ տասնապատիկ ցածր։ Rimfire-ում սովորած դիրքերն ուղղակիորեն տեղափոխվում են հեռահար հրաձգություն։",
+          "en": "The same skills at a tenth of the cost per shot. Positions learned on rimfire transfer directly to long range."
+        }
+      },
+      {
+        "title": { "hy": "Զրոյացրեք և գրանցեք ձեր տվյալները", "en": "Zero, then write down your data" },
+        "body": {
+          "hy": "100 մ ճշգրիտ զրո, չափված սկզբնական արագություն, ստուգված ուղղիչ քայլ։ Առանց այս երեքի բալիստիկ հաշվիչը գուշակում է։",
+          "en": "An honest 100 m zero, a measured muzzle velocity, a verified turret track. Without those three a ballistic solver is guessing."
+        }
+      },
+      {
+        "title": { "hy": "Գրանցվեք առաջին մրցմանը", "en": "Enter your first match" },
+        "body": {
+          "hy": "Մի սպասեք «պատրաստ» լինելուն։ Վերջին տեղը առաջին մրցումում նորմալ է և ամենաարագ ուսուցումն է։",
+          "en": "Do not wait until you feel ready. Finishing last at your first match is normal, and it is the fastest lesson available."
+        }
+      }
+    ],
+    "minimumGear": {
+      "hy": [
+        "Հրացան՝ 1 MOA-ից լավ ճշգրտությամբ (նույնիսկ գործարանային)",
+        "Օպտիկա՝ ուղղիչ մեխանիզմով և MIL/MOA ցանցով, նույն միավորով",
+        "Երկոտանի կամ առջևի պայուսակ + հետնապայուսակ",
+        "Աչքի և ականջի պաշտպանություն (պարտադիր)",
+        "60–120 փամփուշտ մեկ մրցումի համար",
+        "Հեռաչափ կամ մրցումի հայտարարված հեռավորությունները",
+        "Բալիստիկ հաշվիչ հեռախոսում + թղթե DOPE քարտ որպես պահեստ",
+        "Գրելու պիտույք և ժամացույց"
+      ],
+      "en": [
+        "A rifle that shoots better than 1 MOA — a factory rifle is fine",
+        "A scope with usable turrets and a MIL or MOA reticle in matching units",
+        "A bipod or front bag, plus a rear bag",
+        "Eye and ear protection (mandatory)",
+        "60–120 rounds per match",
+        "A rangefinder, or the match's published distances",
+        "A ballistic solver on your phone, plus a paper DOPE card as backup",
+        "Something to write with, and a watch"
+      ]
+    }
+  },
+  "glossary": [
+    { "term": "MOA", "hy": "Անկյունային րոպե՝ 1/60 աստիճան, մոտ 2.9 սմ 100 մ-ի վրա։", "en": "Minute of angle, 1/60 of a degree — about 2.9 cm at 100 m." },
+    { "term": "MIL", "hy": "Միլիռադիան՝ 10 սմ 100 մ-ի վրա։ Ցանցը և ուղղիչը պետք է լինեն նույն միավորով։", "en": "Milliradian — 10 cm at 100 m. Reticle and turrets must use the same unit." },
+    { "term": "DOPE", "hy": "«Data On Previous Engagements»՝ ձեր հրացանի իրական ուղղումները ըստ հեռավորության։", "en": "Data On Previous Engagements — your rifle's real come-ups by distance." },
+    { "term": "Cold bore", "hy": "Առաջին կրակոցը սառը, մաքուր փողից՝ որսի պայմաններին ամենամոտը։", "en": "The first shot from a cold, clean barrel — the closest thing to a hunting shot." },
+    { "term": "KYL", "hy": "«Know Your Limits»՝ նվազող թիրախների կանգնակ, որտեղ վրիպումը դադարեցնում է շարքը։", "en": "Know Your Limits — a rack of shrinking targets where a miss ends your string." },
+    { "term": "Stage", "hy": "Փուլ՝ մեկ առաջադրանք որոշակի թիրախներով, դիրքով և ժամանակով։", "en": "Stage — one task with defined targets, position and time limit." },
+    { "term": "RO", "hy": "Մրցավար կրակային գծին՝ ժամանակը, խոցումները և անվտանգությունը վերահսկողը։", "en": "Range officer — runs the clock, calls impacts, owns safety on the line." },
+    { "term": "Impact / splash", "hy": "Խոցում՝ պողպատին կամ գետնին կպնելու տեսանելի հետք, որով ուղղվում է հաջորդ կրակոցը։", "en": "The visible mark of a hit on steel or ground, used to correct the next shot." },
+    { "term": "Mirage", "hy": "Օդի ջերմային շերտավորումը՝ քամին կարդալու ամենաճշգրիտ միջոցը դիտակով։", "en": "Heat shimmer in the air — the most precise way to read wind through a spotting scope." },
+    { "term": "Positional", "hy": "Դիրքային կրակոց՝ առանց պառկած դիրքի, հենարանից կամ խոչընդոտից։", "en": "A shot taken from anything other than prone — off a prop or barricade." },
+    { "term": "Zero", "hy": "Զրոյացում՝ հեռավորությունը, որտեղ նշանառության կետը և խոցման կետը համընկնում են։ Սովորաբար 100 մ։", "en": "The distance at which point of aim equals point of impact. Usually 100 m." },
+    { "term": "Chrono", "hy": "Խրոնոգրաֆ՝ սկզբնական արագությունը չափող սարք, առանց որի բալիստիկ հաշվարկը գուշակություն է։", "en": "Chronograph — measures muzzle velocity; without it a ballistic solution is a guess." },
+    { "term": "Wind call", "hy": "Քամու ուղղումը՝ գնահատված դրոշներով, բուսականությամբ, միրաժով և Kestrel-ով։", "en": "The wind correction you commit to, judged from flags, vegetation, mirage and a Kestrel." },
+    { "term": "Division", "hy": "Դասակարգ՝ սարքավորման սահմանափակումների խումբ, որտեղ մրցում եք (Open, Hunter, Rimfire և այլն)։", "en": "Division — the equipment-limited group you compete in (Open, Hunter, Rimfire, etc.)." }
+  ]
+}

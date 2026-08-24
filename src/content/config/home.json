@@ -1,0 +1,33 @@
+{
+  "missionTiles": [
+    {
+      "icon": "reticle",
+      "title": { "hy": "Կարգապահ սպորտ", "en": "A disciplined sport" },
+      "body": {
+        "hy": "Ճշգրիտ հրաձգությունը սպորտ է, ոչ թե զվարճանք։ Դիրք, շնչառություն, քամի, տվյալ․ ամեն կրակոց չափելի է և կրկնելի։",
+        "en": "Precision rifle is a sport, not a pastime. Position, breathing, wind, data — every shot is measurable and repeatable."
+      }
+    },
+    {
+      "icon": "shield",
+      "title": { "hy": "Անվտանգությունն առաջին տեղում", "en": "Safety before score" },
+      "body": {
+        "hy": "Փողի ուղղություն, բացված փական, դատարկ պահոց․ մեկ խախտումը հանում է մրցումից՝ անկախ միավորից։",
+        "en": "Muzzle direction, open bolt, empty chamber. One violation ends your match, whatever your score says."
+      }
+    },
+    {
+      "icon": "chart",
+      "title": { "hy": "Թափանցիկ արդյունքներ", "en": "Results in the open" },
+      "body": {
+        "hy": "Բոլոր միավորները հրապարակվում են՝ ամսաթվով, դասակարգով և ապացույցով։ Աղյուսակը վիճելի չէ, այն ստուգելի է։",
+        "en": "Every score is published with its date, division and proof. The leaderboard is not an opinion — it is auditable."
+      }
+    }
+  ],
+  "stats": [
+    { "value": "4", "label": { "hy": "Գործող մարտահրավեր", "en": "Active challenges" } },
+    { "value": "1000+", "label": { "hy": "Մետր առավելագույն հեռավորություն", "en": "Metres max distance" } },
+    { "value": "2023", "label": { "hy": "Հիմնադրման տարի", "en": "Founded" } }
+  ]
+}

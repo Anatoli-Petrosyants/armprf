@@ -1,0 +1,935 @@
+{
+  "taxonomy": [
+    {
+      "id": "match",
+      "label": {
+        "hy": "Մրցում",
+        "en": "Competition"
+      },
+      "tags": [
+        {
+          "id": "match/stage-firing",
+          "label": {
+            "hy": "Փուլային կրակոց",
+            "en": "Stage firing"
+          }
+        },
+        {
+          "id": "match/prone-positional",
+          "label": {
+            "hy": "Պառկած և դիրքային",
+            "en": "Prone & positional"
+          }
+        },
+        {
+          "id": "match/timers-and-scoring",
+          "label": {
+            "hy": "Ժամանակ և միավոր",
+            "en": "Timers & scoring"
+          }
+        },
+        {
+          "id": "match/targets",
+          "label": {
+            "hy": "Թիրախներ",
+            "en": "Targets"
+          }
+        },
+        {
+          "id": "match/podium",
+          "label": {
+            "hy": "Պատվանդան",
+            "en": "Podium"
+          }
+        },
+        {
+          "id": "match/gear-line",
+          "label": {
+            "hy": "Հանդերձանքի գիծ",
+            "en": "Gear line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rimfire",
+      "label": {
+        "hy": "Rimfire / .22LR",
+        "en": "Rimfire / .22LR"
+      },
+      "tags": [
+        {
+          "id": "rimfire/matches",
+          "label": {
+            "hy": "Rimfire մրցումներ",
+            "en": "Rimfire matches"
+          }
+        },
+        {
+          "id": "rimfire/kids-and-newcomers",
+          "label": {
+            "hy": "Պատանիներ և սկսնակներ",
+            "en": "Kids & newcomers"
+          }
+        },
+        {
+          "id": "rimfire/small-targets",
+          "label": {
+            "hy": "Փոքր թիրախներ",
+            "en": "Small targets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "longrange",
+      "label": {
+        "hy": "Հեռահար",
+        "en": "Long range"
+      },
+      "tags": [
+        {
+          "id": "longrange/1000m-plus",
+          "label": {
+            "hy": "1000 մ և ավելի",
+            "en": "1000 m and beyond"
+          }
+        },
+        {
+          "id": "longrange/wind-reading",
+          "label": {
+            "hy": "Քամու ընթերցում",
+            "en": "Wind reading"
+          }
+        },
+        {
+          "id": "longrange/dope-and-ballistics",
+          "label": {
+            "hy": "DOPE և բալիստիկա",
+            "en": "DOPE & ballistics"
+          }
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "label": {
+        "hy": "Մարզում",
+        "en": "Training"
+      },
+      "tags": [
+        {
+          "id": "training/zeroing",
+          "label": {
+            "hy": "Զրոյացում",
+            "en": "Zeroing"
+          }
+        },
+        {
+          "id": "training/dry-fire-and-positions",
+          "label": {
+            "hy": "Չոր մարզում և դիրքեր",
+            "en": "Dry fire & positions"
+          }
+        },
+        {
+          "id": "training/coaching",
+          "label": {
+            "hy": "Մարզչական աշխատանք",
+            "en": "Coaching"
+          }
+        },
+        {
+          "id": "training/safety-briefing",
+          "label": {
+            "hy": "Անվտանգության ճեպազրույց",
+            "en": "Safety briefing"
+          }
+        },
+        {
+          "id": "training/reloading-bench",
+          "label": {
+            "hy": "Վերալիցքավորում",
+            "en": "Reloading bench"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hunting",
+      "label": {
+        "hy": "Որսորդություն",
+        "en": "Hunting"
+      },
+      "tags": [
+        {
+          "id": "hunting/field-positions",
+          "label": {
+            "hy": "Դաշտային դիրքեր",
+            "en": "Field positions"
+          }
+        },
+        {
+          "id": "hunting/500yd-challenge",
+          "label": {
+            "hy": "500 յարդ մարտահրավեր",
+            "en": "500 yd challenge"
+          }
+        },
+        {
+          "id": "hunting/landscape",
+          "label": {
+            "hy": "Տեղանք",
+            "en": "Landscape"
+          }
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "label": {
+        "hy": "Հրաձգարան",
+        "en": "Range"
+      },
+      "tags": [
+        {
+          "id": "range/construction-progress",
+          "label": {
+            "hy": "Շինարարության ընթացք",
+            "en": "Construction progress"
+          }
+        },
+        {
+          "id": "range/facilities",
+          "label": {
+            "hy": "Հարմարություններ",
+            "en": "Facilities"
+          }
+        },
+        {
+          "id": "range/before-after",
+          "label": {
+            "hy": "Առաջ և հետո",
+            "en": "Before & after"
+          }
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "label": {
+        "hy": "Համայնք",
+        "en": "Community"
+      },
+      "tags": [
+        {
+          "id": "community/birthday-and-celebrations",
+          "label": {
+            "hy": "Տոներ",
+            "en": "Celebrations"
+          }
+        },
+        {
+          "id": "community/group-photos",
+          "label": {
+            "hy": "Խմբակային լուսանկարներ",
+            "en": "Group photos"
+          }
+        },
+        {
+          "id": "community/barbecue-and-camp",
+          "label": {
+            "hy": "Խարույկ և ճամբար",
+            "en": "Barbecue & camp"
+          }
+        },
+        {
+          "id": "community/kids-and-families",
+          "label": {
+            "hy": "Երեխաներ և ընտանիքներ",
+            "en": "Kids & families"
+          }
+        },
+        {
+          "id": "community/international-guests",
+          "label": {
+            "hy": "Միջազգային հյուրեր",
+            "en": "International guests"
+          }
+        }
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "src": "/img/match/stage-firing/2026-04-12_match-stage-firing_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/stage-firing",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Հրաձիգը փուլում՝ երկոտանիով, դիտորդը կողքին (TODO(content))",
+        "en": "Shooter on a stage with a bipod, spotter alongside (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/stage-firing/2026-03-08_match-stage-firing_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/stage-firing",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Հրաձիգը փուլում՝ երկոտանիով, դիտորդը կողքին (TODO(content))",
+        "en": "Shooter on a stage with a bipod, spotter alongside (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/prone-positional/2026-03-08_match-prone-positional_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/prone-positional",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Պառկած դիրք, արգելապատնեշ, տանիքի հենարան (TODO(content))",
+        "en": "Prone, barricade and roof-prop positions (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/prone-positional/2025-11-02_match-prone-positional_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/prone-positional",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Պառկած դիրք, արգելապատնեշ, տանիքի հենարան (TODO(content))",
+        "en": "Prone, barricade and roof-prop positions (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/timers-and-scoring/2025-11-02_match-timers-and-scoring_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/timers-and-scoring",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Մրցավարը ժամաչափով, միավորի քարտը մոտիկից (TODO(content))",
+        "en": "Range officer with a timer, score card close-up (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/timers-and-scoring/2025-09-21_match-timers-and-scoring_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/timers-and-scoring",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Մրցավարը ժամաչափով, միավորի քարտը մոտիկից (TODO(content))",
+        "en": "Range officer with a timer, score card close-up (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/targets/2025-09-21_match-targets_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/targets",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Պողպատե թիրախներ հեռավորության վրա, KYL կանգնակ (TODO(content))",
+        "en": "Steel targets at distance and a KYL rack (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/targets/2025-07-13_match-targets_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/targets",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Պողպատե թիրախներ հեռավորության վրա, KYL կանգնակ (TODO(content))",
+        "en": "Steel targets at distance and a KYL rack (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/podium/2025-07-13_match-podium_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/podium",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Առաջին երեքը մրցանակներով, մասնակիցների ընդհանուր լուսանկար (TODO(content))",
+        "en": "Top three with awards, and the full field (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/podium/2026-05-17_match-podium_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/podium",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Առաջին երեքը մրցանակներով, մասնակիցների ընդհանուր լուսանկար (TODO(content))",
+        "en": "Top three with awards, and the full field (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/gear-line/2026-05-17_match-gear-line_todo-content_01.jpg",
+      "group": "match",
+      "tag": "match/gear-line",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Հրացանները կրակային գծին, խրոնոգրաֆի աշխատանք (TODO(content))",
+        "en": "Rifles racked at the line, chrono session (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/match/gear-line/2026-04-12_match-gear-line_todo-content_02.jpg",
+      "group": "match",
+      "tag": "match/gear-line",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Հրացանները կրակային գծին, խրոնոգրաֆի աշխատանք (TODO(content))",
+        "en": "Rifles racked at the line, chrono session (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/matches/2025-09-21_rimfire-matches_todo-content_01.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/matches",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Rimfire մրցում փոքր հեռավորությունների վրա (TODO(content))",
+        "en": "A rimfire match at short distances (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/matches/2025-07-13_rimfire-matches_todo-content_02.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/matches",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Rimfire մրցում փոքր հեռավորությունների վրա (TODO(content))",
+        "en": "A rimfire match at short distances (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/kids-and-newcomers/2025-07-13_rimfire-kids-and-newcomers_todo-content_01.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/kids-and-newcomers",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Առաջին կրակոցները մարզչի ուղեկցությամբ (TODO(content))",
+        "en": "First shots under a coach (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/kids-and-newcomers/2026-05-17_rimfire-kids-and-newcomers_todo-content_02.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/kids-and-newcomers",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Առաջին կրակոցները մարզչի ուղեկցությամբ (TODO(content))",
+        "en": "First shots under a coach (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/small-targets/2026-05-17_rimfire-small-targets_todo-content_01.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/small-targets",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Մինի պողպատե թիրախներ 100 մ և ցածր (TODO(content))",
+        "en": "Mini steel at 100 m and under (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/rimfire/small-targets/2026-04-12_rimfire-small-targets_todo-content_02.jpg",
+      "group": "rimfire",
+      "tag": "rimfire/small-targets",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Մինի պողպատե թիրախներ 100 մ և ցածր (TODO(content))",
+        "en": "Mini steel at 100 m and under (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/1000m-plus/2026-04-12_longrange-1000m-plus_todo-content_01.jpg",
+      "group": "longrange",
+      "tag": "longrange/1000m-plus",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Հրաձիգ, դիտողական դիտակ, քամու դրոշներ (TODO(content))",
+        "en": "Shooter, spotting scope and wind flags (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/1000m-plus/2026-03-08_longrange-1000m-plus_todo-content_02.jpg",
+      "group": "longrange",
+      "tag": "longrange/1000m-plus",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Հրաձիգ, դիտողական դիտակ, քամու դրոշներ (TODO(content))",
+        "en": "Shooter, spotting scope and wind flags (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/wind-reading/2026-03-08_longrange-wind-reading_todo-content_01.jpg",
+      "group": "longrange",
+      "tag": "longrange/wind-reading",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Kestrel, դրոշներ, միրաժ (TODO(content))",
+        "en": "Kestrel, flags, mirage (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/wind-reading/2025-11-02_longrange-wind-reading_todo-content_02.jpg",
+      "group": "longrange",
+      "tag": "longrange/wind-reading",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Kestrel, դրոշներ, միրաժ (TODO(content))",
+        "en": "Kestrel, flags, mirage (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/dope-and-ballistics/2025-11-02_longrange-dope-and-ballistics_todo-content_01.jpg",
+      "group": "longrange",
+      "tag": "longrange/dope-and-ballistics",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Տվյալների գրքույկ, բալիստիկ հավելված, ուղղիչ մոտիկից (TODO(content))",
+        "en": "Data book, ballistic app, turret close-up (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/longrange/dope-and-ballistics/2025-09-21_longrange-dope-and-ballistics_todo-content_02.jpg",
+      "group": "longrange",
+      "tag": "longrange/dope-and-ballistics",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Տվյալների գրքույկ, բալիստիկ հավելված, ուղղիչ մոտիկից (TODO(content))",
+        "en": "Data book, ballistic app, turret close-up (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/zeroing/2025-09-21_training-zeroing_todo-content_01.jpg",
+      "group": "training",
+      "tag": "training/zeroing",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "100 մ խմբեր թղթե թիրախի վրա (TODO(content))",
+        "en": "100 m groups on paper (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/zeroing/2025-07-13_training-zeroing_todo-content_02.jpg",
+      "group": "training",
+      "tag": "training/zeroing",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "100 մ խմբեր թղթե թիրախի վրա (TODO(content))",
+        "en": "100 m groups on paper (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/dry-fire-and-positions/2025-07-13_training-dry-fire-and-positions_todo-content_01.jpg",
+      "group": "training",
+      "tag": "training/dry-fire-and-positions",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Դիրքային աշխատանք առանց փամփուշտի (TODO(content))",
+        "en": "Positional work without ammunition (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/dry-fire-and-positions/2026-05-17_training-dry-fire-and-positions_todo-content_02.jpg",
+      "group": "training",
+      "tag": "training/dry-fire-and-positions",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Դիրքային աշխատանք առանց փամփուշտի (TODO(content))",
+        "en": "Positional work without ammunition (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/coaching/2026-05-17_training-coaching_todo-content_01.jpg",
+      "group": "training",
+      "tag": "training/coaching",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Մարզիչը ուղղում է դիրքը (TODO(content))",
+        "en": "Instructor correcting a position (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/coaching/2026-04-12_training-coaching_todo-content_02.jpg",
+      "group": "training",
+      "tag": "training/coaching",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Մարզիչը ուղղում է դիրքը (TODO(content))",
+        "en": "Instructor correcting a position (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/safety-briefing/2026-04-12_training-safety-briefing_todo-content_01.jpg",
+      "group": "training",
+      "tag": "training/safety-briefing",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Բոլորը պաշտպանիչ միջոցներով, փողի կարգապահություն (TODO(content))",
+        "en": "Everyone in eyes and ears, muzzle discipline (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/safety-briefing/2026-03-08_training-safety-briefing_todo-content_02.jpg",
+      "group": "training",
+      "tag": "training/safety-briefing",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Բոլորը պաշտպանիչ միջոցներով, փողի կարգապահություն (TODO(content))",
+        "en": "Everyone in eyes and ears, muzzle discipline (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/reloading-bench/2026-03-08_training-reloading-bench_todo-content_01.jpg",
+      "group": "training",
+      "tag": "training/reloading-bench",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Մամլիչ, պարկուճներ, վառոդ, նստեցման կաղապարներ (TODO(content))",
+        "en": "Press, brass, powder, seating dies (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/training/reloading-bench/2025-11-02_training-reloading-bench_todo-content_02.jpg",
+      "group": "training",
+      "tag": "training/reloading-bench",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Մամլիչ, պարկուճներ, վառոդ, նստեցման կաղապարներ (TODO(content))",
+        "en": "Press, brass, powder, seating dies (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/field-positions/2026-04-12_hunting-field-positions_todo-content_01.jpg",
+      "group": "hunting",
+      "tag": "hunting/field-positions",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Իմպրովիզացված հենարաններ, ուսապարկ, տեղանք (TODO(content))",
+        "en": "Improvised rests, packs, terrain (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/field-positions/2026-03-08_hunting-field-positions_todo-content_02.jpg",
+      "group": "hunting",
+      "tag": "hunting/field-positions",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Իմպրովիզացված հենարաններ, ուսապարկ, տեղանք (TODO(content))",
+        "en": "Improvised rests, packs, terrain (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/500yd-challenge/2026-03-08_hunting-500yd-challenge_todo-content_01.jpg",
+      "group": "hunting",
+      "tag": "hunting/500yd-challenge",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Ethical Hunter Challenge-ի փորձեր (TODO(content))",
+        "en": "Runs from the Ethical Hunter Challenge (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/500yd-challenge/2025-11-02_hunting-500yd-challenge_todo-content_02.jpg",
+      "group": "hunting",
+      "tag": "hunting/500yd-challenge",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Ethical Hunter Challenge-ի փորձեր (TODO(content))",
+        "en": "Runs from the Ethical Hunter Challenge (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/landscape/2025-11-02_hunting-landscape_todo-content_01.jpg",
+      "group": "hunting",
+      "tag": "hunting/landscape",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Հայկական լեռնային տեղանք՝ հեռավորության զգացողությամբ (TODO(content))",
+        "en": "Armenian terrain, giving a sense of distance (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/hunting/landscape/2025-09-21_hunting-landscape_todo-content_02.jpg",
+      "group": "hunting",
+      "tag": "hunting/landscape",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Հայկական լեռնային տեղանք՝ հեռավորության զգացողությամբ (TODO(content))",
+        "en": "Armenian terrain, giving a sense of distance (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/construction-progress/2025-09-21_range-construction-progress_todo-content_01.jpg",
+      "group": "range",
+      "tag": "range/construction-progress",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Հողային աշխատանք, պատվարներ, կրակային գիծ, թիրախային շրջանակներ (TODO(content))",
+        "en": "Earthworks, berms, firing line, target frames (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/construction-progress/2025-07-13_range-construction-progress_todo-content_02.jpg",
+      "group": "range",
+      "tag": "range/construction-progress",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Հողային աշխատանք, պատվարներ, կրակային գիծ, թիրախային շրջանակներ (TODO(content))",
+        "en": "Earthworks, berms, firing line, target frames (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/facilities/2025-07-13_range-facilities_todo-content_01.jpg",
+      "group": "range",
+      "tag": "range/facilities",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Նստարաններ, ցուցանակներ, ստվեր, կայանատեղի (TODO(content))",
+        "en": "Benches, signage, shade, parking (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/facilities/2026-05-17_range-facilities_todo-content_02.jpg",
+      "group": "range",
+      "tag": "range/facilities",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Նստարաններ, ցուցանակներ, ստվեր, կայանատեղի (TODO(content))",
+        "en": "Benches, signage, shade, parking (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/before-after/2026-05-17_range-before-after_todo-content_01.jpg",
+      "group": "range",
+      "tag": "range/before-after",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Զույգեր ժամանակագրության բաժնի համար (TODO(content))",
+        "en": "Pairs for the timeline component (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/range/before-after/2026-04-12_range-before-after_todo-content_02.jpg",
+      "group": "range",
+      "tag": "range/before-after",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Զույգեր ժամանակագրության բաժնի համար (TODO(content))",
+        "en": "Pairs for the timeline component (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/birthday-and-celebrations/2026-04-12_community-birthday-and-celebrations_todo-content_01.jpg",
+      "group": "community",
+      "tag": "community/birthday-and-celebrations",
+      "date": "2026-04-12",
+      "alt": {
+        "hy": "Ֆեդերացիայի տոնական հանդիպումներ (TODO(content))",
+        "en": "Federation celebrations (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/birthday-and-celebrations/2026-03-08_community-birthday-and-celebrations_todo-content_02.jpg",
+      "group": "community",
+      "tag": "community/birthday-and-celebrations",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Ֆեդերացիայի տոնական հանդիպումներ (TODO(content))",
+        "en": "Federation celebrations (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/group-photos/2026-03-08_community-group-photos_todo-content_01.jpg",
+      "group": "community",
+      "tag": "community/group-photos",
+      "date": "2026-03-08",
+      "alt": {
+        "hy": "Ֆեդերացիայի անդամներ, թիմային լուսանկարներ (TODO(content))",
+        "en": "Federation members and team photos (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/group-photos/2025-11-02_community-group-photos_todo-content_02.jpg",
+      "group": "community",
+      "tag": "community/group-photos",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Ֆեդերացիայի անդամներ, թիմային լուսանկարներ (TODO(content))",
+        "en": "Federation members and team photos (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/barbecue-and-camp/2025-11-02_community-barbecue-and-camp_todo-content_01.jpg",
+      "group": "community",
+      "tag": "community/barbecue-and-camp",
+      "date": "2025-11-02",
+      "alt": {
+        "hy": "Գիշերային մրցումներ, ճամբարային կյանք (TODO(content))",
+        "en": "Overnight matches and camp life (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/barbecue-and-camp/2025-09-21_community-barbecue-and-camp_todo-content_02.jpg",
+      "group": "community",
+      "tag": "community/barbecue-and-camp",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Գիշերային մրցումներ, ճամբարային կյանք (TODO(content))",
+        "en": "Overnight matches and camp life (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/kids-and-families/2025-09-21_community-kids-and-families_todo-content_01.jpg",
+      "group": "community",
+      "tag": "community/kids-and-families",
+      "date": "2025-09-21",
+      "alt": {
+        "hy": "Ընտանեկան օրեր հրաձգարանում (TODO(content))",
+        "en": "Family days at the range (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/kids-and-families/2025-07-13_community-kids-and-families_todo-content_02.jpg",
+      "group": "community",
+      "tag": "community/kids-and-families",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Ընտանեկան օրեր հրաձգարանում (TODO(content))",
+        "en": "Family days at the range (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/international-guests/2025-07-13_community-international-guests_todo-content_01.jpg",
+      "group": "community",
+      "tag": "community/international-guests",
+      "date": "2025-07-13",
+      "alt": {
+        "hy": "Հյուր հրաձիգներ և մարզիչներ (TODO(content))",
+        "en": "Visiting shooters and coaches (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    },
+    {
+      "src": "/img/community/international-guests/2026-05-17_community-international-guests_todo-content_02.jpg",
+      "group": "community",
+      "tag": "community/international-guests",
+      "date": "2026-05-17",
+      "alt": {
+        "hy": "Հյուր հրաձիգներ և մարզիչներ (TODO(content))",
+        "en": "Visiting shooters and coaches (TODO(content))"
+      },
+      "credit": "TODO(content)"
+    }
+  ],
+  "videos": [
+    {
+      "youtubeId": "KZCXywObrO0",
+      "tag": "hunting/500yd-challenge",
+      "date": "2026-02-01",
+      "title": {
+        "hy": "500 յարդ էթիկ որսորդի մարտահրավեր՝ սկզբնաղբյուր",
+        "en": "500 Yard Ethical Hunter Challenge — source video"
+      },
+      "description": {
+        "hy": "Մարտահրավերի սկզբնական ձևաչափը և կանոնները։",
+        "en": "The original format and rules of the challenge."
+      }
+    },
+    {
+      "youtubeId": "TODO_CONTENT_1",
+      "tag": "match/stage-firing",
+      "date": "2026-05-18",
+      "title": {
+        "hy": "Գյումրի 2026՝ մրցումի ամփոփում",
+        "en": "Gyumri 2026 — match recap"
+      },
+      "description": {
+        "hy": "TODO(content): վերբեռնեք տեսանյութը և փոխարինեք ID-ն։",
+        "en": "TODO(content): upload the video and replace the ID."
+      }
+    },
+    {
+      "youtubeId": "TODO_CONTENT_2",
+      "tag": "training/coaching",
+      "date": "2026-03-10",
+      "title": {
+        "hy": "Դիրքային աշխատանք արգելապատնեշից",
+        "en": "Positional work off a barricade"
+      },
+      "description": {
+        "hy": "TODO(content): ուսուցողական կարճ տեսանյութ։",
+        "en": "TODO(content): short instructional clip."
+      }
+    },
+    {
+      "youtubeId": "TODO_CONTENT_3",
+      "tag": "range/construction-progress",
+      "date": "2026-04-01",
+      "title": {
+        "hy": "Հրաձգարանի օդային նկարահանում",
+        "en": "Range drone flyover"
+      },
+      "description": {
+        "hy": "TODO(content): կրակային գիծը և թիրախային դաշտը վերևից։",
+        "en": "TODO(content): the firing line and target field from above."
+      }
+    }
+  ]
+}

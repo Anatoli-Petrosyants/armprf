@@ -1,0 +1,99 @@
+{
+  "note": {
+    "hy": "Դիմումները մշակվում են ձեռքով։ Լրացրեք ձևը, մենք կկապվենք ձեզ հետ 7 օրվա ընթացքում։",
+    "en": "Applications are processed by hand. Fill in the form and we will get back to you within seven days."
+  },
+  "tiers": [
+    {
+      "id": "supporter",
+      "name": { "hy": "Աջակից", "en": "Supporter" },
+      "price": { "amd": 10000, "display": { "hy": "10 000 ֏ / տարի", "en": "10,000 AMD / year" } },
+      "perks": {
+        "hy": [
+          "Մուտք ֆեդերացիայի միջոցառումներին որպես դիտորդ",
+          "Նորությունների ցուցակ և մրցումների նախնական հայտարարություններ",
+          "Զեղչ ARMPRF-ի սեմինարներին"
+        ],
+        "en": [
+          "Access to federation events as a spectator",
+          "Newsletter and early match announcements",
+          "Discount on ARMPRF clinics"
+        ]
+      }
+    },
+    {
+      "id": "competitor",
+      "name": { "hy": "Մրցորդ", "en": "Competitor" },
+      "price": { "amd": 25000, "display": { "hy": "25 000 ֏ / տարի", "en": "25,000 AMD / year" } },
+      "featured": true,
+      "perks": {
+        "hy": [
+          "Մասնակցություն մրցաշրջանի բոլոր մրցումներին",
+          "Միավորներ մրցաշրջանի ընդհանուր աղյուսակում",
+          "Անձնական էջ «Մարզիկներ» բաժնում",
+          "Զեղչված մասնակցության վճար",
+          "Մուտք մարզական օրերին և .22LR պարապմունքներին"
+        ],
+        "en": [
+          "Entry to every match in the season series",
+          "Points in the season standings",
+          "A profile in the Athletes section",
+          "Reduced entry fees",
+          "Access to training days and .22LR practice"
+        ]
+      }
+    },
+    {
+      "id": "junior",
+      "name": { "hy": "Պատանի (.22LR)", "en": "Junior (.22LR)" },
+      "price": { "amd": 5000, "display": { "hy": "5 000 ֏ / տարի", "en": "5,000 AMD / year" } },
+      "perks": {
+        "hy": [
+          "16–20 տարեկան, մեծահասակի ուղեկցությամբ",
+          "Rimfire մրցումներ և պարապմունքներ",
+          "Տրամադրվող հրացան և փամփուշտ պարապմունքների ժամանակ",
+          "Մարզչի ուղեկցում առաջին մրցաշրջանում"
+        ],
+        "en": [
+          "Ages 16–20, with an accompanying adult",
+          "Rimfire matches and practice sessions",
+          "Loaner rifle and ammunition at practice",
+          "A coach assigned for your first season"
+        ]
+      }
+    },
+    {
+      "id": "club",
+      "name": { "hy": "Ակումբ", "en": "Club" },
+      "price": { "amd": 100000, "display": { "hy": "100 000 ֏ / տարի", "en": "100,000 AMD / year" } },
+      "perks": {
+        "hy": [
+          "Մինչև 10 մրցորդի անդամակցություն",
+          "Ակումբի անվանումը արդյունքների աղյուսակներում",
+          "Համատեղ մրցումների կազմակերպման աջակցություն",
+          "Ակումբային թիմային հաշվարկ մրցաշրջանում"
+        ],
+        "en": [
+          "Membership for up to 10 competitors",
+          "Club name shown on leaderboards",
+          "Support in co-hosting matches",
+          "Club team scoring in the season series"
+        ]
+      }
+    }
+  ],
+  "requirements": {
+    "hy": [
+      "18 տարեկան և բարձր (պատանիների համար՝ 16+ գրավոր համաձայնությամբ)",
+      "Զենքի օրինական տիրապետում կամ ակումբի զենքի օգտագործում",
+      "Անվտանգության ճեպազրույցի անցում առաջին մրցումից առաջ",
+      "Սեփական աչքի և ականջի պաշտպանություն"
+    ],
+    "en": [
+      "18 or older (16+ for juniors, with written consent)",
+      "Legal possession of a rifle, or use of a club rifle",
+      "Completed safety briefing before your first match",
+      "Your own eye and ear protection"
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Armen Hakobyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 317,
+    "percent": 79.3,
+    "verified": true
+  },
+  {
+    "name": "Tigran Sargsyan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 352,
+    "percent": 87.9,
+    "verified": true
+  },
+  {
+    "name": "Narek Grigoryan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2026-06-07",
+    "score": 210,
+    "percent": 52.5,
+    "verified": true
+  },
+  {
+    "name": "Gor Petrosyan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 278,
+    "percent": 69.4,
+    "verified": true
+  },
+  {
+    "name": "Hayk Avetisyan",
+    "club": "Vayots Dzor Shooters",
+    "division": "Hunter",
+    "date": "2026-06-07",
+    "score": 316,
+    "percent": 79.1,
+    "verified": true
+  },
+  {
+    "name": "Davit Mkrtchyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 308,
+    "percent": 76.9,
+    "verified": true
+  },
+  {
+    "name": "Arsen Khachatryan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 334,
+    "percent": 83.6,
+    "verified": true
+  },
+  {
+    "name": "Ani Melkonyan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2026-06-07",
+    "score": 327,
+    "percent": 81.7,
+    "verified": true
+  },
+  {
+    "name": "Vahe Hovhannisyan",
+    "club": "Independent",
+    "division": "Hunter",
+    "date": "2026-06-07",
+    "score": 220,
+    "percent": 55.1,
+    "verified": true
+  },
+  {
+    "name": "Levon Baghdasaryan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2026-06-07",
+    "score": 364,
+    "percent": 90.9,
+    "verified": true
+  },
+  {
+    "name": "Levon Baghdasaryan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 218,
+    "percent": 54.5,
+    "verified": true
+  },
+  {
+    "name": "Vahe Hovhannisyan",
+    "club": "Independent",
+    "division": "Hunter",
+    "date": "2025-11-02",
+    "score": 246,
+    "percent": 61.6,
+    "verified": true
+  },
+  {
+    "name": "Ani Melkonyan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2025-11-02",
+    "score": 303,
+    "percent": 75.8,
+    "verified": true
+  },
+  {
+    "name": "Arsen Khachatryan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 390,
+    "percent": 97.5,
+    "verified": true
+  },
+  {
+    "name": "Davit Mkrtchyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 289,
+    "percent": 72.2,
+    "verified": true
+  },
+  {
+    "name": "Hayk Avetisyan",
+    "club": "Vayots Dzor Shooters",
+    "division": "Hunter",
+    "date": "2025-11-02",
+    "score": 324,
+    "percent": 81,
+    "verified": true
+  },
+  {
+    "name": "Gor Petrosyan",
+    "club": "Ararat Long Range",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 226,
+    "percent": 56.5,
+    "verified": true
+  },
+  {
+    "name": "Narek Grigoryan",
+    "club": "Yerevan PRC",
+    "division": "Rimfire",
+    "date": "2025-11-02",
+    "score": 298,
+    "percent": 74.6,
+    "verified": true
+  },
+  {
+    "name": "Tigran Sargsyan",
+    "club": "Gyumri Rifle Club",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 363,
+    "percent": 90.8,
+    "verified": true
+  },
+  {
+    "name": "Armen Hakobyan",
+    "club": "Yerevan PRC",
+    "division": "Open",
+    "date": "2025-11-02",
+    "score": 355,
+    "percent": 88.7,
+    "verified": true
+  }
+]
