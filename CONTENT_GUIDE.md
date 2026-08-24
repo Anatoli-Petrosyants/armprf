@@ -218,9 +218,9 @@ Everything site-wide lives in `src/content/config/site.json`.
   `1` or `2`, or edit the text.
 - **Email, phone, address, map** — under `contact`.
 - **Instagram, Facebook, YouTube, Telegram** — under `social`.
-- **Google Form links** — under `forms`: `scoreSubmission` for the leaderboard "submit your
-  score" button, `contact` for the optional form on the Contact page. Replace both `TODO_`
-  placeholders with the real form URLs.
+- **Google Form link** — under `forms`: `contact`, the optional form button on the Contact
+  page. Replace the `TODO_` placeholder with the real form URL, and set
+  `flags.showContactForm` to `true` to show the button.
 - **Switches** — under `flags`:
   - `showShop` — turns the Shop page and its nav link on or off.
   - `showContactForm` — adds a Google Form button next to the email link on Contact.

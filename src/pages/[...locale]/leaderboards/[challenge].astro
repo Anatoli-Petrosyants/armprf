@@ -10,7 +10,6 @@ import { getChallenges } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
 import { athleteNames } from '@/lib/athletes';
 import { breadcrumbLd } from '@/lib/seo';
-import { site } from '@/lib/site';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -107,10 +106,11 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
         </div>
       </dl>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href={site.forms.scoreSubmission} rel="noopener" class="btn btn-primary">{t('lb.submit')}</a>
-        {data.videoUrl && <a href="#video" class="btn btn-ghost">{t('lb.watchVideo')}</a>}
-      </div>
+      {data.videoUrl && (
+        <div class="mt-8">
+          <a href="#video" class="btn btn-ghost">{t('lb.watchVideo')}</a>
+        </div>
+      )}
     </div>
   </header>
 
@@ -128,32 +128,27 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
     />
   </section>
 
-  <section class="wrap grid gap-10 border-t border-[var(--color-border)] py-12 lg:grid-cols-[1fr_22rem]">
+  <section
+    class:list={[
+      'wrap grid gap-10 border-t border-[var(--color-border)] py-12',
+      data.videoUrl && 'lg:grid-cols-[1fr_22rem]',
+    ]}
+  >
     <div class="prose-armprf">
       <h2 class="!mt-0 !border-t-0 !pt-0">{t('lb.rules')}</h2>
       <Content />
       {!challenge.translated && <p class="text-[var(--color-muted)]">{t('common.translationPending')}</p>}
     </div>
 
-    <aside class="grid gap-6">
-      {data.videoUrl && (
+    {data.videoUrl && (
+      <aside class="grid gap-6">
         <div id="video">
           <h2 class="eyebrow">{t('lb.watchVideo')}</h2>
           <div class="mt-3">
             <LiteYouTube lang={lang} url={data.videoUrl} title={data.title} />
           </div>
         </div>
-      )}
-
-      <div class="card p-5">
-        <h2 class="text-lg">{t('lb.submit')}</h2>
-        <p class="mt-2 text-sm text-[var(--color-muted)]">
-          {lang === 'hy'
-            ? 'Կցեք տեսանյութ կամ լուսանկար՝ թիրախով և միավորի քարտով։'
-            : 'Attach video or a photo showing the target and the score card.'}
-        </p>
-        <a href={site.forms.scoreSubmission} rel="noopener" class="btn btn-primary mt-4 w-full">{t('lb.submit')}</a>
-      </div>
-    </aside>
+      </aside>
+    )}
   </section>
 </BaseLayout>
