@@ -23,14 +23,14 @@
       }
     },
     {
-      "icon": "chart",
+      "icon": "education",
       "title": {
-        "hy": "Թափանցիկ արդյունքներ",
-        "en": "Results in the open"
+        "hy": "Ուսուցում և մարզում",
+        "en": "Coaching and education"
       },
       "body": {
-        "hy": "Բոլոր միավորները հրապարակվում են՝ ամսաթվով, դասակարգով և ապացույցով։ Աղյուսակը վիճելի չէ, այն ստուգելի է։",
-        "en": "Every score is published with its date, division and proof. The leaderboard is not an opinion — it is auditable."
+        "hy": "Նոր հրաձիգը ստանում է մարզիչ, փոխառու հրացան և ճեպազրույց՝ առաջին կրակոցից առաջ։ Այս սպորտը սովորում են, ոչ թե գնում․ դիրք, քամի, տվյալ՝ հիմքից։",
+        "en": "A new shooter gets a coach, a loaner rifle and a briefing before the first shot. This sport is learned, not bought — position, wind and data, from the ground up."
       }
     }
   ]
