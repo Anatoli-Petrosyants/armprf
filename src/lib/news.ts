@@ -1,6 +1,6 @@
 import { TAGS } from '@/content.config';
 
-export const PER_PAGE = 9;
+export const PER_PAGE = 12;
 
 type PostLike = { data: { tags: string[] } };
 

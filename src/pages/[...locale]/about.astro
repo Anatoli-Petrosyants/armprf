@@ -63,6 +63,20 @@ const t = useTranslations(lang);
     </div>
   </section>
 
+  <Section eyebrow={about.membership.org} title={about.membership.title[lang]} id="membership">
+    <div class="card p-6 md:p-8">
+      <p class="max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
+        {about.membership.body[lang]}
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={localizePath(`/blog/${about.membership.postSlug}`, lang)} class="btn btn-ghost">
+          {t('common.readMore')}
+        </a>
+        <a href={about.membership.url} rel="noopener" class="btn btn-ghost">{about.membership.org} ↗</a>
+      </div>
+    </div>
+  </Section>
+
   <Section eyebrow={t('about.board')} title={t('about.board')} id="board">
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {about.board.map((member) => (

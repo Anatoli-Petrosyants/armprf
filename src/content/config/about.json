@@ -137,5 +137,19 @@
       }
     }
   ],
-  "charterPdf": "/downloads/armprf-kanonadrutyun.pdf"
+  "charterPdf": "/downloads/armprf-kanonadrutyun.pdf",
+  "membership": {
+    "title": {
+      "hy": "Միջազգային անդամակցություն",
+      "en": "International membership"
+    },
+    "body": {
+      "hy": "2024 թվականի նոյեմբերի 13-ից Հայաստանի ճշգրիտ հրաձգության ֆեդերացիան Միջազգային ճշգրիտ հրաձգության ֆեդերացիայի (IPRF) անդամ է։ Անդամակցությունը բացում է մասնակցության և աճի նոր հնարավորություններ այս սպորտաձևի համար Հայաստանում։",
+      "en": "Since 13 November 2024 the Armenian Precision Rifle Federation has been a member of the International Precision Rifle Federation (IPRF). Membership opens new routes to compete, and new room for the sport to grow in Armenia."
+    },
+    "org": "IPRF",
+    "url": "https://www.precisionrifle.org",
+    "postSlug": "2024-11-13-iprf-membership",
+    "since": "2024-11-13"
+  }
 }
