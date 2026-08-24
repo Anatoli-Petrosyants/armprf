@@ -15,6 +15,7 @@ const ASSETS = join(ROOT, 'src/assets/img');
 const SPECS = [
   { match: /^\/img\/brand\/hero\//, ratio: '16:9', min: '2560×1440', note: 'Text-safe area on the left third.' },
   { match: /^\/img\/brand\/portraits\//, ratio: '1:1', min: '1000×1000', note: 'Head and shoulders, eyes on the upper third.' },
+  { match: /^\/img\/about\//, ratio: '1:1', min: '1100×1100', note: 'About page pair, shown side by side.' },
   { match: /^\/img\/brand\/og\//, ratio: '1.91:1', min: '1200×630', note: 'Social sharing fallback.' },
   { match: /^\/img\/brand\/logo\//, ratio: '1:1', min: 'SVG', note: 'Light and dark variants, transparent background.' },
   { match: /^\/img\/brand\/sponsors\//, ratio: '12:5', min: 'SVG or 480×200', note: 'Monochrome, uses currentColor when SVG.' },
@@ -49,10 +50,10 @@ walk(CONTENT, (file) => {
 [
   '/img/brand/logo/armprf-logo-dark.svg',
   '/img/brand/logo/armprf-logo-light.svg',
-  '/img/brand/og/og-default.jpg',
-  '/img/brand/hero/hero-01.jpg',
-  '/img/brand/hero/hero-02.jpg',
-  '/img/brand/hero/hero-03.jpg',
+  '/img/brand/logo/armprf-logo-themed.svg',
+  '/img/brand/logo/armprf-wordmark-dark.svg',
+  '/img/brand/logo/armprf-wordmark-light.svg',
+  '/img/brand/logo/armprf-wordmark-themed.svg',
 ].forEach((p) => {
   if (!refs.has(p)) refs.set(p, new Set(['src/components (referenced directly)']));
 });
@@ -66,6 +67,9 @@ for (const path of paths) {
 }
 
 const present = (path) => existsSync(join(ASSETS, path.replace('/img/', '')));
+
+// Folders already holding real artwork rather than generated stand-ins.
+const REAL = ['/img/brand/logo/', '/img/brand/hero/', '/img/about/'];
 
 const lines = [
   '# Photo manifest',
@@ -107,7 +111,8 @@ for (const [folder, items] of [...groups.entries()].sort()) {
   lines.push('| File | Status | Referenced by |', '| --- | --- | --- |');
   for (const path of items) {
     const file = path.slice(folder.length + 1);
-    const status = present(path) ? 'placeholder' : 'missing';
+    const real = REAL.some((prefix) => path.startsWith(prefix));
+    const status = !present(path) ? 'missing' : real ? '**real**' : 'placeholder';
     const used = [...refs.get(path)].map((r) => `\`${r.split('/').pop()}\``).join(', ');
     lines.push(`| \`${file}\` | ${status} | ${used} |`);
   }

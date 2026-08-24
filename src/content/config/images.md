@@ -24,9 +24,18 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (99 total)
+## Slots (102 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
+
+### `/img/about/`
+
+Aspect **1:1** · minimum **1100×1100** · About page pair, shown side by side.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `prone-shooter.webp` | **real** | `about.json` |
+| `spotter.webp` | **real** | `about.json` |
 
 ### `/img/brand/hero/`
 
@@ -34,9 +43,7 @@ Aspect **16:9** · minimum **2560×1440** · Text-safe area on the left third.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `hero-01.jpg` | placeholder | `site.json` |
-| `hero-02.jpg` | placeholder | `components (referenced directly)` |
-| `hero-03.jpg` | placeholder | `components (referenced directly)` |
+| `hero-01.webp` | **real** | `site.json` |
 
 ### `/img/brand/logo/`
 
@@ -44,16 +51,12 @@ Aspect **1:1** · minimum **SVG** · Light and dark variants, transparent backgr
 
 | File | Status | Referenced by |
 | --- | --- | --- |
-| `armprf-logo-dark.svg` | placeholder | `components (referenced directly)` |
-| `armprf-logo-light.svg` | placeholder | `components (referenced directly)` |
-
-### `/img/brand/og/`
-
-Aspect **1.91:1** · minimum **1200×630** · Social sharing fallback.
-
-| File | Status | Referenced by |
-| --- | --- | --- |
-| `og-default.jpg` | placeholder | `components (referenced directly)` |
+| `armprf-logo-dark.svg` | **real** | `components (referenced directly)` |
+| `armprf-logo-light.svg` | **real** | `components (referenced directly)` |
+| `armprf-logo-themed.svg` | **real** | `components (referenced directly)` |
+| `armprf-wordmark-dark.svg` | **real** | `components (referenced directly)` |
+| `armprf-wordmark-light.svg` | **real** | `components (referenced directly)` |
+| `armprf-wordmark-themed.svg` | **real** | `components (referenced directly)` |
 
 ### `/img/brand/portraits/`
 

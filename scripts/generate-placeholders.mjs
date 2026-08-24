@@ -23,6 +23,7 @@ const INK = '#7d8b92';
 const SPECS = [
   { match: /^\/img\/brand\/hero\//, w: 2560, h: 1440 },
   { match: /^\/img\/brand\/portraits\//, w: 1000, h: 1000 },
+  { match: /^\/img\/about\//, w: 1100, h: 1100 },
   { match: /^\/img\/brand\/og\//, w: 1200, h: 630 },
   { match: /^\/img\/brand\/logo\//, w: 512, h: 512 },
   { match: /^\/img\/brand\/sponsors\//, w: 480, h: 200 },
@@ -106,6 +107,8 @@ function walk(dir, fn) {
 
 walk(CONTENT, (file) => {
   if (!/\.(json|md)$/.test(file)) return;
+  // images.md is generated from these same references and quotes example paths.
+  if (file.endsWith('config/images.md')) return;
   const text = readFileSync(file, 'utf-8');
   for (const m of text.matchAll(/\/img\/[A-Za-z0-9._\/-]+\.(?:jpg|jpeg|png|svg|webp)/g)) {
     wanted.add(m[0]);
@@ -113,13 +116,14 @@ walk(CONTENT, (file) => {
 });
 
 // Slots that components reference directly rather than through content files.
+// The logo files are real artwork, listed so the manifest knows about them.
 [
   '/img/brand/logo/armprf-logo-dark.svg',
   '/img/brand/logo/armprf-logo-light.svg',
-  '/img/brand/og/og-default.jpg',
-  '/img/brand/hero/hero-01.jpg',
-  '/img/brand/hero/hero-02.jpg',
-  '/img/brand/hero/hero-03.jpg',
+  '/img/brand/logo/armprf-logo-themed.svg',
+  '/img/brand/logo/armprf-wordmark-dark.svg',
+  '/img/brand/logo/armprf-wordmark-light.svg',
+  '/img/brand/logo/armprf-wordmark-themed.svg',
 ].forEach((p) => wanted.add(p));
 
 /* ------------------------------------------------------------------ generate */

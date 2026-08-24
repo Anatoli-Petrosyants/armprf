@@ -31,10 +31,10 @@
   ],
   "activeSloganIndex": 0,
   "hero": {
-    "image": "/img/brand/hero/hero-01.jpg",
+    "image": "/img/brand/hero/hero-01.webp",
     "alt": {
-      "hy": "Հրաձիգը դիրքում՝ հեռահար հրացանով, հայկական լեռնային տեղանք",
-      "en": "A shooter behind a long-range rifle on Armenian mountain terrain"
+      "hy": "Հրաձիգը պառկած դիրքում՝ երկոտանիով հեռահար հրացանի հետևում, հայկական դաշտային տեղանք",
+      "en": "A shooter prone behind a bipod-mounted long-range rifle in Armenian field terrain"
     },
     "kicker": {
       "hy": "Հայաստանի ճշգրիտ հրաձգության ֆեդերացիա",
@@ -68,7 +68,6 @@
   },
   "flags": {
     "showContactForm": false,
-    "showShop": false,
     "showAthletePhotos": true
   },
   "featuredChallenge": "blackjack-21",

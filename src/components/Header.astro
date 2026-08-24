@@ -11,14 +11,13 @@ const { lang, neutral } = Astro.props;
 const t = useTranslations(lang);
 
 const primary = visibleNav(nav.primary);
-const secondary = visibleNav(nav.secondary);
 const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${path}/`);
 ---
 
 <header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] backdrop-blur">
   <div class="wrap flex h-16 items-center gap-4">
     <a href={localizePath('/', lang)} class="shrink-0" aria-label="ARMPRF">
-      <Logo />
+      <Logo class="h-9 md:h-10" />
     </a>
 
     <nav class="ms-auto hidden items-center gap-1 lg:flex" aria-label={t('nav.menu')}>
@@ -31,28 +30,6 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
           {t(item.key)}
         </a>
       ))}
-
-      <details class="group relative" name="hdr">
-        <summary
-          class="cursor-pointer list-none px-2.5 py-2 text-[0.8125rem] font-bold uppercase tracking-[0.06em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
-        >
-          {t('nav.more')}
-          <span aria-hidden="true" class="ms-1 inline-block transition-transform group-open:rotate-180">▾</span>
-        </summary>
-        <ul class="card absolute end-0 mt-2 w-60 p-1.5 shadow-2xl">
-          {secondary.map((item) => (
-            <li>
-              <a
-                href={localizePath(item.path, lang)}
-                aria-current={isCurrent(item.path) ? 'page' : undefined}
-                class="block rounded px-3 py-2 text-sm text-[var(--color-muted)] hover:bg-[var(--color-surface-2)] hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-accent)]"
-              >
-                {t(item.key)}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </details>
     </nav>
 
     <div class="ms-auto flex items-center gap-2 lg:ms-0">
@@ -97,7 +74,7 @@ const isCurrent = (path: string) => neutral === path || neutral.startsWith(`${pa
         </summary>
         <div class="fixed inset-x-0 top-16 z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-y border-[var(--color-border)] bg-[var(--color-bg)] p-5">
           <ul class="grid gap-1">
-            {[...primary, ...secondary, nav.cta].map((item) => (
+            {[...primary, nav.cta].map((item) => (
               <li>
                 <a
                   href={localizePath(item.path, lang)}

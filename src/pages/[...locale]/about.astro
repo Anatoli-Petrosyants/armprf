@@ -36,6 +36,26 @@ const timelineLabels = {
 >
   <PageHeader lang={lang} title={t('nav.about')} lead={about.intro[lang]} crumbs={[{ name: t('nav.about'), path: '/about' }]} />
 
+  <Section>
+    <ul class="grid gap-4 sm:grid-cols-2">
+      {about.images.map((image) => (
+        <li>
+          <figure>
+            <SmartImage
+              src={image.src}
+              alt={image.alt[lang]}
+              aspect="1/1"
+              widths={[400, 550]}
+              sizes="(min-width: 40rem) 45vw, 100vw"
+              class="w-full rounded-[var(--radius-card)] border border-[var(--color-border)]"
+            />
+            <figcaption class="mt-2 text-sm text-[var(--color-muted)]">{image.caption[lang]}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
   <Section eyebrow={t('about.goals')} title={t('about.goals')} id="goals">
     <ol class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {about.goals.map((goal, index) => (
@@ -54,7 +74,6 @@ const timelineLabels = {
       <blockquote class="mt-4 max-w-3xl border-s-2 border-[var(--color-accent)] ps-6 text-xl leading-relaxed md:text-2xl">
         {about.safetyStatement[lang]}
       </blockquote>
-      <a href={localizePath('/rules-and-safety', lang)} class="btn btn-ghost mt-8">{t('nav.rules')}</a>
     </div>
   </section>
 

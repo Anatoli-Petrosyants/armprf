@@ -230,8 +230,9 @@ longest edge at least 2000 px. Keep your originals elsewhere; the build makes th
 sizes.
 
 Every image slot the site expects is listed in `src/content/config/images.md`, with the
-aspect ratio and minimum resolution for each folder. Placeholder images are already in
-place, so nothing looks broken while you collect the real photographs. **The build never
+aspect ratio and minimum resolution for each folder, and whether the file there is real
+artwork or a generated stand-in. The logo, the home hero and the two About photos are real;
+everything else is still a placeholder, so nothing looks broken while you collect the rest. **The build never
 overwrites a file that already exists** — dropping your photo in at the same path is
 enough.
 
@@ -269,9 +270,8 @@ Other settings files, all in `src/content/config/`:
 | --- | --- |
 | `nav.json` | The menu, in order |
 | `home.json` | Home page mission tiles and the three numbers under the hero |
-| `about.json` | Mission text, goals, board, history, safety statement |
+| `about.json` | Mission text, goals, board, history, safety statement, the two About photos |
 | `rules.json` | The Rules & Safety page |
-| `disciplines.json` | Disciplines, the getting-started steps, the glossary |
 | `gallery.json` | Gallery photos, tags and videos |
 | `i18n/hy.json`, `i18n/en.json` | Every button and label on the site |
 

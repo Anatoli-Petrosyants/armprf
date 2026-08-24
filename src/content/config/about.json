@@ -5,49 +5,70 @@
   },
   "goals": [
     {
-      "title": { "hy": "Զարգացնել սպորտը", "en": "Grow the sport" },
+      "title": {
+        "hy": "Զարգացնել սպորտը",
+        "en": "Grow the sport"
+      },
       "body": {
         "hy": "Հայաստանում ճշգրիտ հրաձգությունը դարձնել կարգապահ, կանոնակարգված մարզաձև՝ մրցաշրջանով, դասակարգերով և չափանիշներով։",
         "en": "Establish precision rifle in Armenia as a disciplined, regulated sport with a season, divisions and standards."
       }
     },
     {
-      "title": { "hy": "Պատրաստել գրագետ հրաձիգներ", "en": "Train competent riflemen" },
+      "title": {
+        "hy": "Պատրաստել գրագետ հրաձիգներ",
+        "en": "Train competent riflemen"
+      },
       "body": {
         "hy": "Անվտանգ, էթիկ և տեխնիկապես գրագետ հրաձիգներ՝ որտեղ անվտանգությունը միշտ միավորից առաջ է։",
         "en": "Safe, ethical, technically competent shooters — safety always ahead of score."
       }
     },
     {
-      "title": { "hy": "Թափանցիկ մրցումներ", "en": "Transparent matches" },
+      "title": {
+        "hy": "Թափանցիկ մրցումներ",
+        "en": "Transparent matches"
+      },
       "body": {
         "hy": "Անցկացնել ստուգելի մրցումներ՝ բաց կանոններով և հրապարակված, հաստատված արդյունքներով։",
         "en": "Run verifiable matches with open rules and published, verified results."
       }
     },
     {
-      "title": { "hy": "Կառուցել ենթակառուցվածք", "en": "Build the infrastructure" },
+      "title": {
+        "hy": "Կառուցել ենթակառուցվածք",
+        "en": "Build the infrastructure"
+      },
       "body": {
         "hy": "Կառուցել և պահպանել լիարժեք հեռահար հրաձգարաններ՝ ապահով գծերով, թիրախային դաշտերով և ծառայություններով։",
         "en": "Build and maintain proper long-range ranges — safe firing lines, target fields and facilities."
       }
     },
     {
-      "title": { "hy": "Մատչելի մուտք .22LR-ով", "en": "An affordable way in" },
+      "title": {
+        "hy": "Մատչելի մուտք .22LR-ով",
+        "en": "An affordable way in"
+      },
       "body": {
         "hy": "Rimfire .22LR ուղղությունը դարձնել սպորտ մուտք գործելու էժան և անվտանգ ճանապարհ՝ նաև պատանիների համար։",
         "en": "Use .22LR rimfire as the cheap, safe entry path into the sport — including for juniors."
       }
     },
     {
-      "title": { "hy": "Ներկայացնել Հայաստանը", "en": "Represent Armenia" },
+      "title": {
+        "hy": "Ներկայացնել Հայաստանը",
+        "en": "Represent Armenia"
+      },
       "body": {
         "hy": "Հայ հրաձիգներին պատրաստել և ներկայացնել միջազգային ճշգրիտ հրաձգության մրցումներում։",
         "en": "Prepare Armenian shooters for, and represent Armenia at, international precision rifle competition."
       }
     },
     {
-      "title": { "hy": "Էթիկ որսորդություն", "en": "Ethical hunting" },
+      "title": {
+        "hy": "Էթիկ որսորդություն",
+        "en": "Ethical hunting"
+      },
       "body": {
         "hy": "Աջակցել էթիկ որսորդության չափանիշներին և հրաձգության կրթությանը՝ վստահ հեռավորության և մաքուր կրակոցի սկզբունքով։",
         "en": "Support ethical hunting standards and marksmanship education — know your limit, take the clean shot."
@@ -57,7 +78,10 @@
   "history": [
     {
       "year": "2023",
-      "title": { "hy": "Առաջին ոչ պաշտոնական մրցումները", "en": "First informal matches" },
+      "title": {
+        "hy": "Առաջին ոչ պաշտոնական մրցումները",
+        "en": "First informal matches"
+      },
       "body": {
         "hy": "TODO(content): մի խումբ հրաձիգներ սկսում են կանոնավոր հանդիպումներ՝ 300–600 մ հեռավորությունների վրա։",
         "en": "TODO(content): a group of shooters starts meeting regularly at 300–600 m."
@@ -65,7 +89,10 @@
     },
     {
       "year": "2024",
-      "title": { "hy": "Միասնական կանոնագիրք", "en": "One common rulebook" },
+      "title": {
+        "hy": "Միասնական կանոնագիրք",
+        "en": "One common rulebook"
+      },
       "body": {
         "hy": "TODO(content): ձևակերպվում են դասակարգերը, անվտանգության կանոնները և միավորակալման համակարգը։",
         "en": "TODO(content): divisions, safety rules and the scoring system are written down."
@@ -73,7 +100,10 @@
     },
     {
       "year": "2025",
-      "title": { "hy": "Ֆեդերացիայի հիմնում", "en": "The federation is founded" },
+      "title": {
+        "hy": "Ֆեդերացիայի հիմնում",
+        "en": "The federation is founded"
+      },
       "body": {
         "hy": "TODO(content): ARMPRF-ը գրանցվում է որպես կազմակերպություն, մեկնարկում է առաջին մրցաշրջանը։",
         "en": "TODO(content): ARMPRF is registered, and the first season starts."
@@ -81,7 +111,10 @@
     },
     {
       "year": "2026",
-      "title": { "hy": "Սեփական հրաձգարան", "en": "Our own range" },
+      "title": {
+        "hy": "Սեփական հրաձգարան",
+        "en": "Our own range"
+      },
       "body": {
         "hy": "TODO(content): սկսվում են հեռահար հրաձգարանի հողային աշխատանքները։",
         "en": "TODO(content): earthworks begin on a dedicated long-range facility."
@@ -93,10 +126,62 @@
     "en": "Safety is not something we compete on. At any ARMPRF match the muzzle stays in a safe direction, the bolt stays out and the chamber stays empty except between the commands to load and unload. A gross safety violation means immediate removal from the match, with no appeal."
   },
   "board": [
-    { "name": "TODO(content) — President", "role": { "hy": "Նախագահ", "en": "President" }, "photo": "/img/brand/portraits/board-01.jpg" },
-    { "name": "TODO(content) — Match Director", "role": { "hy": "Գլխավոր մրցավար", "en": "Chief Match Director" }, "photo": "/img/brand/portraits/board-02.jpg" },
-    { "name": "TODO(content) — Safety Officer", "role": { "hy": "Անվտանգության պատասխանատու", "en": "Chief Safety Officer" }, "photo": "/img/brand/portraits/board-03.jpg" },
-    { "name": "TODO(content) — Secretary", "role": { "hy": "Քարտուղար", "en": "Secretary" }, "photo": "/img/brand/portraits/board-04.jpg" }
+    {
+      "name": "TODO(content) — President",
+      "role": {
+        "hy": "Նախագահ",
+        "en": "President"
+      },
+      "photo": "/img/brand/portraits/board-01.jpg"
+    },
+    {
+      "name": "TODO(content) — Match Director",
+      "role": {
+        "hy": "Գլխավոր մրցավար",
+        "en": "Chief Match Director"
+      },
+      "photo": "/img/brand/portraits/board-02.jpg"
+    },
+    {
+      "name": "TODO(content) — Safety Officer",
+      "role": {
+        "hy": "Անվտանգության պատասխանատու",
+        "en": "Chief Safety Officer"
+      },
+      "photo": "/img/brand/portraits/board-03.jpg"
+    },
+    {
+      "name": "TODO(content) — Secretary",
+      "role": {
+        "hy": "Քարտուղար",
+        "en": "Secretary"
+      },
+      "photo": "/img/brand/portraits/board-04.jpg"
+    }
   ],
-  "rulebookPdf": "/downloads/armprf-rulebook.pdf"
+  "rulebookPdf": "/downloads/armprf-rulebook.pdf",
+  "images": [
+    {
+      "src": "/img/about/prone-shooter.webp",
+      "alt": {
+        "hy": "Հրաձիգը պառկած դիրքում՝ ականջակալներով և օպտիկայով, կրակային գծին",
+        "en": "A shooter prone on the firing line, in ear protection behind the scope"
+      },
+      "caption": {
+        "hy": "Դիրք, շնչառություն, ձգան․ ամեն կրակոց չափելի է։",
+        "en": "Position, breathing, trigger — every shot is measurable."
+      }
+    },
+    {
+      "src": "/img/about/spotter.webp",
+      "alt": {
+        "hy": "Դիտորդը դիտողական դիտակի հետևում՝ եռոտանիի վրա, մրցումի ընթացքում",
+        "en": "A spotter behind a tripod-mounted spotting scope during a match"
+      },
+      "caption": {
+        "hy": "Դիտորդը կարդում է քամին և գրանցում խոցումները։",
+        "en": "The spotter reads the wind and calls the impacts."
+      }
+    }
+  ]
 }

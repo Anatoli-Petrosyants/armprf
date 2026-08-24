@@ -1,27 +1,27 @@
 ---
+// The federation wordmark, inlined so it inherits the theme: the lettering that
+// is white on dark follows currentColor, while the three brand colours in the
+// ARMPRF monogram stay fixed in both themes.
+import full from '@/assets/img/brand/logo/armprf-logo-themed.svg?raw';
+import compact from '@/assets/img/brand/logo/armprf-wordmark-themed.svg?raw';
+
 interface Props {
   class?: string;
-  withWordmark?: boolean;
+  /** `full` includes the federation name and rule; `compact` is the monogram only. */
+  variant?: 'full' | 'compact';
+  label?: string;
 }
-const { class: className = '', withWordmark = true } = Astro.props;
+const { class: className = '', variant = 'full', label = 'ARMPRF' } = Astro.props;
+const markup = variant === 'full' ? full : compact;
 ---
-<span class={`inline-flex items-center gap-2.5 ${className}`}>
-  <svg viewBox="0 0 512 512" width="30" height="30" aria-hidden="true" class="shrink-0">
-    <g fill="none" stroke="currentColor" stroke-width="20" opacity="0.55">
-      <circle cx="256" cy="256" r="196" />
-      <circle cx="256" cy="256" r="112" />
-    </g>
-    <g stroke="var(--color-accent)" stroke-width="22" stroke-linecap="square">
-      <line x1="256" y1="16" x2="256" y2="126" />
-      <line x1="256" y1="386" x2="256" y2="496" />
-      <line x1="16" y1="256" x2="126" y2="256" />
-      <line x1="386" y1="256" x2="496" y2="256" />
-    </g>
-    <circle cx="256" cy="256" r="30" fill="var(--color-accent)" />
-  </svg>
-  {withWordmark && (
-    <span class="font-display font-bold tracking-[0.16em] text-[0.9375rem]" style="font-stretch:75%">
-      ARMPRF
-    </span>
-  )}
+<span class={`armprf-logo inline-block ${className}`} role="img" aria-label={label}>
+  <Fragment set:html={markup} />
 </span>
+
+<style>
+  .armprf-logo :global(svg) {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+</style>
