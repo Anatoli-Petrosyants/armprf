@@ -17,10 +17,10 @@ After three months of work the core safety structures at the range are in place.
 
 ## Done
 
-- **Side berms** — both standing, 4 metres high.
-- **Backstop** — reinforced and proofed with fire from 900 metres.
-- **Access track** — passable by a normal car in dry weather.
-- **Firing line levelled** — 12 positions, marked out.
+- **Side berms:** both standing, 4 metres high.
+- **Backstop:** reinforced and proofed with fire from 900 metres.
+- **Access track:** passable by a normal car in dry weather.
+- **Firing line levelled:** 12 positions, marked out.
 
 ## Left
 

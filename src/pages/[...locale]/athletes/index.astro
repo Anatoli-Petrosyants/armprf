@@ -18,8 +18,8 @@ const athletes = await getAthletes(lang);
   neutral="/athletes"
   title={t('athletes.title')}
   description={lang === 'hy'
-    ? 'ARMPRF-ի մարզիկները՝ ակումբ, դասակարգ, հրացան և արդյունքներ աղյուսակներում։'
-    : 'ARMPRF shooters — club, division, rifle, and their leaderboard results.'}
+    ? 'ARMPRF-ի մարզիկները՝ լուսանկար, անուն, քաղաք և ֆեդերացիայում անդամակցության տարին։'
+    : 'The ARMPRF roster: photograph, name, city and the year each shooter joined.'}
   jsonLd={[breadcrumbLd([{ name: t('athletes.title'), url: localizePath('/athletes', lang) }])]}
 >
   <PageHeader lang={lang} title={t('athletes.title')} crumbs={[{ name: t('athletes.title'), path: '/athletes' }]} />

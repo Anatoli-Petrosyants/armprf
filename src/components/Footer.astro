@@ -17,8 +17,9 @@ const links = visibleNav(nav.footer);
     <div>
       <Logo class="h-12" />
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-[var(--color-muted)]">
-        {siteName(lang)} — {slogan(lang)}
+        {siteName(lang)}
       </p>
+      <p class="mt-1 text-sm text-[var(--color-muted)]">{slogan(lang)}</p>
       <ul class="mt-5 flex flex-wrap gap-3 text-sm">
         {socialLinks.map((link) => (
           <li>

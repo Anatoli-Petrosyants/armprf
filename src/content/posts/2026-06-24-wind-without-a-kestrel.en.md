@@ -14,9 +14,9 @@ A Kestrel measures the wind **at your position**. The bullet flies 500–1000 me
 
 Focus the spotting scope slightly in front of the target. The tilt of the shimmer gives you direction; its speed gives you rough strength.
 
-- Vertical, "boiling" mirage — almost no wind, or wind straight down the range.
-- A 45° lean — roughly 3–4 m/s.
-- Running flat and horizontal — 6 m/s or more.
+- Vertical, "boiling" mirage: almost no wind, or wind straight down the range.
+- A 45° lean: roughly 3–4 m/s.
+- Running flat and horizontal: 6 m/s or more.
 
 Mirage stops being useful above about 8 m/s: it simply flattens out.
 

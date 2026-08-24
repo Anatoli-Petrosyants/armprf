@@ -1,5 +1,5 @@
 ---
-title: "Ararat Long Range Open — 20–21 September"
+title: "Ararat Long Range Open, 20–21 September"
 excerpt: "The longest match of the season: two days, 12 stages, out to 1100 metres. Registration is open."
 date: 2026-08-10
 tags: ["announcement"]
@@ -12,18 +12,18 @@ On 20–21 September, Ararat Province hosts the longest match of the season: the
 
 ## The essentials
 
-- **Discipline** — centerfire long range
-- **Divisions** — Open, Hunter, Production
-- **Distances** — 400–1100 metres
-- **Round count** — 140
-- **Entry** — 15,000 AMD
-- **Match director** — Tigran Sargsyan
-- **Where** — Ararat Province, TODO(content) range
+- **Discipline:** centerfire long range
+- **Divisions:** Open, Hunter, Production
+- **Distances:** 400–1100 metres
+- **Round count:** 140
+- **Entry:** 15,000 AMD
+- **Match director:** Tigran Sargsyan
+- **Where:** Ararat Province, TODO(content) range
 
 ## Schedule
 
-- **Saturday 20.09** — registration 07:30, safety briefing 08:15, stages 1–6.
-- **Sunday 21.09** — stages 7–12, awards around 16:00.
+- **Saturday 20.09:** registration 07:30, safety briefing 08:15, stages 1–6.
+- **Sunday 21.09:** stages 7–12, awards around 16:00.
 
 ## What to bring
 

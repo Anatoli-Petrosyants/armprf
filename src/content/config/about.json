@@ -21,7 +21,7 @@
       },
       "body": {
         "hy": "Անվտանգ, էթիկ և տեխնիկապես գրագետ հրաձիգներ՝ որտեղ անվտանգությունը միշտ միավորից առաջ է։",
-        "en": "Safe, ethical, technically competent shooters — safety always ahead of score."
+        "en": "Safe, ethical, technically competent shooters, with safety always ahead of score."
       }
     },
     {
@@ -41,7 +41,7 @@
       },
       "body": {
         "hy": "Կառուցել և պահպանել լիարժեք հեռահար հրաձգարաններ՝ ապահով գծերով, թիրախային դաշտերով և ծառայություններով։",
-        "en": "Build and maintain proper long-range ranges — safe firing lines, target fields and facilities."
+        "en": "Build and maintain proper long-range ranges: safe firing lines, target fields and facilities."
       }
     },
     {
@@ -51,7 +51,7 @@
       },
       "body": {
         "hy": "Rimfire .22LR ուղղությունը դարձնել սպորտ մուտք գործելու էժան և անվտանգ ճանապարհ՝ նաև պատանիների համար։",
-        "en": "Use .22LR rimfire as the cheap, safe entry path into the sport — including for juniors."
+        "en": "Use .22LR rimfire as the cheap, safe entry path into the sport, including for juniors."
       }
     },
     {
@@ -71,7 +71,7 @@
       },
       "body": {
         "hy": "Աջակցել էթիկ որսորդության չափանիշներին և հրաձգության կրթությանը՝ վստահ հեռավորության և մաքուր կրակոցի սկզբունքով։",
-        "en": "Support ethical hunting standards and marksmanship education — know your limit, take the clean shot."
+        "en": "Support ethical hunting standards and marksmanship education: know your limit, take the clean shot."
       }
     }
   ],
@@ -127,7 +127,7 @@
   },
   "board": [
     {
-      "name": "TODO(content) — President",
+      "name": "TODO(content): President",
       "role": {
         "hy": "Նախագահ",
         "en": "President"
@@ -135,7 +135,7 @@
       "photo": "/img/brand/portraits/board-01.jpg"
     },
     {
-      "name": "TODO(content) — Match Director",
+      "name": "TODO(content): Match Director",
       "role": {
         "hy": "Գլխավոր մրցավար",
         "en": "Chief Match Director"
@@ -143,7 +143,7 @@
       "photo": "/img/brand/portraits/board-02.jpg"
     },
     {
-      "name": "TODO(content) — Safety Officer",
+      "name": "TODO(content): Safety Officer",
       "role": {
         "hy": "Անվտանգության պատասխանատու",
         "en": "Chief Safety Officer"
@@ -151,7 +151,7 @@
       "photo": "/img/brand/portraits/board-03.jpg"
     },
     {
-      "name": "TODO(content) — Secretary",
+      "name": "TODO(content): Secretary",
       "role": {
         "hy": "Քարտուղար",
         "en": "Secretary"
@@ -169,7 +169,7 @@
       },
       "caption": {
         "hy": "Դիրք, շնչառություն, ձգան․ ամեն կրակոց չափելի է։",
-        "en": "Position, breathing, trigger — every shot is measurable."
+        "en": "Position, breathing, trigger. Every shot is measurable."
       }
     },
     {

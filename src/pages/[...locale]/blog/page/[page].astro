@@ -35,8 +35,8 @@ const next = page < total ? localizePath(`/blog/page/${page + 1}`, lang) : undef
 <BaseLayout
   lang={lang}
   neutral={`/blog/page/${page}`}
-  title={`${t('news.title')} — ${t('common.page')} ${page}`}
-  description={`${t('news.title')} — ${t('common.page')} ${page} ${t('common.of')} ${total}`}
+  title={`${t('news.title')} · ${t('common.page')} ${page}`}
+  description={`${t('news.title')} · ${t('common.page')} ${page} ${t('common.of')} ${total}`}
   noindex={true}
 >
   <PageHeader lang={lang} title={t('news.title')} crumbs={[{ name: t('news.title'), path: '/blog' }]} />

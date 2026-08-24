@@ -29,7 +29,7 @@ const counts = tagCounts(await getPosts(lang));
 <BaseLayout
   lang={lang}
   neutral={`/blog/tag/${tag}`}
-  title={`${t('news.title')} — #${tag}`}
+  title={`${t('news.title')} · #${tag}`}
   description={`${t('news.tags')}: ${tag}`}
   jsonLd={[
     breadcrumbLd([

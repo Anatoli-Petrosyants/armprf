@@ -14,11 +14,11 @@ gallery:
 featured: true
 ---
 
-The second round of the season was shot in Gyumri on 17 May. Eight stages, 34 shooters, distances from 300 to 700 metres. The average hit rate for the day was **61%** — the lowest of the season.
+The second round of the season was shot in Gyumri on 17 May. Eight stages, 34 shooters, distances from 300 to 700 metres. The average hit rate for the day was **61%**, the lowest of the season.
 
 ## What happened
 
-From 09:00 the wind settled at 7–9 m/s, left to right, and it never let up before the awards. Past 600 metres that meant 1.4–1.8 MIL of hold — twice the width of the target.
+From 09:00 the wind settled at 7–9 m/s, left to right, and it never let up before the awards. Past 600 metres that meant 1.4–1.8 MIL of hold, twice the width of the target.
 
 The match turned into a wind-reading contest. Shooters who had learned to read mirage moved ahead of shooters relying on a Kestrel number alone.
 

@@ -19,7 +19,7 @@ The premise is simple: if you cannot reliably hit a vital-sized target at 500 ya
 ## Format
 
 - Distance: **500 yards (457 m)**.
-- Target: an **8 inch (20 cm)** circle — vital-zone sized.
+- Target: an **8 inch (20 cm)** circle, vital-zone sized.
 - **5 shots**, each from a different position: pack, sticks, kneeling, seated, improvised rest.
 - The **first shot is from a cold, clean barrel** and always counts.
 - Total time: **5 minutes** from the first shot.
@@ -27,7 +27,7 @@ The premise is simple: if you cannot reliably hit a vital-sized target at 500 ya
 ## Rules
 
 1. No bipod. Field supports only.
-2. The rifle must be in hunting configuration — no dedicated match accessories.
+2. The rifle must be in hunting configuration, with no dedicated match accessories.
 3. The distance is lasered and announced before the first shot.
 4. One attempt per shooter per day.
 5. Ties go to the shooter with the lower total elapsed time.

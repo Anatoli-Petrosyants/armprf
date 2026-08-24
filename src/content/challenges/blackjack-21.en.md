@@ -22,12 +22,12 @@ The challenge was created by Erik Cortina. ARMPRF uses it as a single standard f
 - Maximum **21 points** in a session.
 - Every hit scores **+1**, every miss scores **−1**.
 - The shooter decides when to stop. Once you stop, the session is closed.
-- **Going over 21 busts the card** — the result becomes 0.
+- **Going over 21 busts the card:** the result becomes 0.
 
 ## Rules
 
 1. Position: prone, off a bipod and rear bag. No other support is allowed.
-2. There is no time limit, but the session is continuous — leaving the line closes the card.
+2. There is no time limit, but the session is continuous, and leaving the line closes the card.
 3. Impacts are called by a range officer or shown on video.
 4. One session per day. Your best result stays on the board.
 5. Any calibre, any division. The calibre is recorded on the board.

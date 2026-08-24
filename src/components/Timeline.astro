@@ -37,11 +37,11 @@ const dot: Record<Entry['status'], string> = {
       {entry.before && entry.after && (
         <div class="mt-4 grid gap-3 sm:grid-cols-2">
           <figure>
-            <SmartImage src={entry.before} alt={`${entry.title[lang]} — before`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
+            <SmartImage src={entry.before} alt={`${entry.title[lang]}, before`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
             <figcaption class="mt-1 text-xs uppercase tracking-[0.12em] text-[var(--color-faint)]">Before</figcaption>
           </figure>
           <figure>
-            <SmartImage src={entry.after} alt={`${entry.title[lang]} — after`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
+            <SmartImage src={entry.after} alt={`${entry.title[lang]}, after`} aspect="3/2" widths={[400, 800]} sizes="(min-width:40rem) 45vw, 100vw" class="w-full rounded-[var(--radius-card)]" />
             <figcaption class="mt-1 text-xs uppercase tracking-[0.12em] text-[var(--color-faint)]">After</figcaption>
           </figure>
         </div>

@@ -14,7 +14,7 @@ The most common question at a match is "what rifle should I buy?" The short answ
 
 **The optic.** It matters more than the rifle. You need turrets that track and return, a MIL or MOA reticle in the same unit as those turrets, and at least 20 MIL of elevation. A cheap scope does not repeat, and that stays invisible until the moment it is too late.
 
-**The trigger.** One to one and a half kilos, with a clean break. Most factory rifles now ship with an adjustable trigger — adjust it before your first match.
+**The trigger.** One to one and a half kilos, with a clean break. Most factory rifles now ship with an adjustable trigger. Adjust it before your first match.
 
 **A stock or chassis that fits you.** The comb has to let you see the full reticle without straining your neck. That is free precision.
 
@@ -30,4 +30,4 @@ The most common question at a match is "what rifle should I buy?" The short answ
 
 ## The honest budget
 
-Rifle plus optic plus bags plus 500 rounds. If the budget is tight, cut the rifle, not the optic. And either way, start on .22LR — the same money buys ten times the round count.
+Rifle plus optic plus bags plus 500 rounds. If the budget is tight, cut the rifle, not the optic. And either way, start on .22LR. The same money buys ten times the round count.

@@ -18,7 +18,7 @@ Seeing your own miss is exactly the property that teaches wind fastest.
 
 ## Recoil does not hide your errors
 
-On a centerfire rifle a poor position is partly masked by recoil — you never see how you moved the muzzle. On .22LR every movement shows up on the target.
+On a centerfire rifle a poor position is partly masked by recoil: you never see how you moved the muzzle. On .22LR every movement shows up on the target.
 
 ## The cost
 
@@ -26,10 +26,10 @@ Fifty rounds of .22LR costs roughly one round of 6.5 Creedmoor. Two hundred roun
 
 ## What transfers
 
-- Position and support building — **completely**
-- Wind reading — **completely**
-- Trigger control and breathing — **completely**
-- Recoil management — **no**, that has to be learned separately
+- Position and support building: **completely**
+- Wind reading: **completely**
+- Trigger control and breathing: **completely**
+- Recoil management: **no**, that has to be learned separately
 
 Three out of four transfer. That is a good enough trade.
 

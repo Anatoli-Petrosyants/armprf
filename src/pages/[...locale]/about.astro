@@ -83,7 +83,7 @@ const timelineLabels = {
         <li class="card overflow-hidden">
           <SmartImage
             src={member.photo}
-            alt={`${member.name} — ${member.role[lang]}`}
+            alt={`${member.name}, ${member.role[lang]}`}
             aspect="1/1"
             widths={[240, 480]}
             sizes="(min-width: 64rem) 22vw, 50vw"
@@ -109,7 +109,7 @@ const timelineLabels = {
         <p class="mt-1 text-sm text-[var(--color-muted)]">
           {lang === 'hy'
             ? 'Ամբողջական կանոնագիրքը՝ դասակարգեր, անվտանգություն, միավորակալում։'
-            : 'The complete rulebook — divisions, safety, scoring.'}
+            : 'The complete rulebook: divisions, safety, scoring.'}
         </p>
       </div>
       <a href={about.rulebookPdf} class="btn btn-primary" download>{t('common.download')}</a>

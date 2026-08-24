@@ -17,7 +17,7 @@ The last match of the 2025 season was shot on 2 November in Ararat Province, wit
 
 ## 900 metres, for the first time
 
-This match put a 900 m stage on the board for the first time. The hit rate there was 34%, which was about what we expected — for most of the field it was the longest shot they had ever taken under a clock.
+This match put a 900 m stage on the board for the first time. The hit rate there was 34%, which was about what we expected. For most of the field it was the longest shot they had ever taken under a clock.
 
 ## Two points
 
