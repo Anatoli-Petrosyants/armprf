@@ -234,7 +234,7 @@ Other settings files, all in `src/content/config/`:
 | --- | --- |
 | `nav.json` | The menu, in order |
 | `home.json` | Home page mission tiles and the three numbers under the hero |
-| `about.json` | Mission text, goals, board, history, safety statement, the two About photos |
+| `about.json` | Mission text, goals, board, safety statement, the two About photos |
 | `rules.json` | The Rules & Safety page |
 | `i18n/hy.json`, `i18n/en.json` | Every button and label on the site |
 

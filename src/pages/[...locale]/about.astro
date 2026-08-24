@@ -3,7 +3,6 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHeader from '@/components/PageHeader.astro';
 import Section from '@/components/Section.astro';
 import SmartImage from '@/components/SmartImage.astro';
-import Timeline from '@/components/Timeline.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { breadcrumbLd } from '@/lib/seo';
 import { site } from '@/lib/site';
@@ -12,19 +11,6 @@ import about from '@/content/config/about.json';
 export const getStaticPaths = localePaths;
 const { lang } = Astro.props as { lang: Lang };
 const t = useTranslations(lang);
-
-const historyEntries = about.history.map((h) => ({
-  date: h.year,
-  status: 'done' as const,
-  title: h.title,
-  body: h.body,
-}));
-
-const timelineLabels = {
-  done: lang === 'hy' ? 'Արված' : 'Done',
-  'in-progress': lang === 'hy' ? 'Ընթացքում' : 'In progress',
-  planned: lang === 'hy' ? 'Ծրագրված' : 'Planned',
-};
 ---
 
 <BaseLayout
@@ -96,10 +82,6 @@ const timelineLabels = {
         </li>
       ))}
     </ul>
-  </Section>
-
-  <Section eyebrow={t('about.history')} title={t('about.history')} id="history">
-    <Timeline lang={lang} entries={historyEntries} labels={timelineLabels} />
   </Section>
 
   <Section>
