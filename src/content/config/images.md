@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (77 total)
+## Slots (74 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -43,10 +43,7 @@ Aspect **1:1** · minimum **SVG** · Light and dark variants, transparent backgr
 | File | Status | Referenced by |
 | --- | --- | --- |
 | `armprf-logo-dark.svg` | **real** | `components (referenced directly)` |
-| `armprf-logo-light.svg` | **real** | `components (referenced directly)` |
 | `armprf-logo-themed.svg` | **real** | `components (referenced directly)` |
-| `armprf-wordmark-dark.svg` | **real** | `components (referenced directly)` |
-| `armprf-wordmark-light.svg` | **real** | `components (referenced directly)` |
 | `armprf-wordmark-themed.svg` | **real** | `components (referenced directly)` |
 
 ### `/img/brand/portraits/`

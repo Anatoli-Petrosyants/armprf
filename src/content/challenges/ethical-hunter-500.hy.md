@@ -4,12 +4,11 @@ title: "500 յարդ էթիկ որսորդի մարտահրավեր"
 summary: "Մեկ կրակոց սառը փողից՝ 5 դյույմ կենսական գոտու վրա, 500 յարդ հեռավորությունից։ Չափում է ոչ թե խմբի չափը, այլ ձեր վստահ որսորդական հեռավորությունը։"
 scoring: "points"
 sortDirection: "desc"
-maxScore: 3
 unit: "միավոր"
 videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "Որսորդը կրակում է ուսապարկից՝ լեռնային տեղանքում, 500 յարդ հեռավորության թիրախի ուղղությամբ"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
+columns: ["rank", "name", "division", "rifle", "caliber", "score", "date"]
 active: true
 order: 20
 ---

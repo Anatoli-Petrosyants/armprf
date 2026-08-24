@@ -49,10 +49,7 @@ walk(CONTENT, (file) => {
 
 [
   '/img/brand/logo/armprf-logo-dark.svg',
-  '/img/brand/logo/armprf-logo-light.svg',
   '/img/brand/logo/armprf-logo-themed.svg',
-  '/img/brand/logo/armprf-wordmark-dark.svg',
-  '/img/brand/logo/armprf-wordmark-light.svg',
   '/img/brand/logo/armprf-wordmark-themed.svg',
 ].forEach((p) => {
   if (!refs.has(p)) refs.set(p, new Set(['src/components (referenced directly)']));

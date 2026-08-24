@@ -8,7 +8,7 @@ unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=-OQQWgB3rfU"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "A shooter prone behind a rifle with a rack of steel targets downrange"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
+columns: ["rank", "name", "rifle", "caliber", "score", "time", "date"]
 active: true
 order: 10
 ---

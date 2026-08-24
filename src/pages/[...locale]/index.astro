@@ -22,6 +22,10 @@ const posts = (await getPosts(lang)).slice(0, 2);
 const challenges = await getChallenges(lang);
 const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
 const featuredRows = featured ? await getRankedRows(featured.data) : [];
+/** The teaser mirrors the full table: a challenge without divisions shows none. */
+const featuredColumns = ['rank', 'name', 'division', 'score'].filter(
+  (column) => column !== 'division' || Boolean(featured?.data.columns.includes('division')),
+);
 
 const icons: Record<string, string> = {
   reticle: 'M12 2v5M12 17v5M2 12h5M17 12h5',
@@ -99,7 +103,7 @@ const icons: Record<string, string> = {
       <Leaderboard
         lang={lang}
         challengeId={featured.data.id}
-        columns={['rank', 'name', 'division', 'score']}
+        columns={featuredColumns}
         rows={featuredRows}
         scoring={featured.data.scoring}
         unit={featured.data.unit}

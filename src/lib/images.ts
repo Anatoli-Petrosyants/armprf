@@ -32,11 +32,3 @@ export function resolveImage(path: string | undefined): ImageMetadata | undefine
   }
   return found;
 }
-
-export function hasImage(path: string | undefined): boolean {
-  return Boolean(path && byPath.has(path));
-}
-
-export function listImages(prefix: string): string[] {
-  return [...byPath.keys()].filter((p) => p.startsWith(prefix)).sort();
-}

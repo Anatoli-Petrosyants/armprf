@@ -4,12 +4,11 @@ title: "500 Yard Ethical Hunter Challenge"
 summary: "One cold bore shot at a 5 inch vital zone, 500 yards out. It measures your honest hunting range, not your group size."
 scoring: "points"
 sortDirection: "desc"
-maxScore: 3
 unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 yards"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
+columns: ["rank", "name", "division", "rifle", "caliber", "score", "date"]
 active: true
 order: 20
 ---

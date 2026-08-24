@@ -44,15 +44,6 @@ export async function getLocalized<C extends Bilingual>(
   return out;
 }
 
-export async function getLocalizedEntry<C extends Bilingual>(
-  collection: C,
-  slug: string,
-  lang: Lang,
-) {
-  const all = await getLocalized(collection, lang);
-  return all.find((e) => e.slug === slug);
-}
-
 /** Published posts, newest first. Drafts are excluded from production builds. */
 export async function getPosts(lang: Lang) {
   const posts = await getLocalized('posts', lang);

@@ -8,7 +8,7 @@ unit: "միավոր"
 videoUrl: "https://www.youtube.com/watch?v=-OQQWgB3rfU"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "Հրաձիգը պառկած դիրքում հրացանի հետևում՝ պողպատե թիրախների շարքի ուղղությամբ"
-columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
+columns: ["rank", "name", "rifle", "caliber", "score", "time", "date"]
 active: true
 order: 10
 ---

@@ -10,10 +10,6 @@ export const HTML_LANG: Record<Lang, string> = { hy: 'hy-AM', en: 'en' };
 
 const DICTS: Record<Lang, Record<string, string>> = { hy, en };
 
-export function isLang(value: unknown): value is Lang {
-  return typeof value === 'string' && (LOCALES as readonly string[]).includes(value);
-}
-
 /**
  * Look up a UI string. Missing keys fall back to English, then to the key
  * itself — a missing translation degrades to readable text, never to a blank.
@@ -36,16 +32,6 @@ export function useTranslations(lang: Lang) {
 export function localizePath(path: string, lang: Lang): string {
   const clean = path === '/' ? '' : path.replace(/\/+$/, '');
   return lang === DEFAULT_LANG ? clean || '/' : `/${lang}${clean}`;
-}
-
-/** Every prefix a non-default language can occupy, e.g. `/hy`. */
-const PREFIXED = LOCALES.filter((lang) => lang !== DEFAULT_LANG);
-const PREFIX_RE = new RegExp(`^/(?:${PREFIXED.join('|')})(?=/|$)`);
-
-/** Strip the locale prefix, giving the language-neutral path. */
-export function neutralPath(pathname: string): string {
-  const stripped = pathname.replace(PREFIX_RE, '') || '/';
-  return stripped.replace(/\/+$/, '') || '/';
 }
 
 /** The `[...locale]` rest param used by every page route. */
