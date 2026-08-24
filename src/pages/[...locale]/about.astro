@@ -87,14 +87,10 @@ const t = useTranslations(lang);
   <Section>
     <div class="card flex flex-wrap items-center justify-between gap-4 p-6">
       <div>
-        <h2 class="text-xl">{t('about.rulebook')}</h2>
-        <p class="mt-1 text-sm text-[var(--color-muted)]">
-          {lang === 'hy'
-            ? 'Ամբողջական կանոնագիրքը՝ դասակարգեր, անվտանգություն, միավորակալում։'
-            : 'The complete rulebook: divisions, safety, scoring.'}
-        </p>
+        <h2 class="text-xl">{t('about.charter')}</h2>
+        <p class="mt-1 text-sm text-[var(--color-muted)]">{t('about.charterNote')}</p>
       </div>
-      <a href={about.rulebookPdf} class="btn btn-primary" download>{t('common.download')}</a>
+      <a href={about.charterPdf} class="btn btn-primary" download>{t('common.download')}</a>
     </div>
   </Section>
 </BaseLayout>

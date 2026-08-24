@@ -113,7 +113,6 @@
       "photo": "/img/brand/portraits/board-04.jpg"
     }
   ],
-  "rulebookPdf": "/downloads/armprf-rulebook.pdf",
   "images": [
     {
       "src": "/img/about/prone-shooter.webp",
@@ -137,5 +136,6 @@
         "en": "The spotter reads the wind and calls the impacts."
       }
     }
-  ]
+  ],
+  "charterPdf": "/downloads/armprf-kanonadrutyun.pdf"
 }

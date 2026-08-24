@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (62 total)
+## Slots (74 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -88,17 +88,39 @@ Aspect **16:9** · minimum **1920×1080** · Challenge hero; shown at 21:9 with 
 | `blackjack-21.jpg` | placeholder | `blackjack-21.en.md`, `blackjack-21.hy.md` |
 | `ethical-hunter-500.jpg` | placeholder | `ethical-hunter-500.en.md`, `ethical-hunter-500.hy.md` |
 
+### `/img/community/birthday-and-celebrations/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2025-05-17_community-birthday-and-celebrations_first-anniversary_01.jpg` | placeholder | `2025-05-20-one-year-old.en.md`, `2025-05-20-one-year-old.hy.md` |
+
 ### `/img/community/group-photos/`
 
 Aspect **3:2** · minimum **1600×1067** · Gallery photo.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2025-05-17_community-group-photos_first-anniversary_01.jpg` | placeholder | `2025-05-20-one-year-old.en.md`, `2025-05-20-one-year-old.hy.md` |
 | `2025-05-17_community-group-photos_internal-match_01.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-05-17_community-group-photos_internal-match_02.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-10-22_community-group-photos_aro-periyan_01.jpg` | placeholder | `2025-10-22-aro-periyan.en.md`, `2025-10-22-aro-periyan.hy.md` |
 | `2025-10-24_community-group-photos_maria-marutyan_01.jpg` | placeholder | `2025-10-24-maria-marutyan.en.md`, `2025-10-24-maria-marutyan.hy.md` |
 | `2025-10-28_community-group-photos_armen-babayan_01.jpg` | placeholder | `2025-10-28-national-sniper-competition.en.md`, `2025-10-28-national-sniper-competition.hy.md` |
+
+### `/img/community/international-guests/`
+
+Aspect **3:2** · minimum **1600×1067** · Gallery photo.
+
+| File | Status | Referenced by |
+| --- | --- | --- |
+| `2024-11-13_community-international-guests_iprf-membership_01.jpg` | placeholder | `2024-11-13-iprf-membership.en.md`, `2024-11-13-iprf-membership.hy.md` |
+| `2025-05-07_community-international-guests_geprf_01.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
+| `2025-05-07_community-international-guests_geprf_02.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
+| `2025-05-07_community-international-guests_geprf_03.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
+| `2025-05-07_community-international-guests_geprf_04.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
+| `2025-05-07_community-international-guests_geprf_05.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
 
 ### `/img/match/gear-line/`
 
@@ -169,6 +191,10 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 
 | File | Status | Referenced by |
 | --- | --- | --- |
+| `2024-11-13-iprf-membership.jpg` | placeholder | `2024-11-13-iprf-membership.en.md`, `2024-11-13-iprf-membership.hy.md` |
+| `2025-05-01-artyom-presents-his-rifle.jpg` | placeholder | `2025-05-01-artyom-presents-his-rifle.en.md`, `2025-05-01-artyom-presents-his-rifle.hy.md` |
+| `2025-05-07-guests-of-geprf.jpg` | placeholder | `2025-05-07-guests-of-geprf.en.md`, `2025-05-07-guests-of-geprf.hy.md` |
+| `2025-05-20-one-year-old.jpg` | placeholder | `2025-05-20-one-year-old.en.md`, `2025-05-20-one-year-old.hy.md` |
 | `2025-05-21-internal-match-17-may.jpg` | placeholder | `2025-05-21-internal-match-17-may.en.md`, `2025-05-21-internal-match-17-may.hy.md` |
 | `2025-08-11-internal-22lr-match.jpg` | placeholder | `2025-08-11-internal-22lr-match.en.md`, `2025-08-11-internal-22lr-match.hy.md` |
 | `2025-08-18-vanadzor-dmr-match.jpg` | placeholder | `2025-08-18-vanadzor-dmr-match.en.md`, `2025-08-18-vanadzor-dmr-match.hy.md` |
