@@ -6,7 +6,7 @@ scoring: "points"
 sortDirection: "desc"
 maxScore: 21
 unit: "pts"
-videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
+videoUrl: "https://www.youtube.com/watch?v=-OQQWgB3rfU"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "A shooter prone with a 21-point card and steel targets downrange"
 columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]

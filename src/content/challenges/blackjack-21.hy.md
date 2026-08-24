@@ -6,7 +6,7 @@ scoring: "points"
 sortDirection: "desc"
 maxScore: 21
 unit: "միավոր"
-videoUrl: "https://www.youtube.com/watch?v=KZCXywObrO0"
+videoUrl: "https://www.youtube.com/watch?v=-OQQWgB3rfU"
 heroImage: "/img/challenges/blackjack-21.jpg"
 heroAlt: "Հրաձիգը պառկած դիրքում՝ 21 միավորի քարտով և պողպատե թիրախներով"
 columns: ["rank", "name", "division", "score", "date", "rifle", "caliber"]
