@@ -1,8 +1,8 @@
 ---
-name: "Anatoli Petrosyants"
+name: "Անատոլի Պետրոսյանց"
 slug: "anatoli-petrosyants"
 club: "ARMPRF"
 photo: "/img/brand/portraits/anatoli-petrosyants.jpg"
-photoAlt: "Anatoli Petrosyants, ARMPRF-ի հրաձիգ, դիմանկար"
+photoAlt: "Անատոլի Պետրոսյանց, ARMPRF-ի հրաձիգ, դիմանկար"
 memberSince: 2024
 ---

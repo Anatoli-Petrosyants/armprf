@@ -13,19 +13,34 @@ interface Props {
 }
 const { lang, name, photo, photoAlt, hometown, memberSince } = Astro.props;
 const t = useTranslations(lang);
+
+/** A shooter with no portrait yet gets a reticle monogram rather than the
+ *  generic missing-image box: first letter of the first and last name part,
+ *  which reads the same in Armenian and in Latin. */
+const parts = name.split(/[\s-]+/).filter(Boolean);
+const initials = [parts[0], parts.length > 1 ? parts.at(-1) : undefined]
+  .filter(Boolean)
+  .map((part) => [...part!][0])
+  .join('')
+  .toUpperCase();
 ---
 <article class="card overflow-hidden">
-  {flag('showAthletePhotos') && (
-    <SmartImage
-      src={photo}
-      alt={photoAlt ?? name}
-      aspect="1/1"
-      widths={[480]}
-      formats={['webp']}
-      sizes="(min-width: 64rem) 20vw, (min-width: 40rem) 33vw, 50vw"
-      class="w-full"
-    />
-  )}
+  {flag('showAthletePhotos') &&
+    (photo ? (
+      <SmartImage
+        src={photo}
+        alt={photoAlt ?? name}
+        aspect="1/1"
+        widths={[480]}
+        formats={['webp']}
+        sizes="(min-width: 64rem) 20vw, (min-width: 40rem) 33vw, 50vw"
+        class="w-full"
+      />
+    ) : (
+      <div class="reticle w-full" role="img" aria-label={photoAlt ?? name}>
+        <span class="reticle-initials" aria-hidden="true">{initials}</span>
+      </div>
+    ))}
   <div class="p-4">
     <h3 class="text-base leading-snug">{name}</h3>
     {hometown && <p class="mt-1 text-xs text-[var(--color-faint)]">{hometown}</p>}
@@ -34,3 +49,50 @@ const t = useTranslations(lang);
     </p>
   </div>
 </article>
+
+<style>
+  /* Reticle stand-in for a missing portrait: two rings and four stadia marks,
+     drawn in border tones so it reads as a frame, not as content. */
+  .reticle {
+    --tick: color-mix(in srgb, var(--color-border-strong) 70%, transparent);
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--color-surface-2);
+    /* Four stadia marks at 12, 6, 9 and 3 o'clock. */
+    background-image:
+      linear-gradient(var(--tick), var(--tick)),
+      linear-gradient(var(--tick), var(--tick)),
+      linear-gradient(var(--tick), var(--tick)),
+      linear-gradient(var(--tick), var(--tick));
+    background-repeat: no-repeat;
+    background-size: 1px 10%, 1px 10%, 10% 1px, 10% 1px;
+    background-position: 50% 8%, 50% 92%, 8% 50%, 92% 50%;
+  }
+  .reticle::before {
+    content: '';
+    position: absolute;
+    inset: 18%;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--color-border-strong) 70%, transparent);
+  }
+  .reticle::after {
+    content: '';
+    position: absolute;
+    inset: 32%;
+    border-radius: 50%;
+    border: 1px dashed color-mix(in srgb, var(--color-border-strong) 45%, transparent);
+  }
+  .reticle-initials {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: color-mix(in srgb, var(--color-muted) 85%, transparent);
+  }
+</style>
