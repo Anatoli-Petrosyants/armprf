@@ -7,6 +7,7 @@ import SmartImage from '@/components/SmartImage.astro';
 import { localePaths, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges, getPosts } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
+import { athleteNames } from '@/lib/athletes';
 import { site, siteName } from '@/lib/site';
 import home from '@/content/config/home.json';
 
@@ -22,9 +23,12 @@ const posts = (await getPosts(lang)).slice(0, 2);
 const challenges = await getChallenges(lang);
 const featured = challenges.find((c) => c.data.id === site.featuredChallenge) ?? challenges[0];
 const featuredRows = featured ? await getRankedRows(featured.data) : [];
-/** The teaser mirrors the full table: a challenge without divisions shows none. */
-const featuredColumns = ['rank', 'name', 'division', 'score'].filter(
-  (column) => column !== 'division' || Boolean(featured?.data.columns.includes('division')),
+const names = await athleteNames(lang);
+/** The teaser mirrors the full table: rank, name and score are always there,
+ *  and the rest show only when the challenge itself declares them. */
+const TEASER_OPTIONAL = new Set(['division', 'rifle', 'caliber', 'date']);
+const featuredColumns = ['rank', 'name', 'division', 'rifle', 'caliber', 'score', 'date'].filter(
+  (column) => !TEASER_OPTIONAL.has(column) || Boolean(featured?.data.columns.includes(column)),
 );
 
 const icons: Record<string, string> = {
@@ -107,6 +111,7 @@ const icons: Record<string, string> = {
         rows={featuredRows}
         scoring={featured.data.scoring}
         unit={featured.data.unit}
+        displayNames={names}
         limit={5}
       />
     </Section>
