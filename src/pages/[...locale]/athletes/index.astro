@@ -25,7 +25,12 @@ const totalPages = Math.max(1, Math.ceil(athletes.length / PER_PAGE));
     : 'The ARMPRF roster: photograph, name, city and the year each shooter joined.'}
   jsonLd={[breadcrumbLd([{ name: t('athletes.title'), url: localizePath('/athletes', lang) }])]}
 >
-  <PageHeader lang={lang} title={t('athletes.title')} crumbs={[{ name: t('athletes.title'), path: '/athletes' }]} />
+  <PageHeader
+    lang={lang}
+    title={t('athletes.title')}
+    count={athletes.length}
+    crumbs={[{ name: t('athletes.title'), path: '/athletes' }]}
+  />
 
   <div class="wrap py-14">
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
