@@ -47,7 +47,7 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
     ]),
   ]}
 >
-  <header class="moa-grid border-b border-[var(--color-border)]">
+  <header class="moa-grid moa-reticle border-b border-[var(--color-border)]">
     <div class="wrap py-12 md:py-16">
       <nav aria-label={t('lb.title')} class="no-scrollbar -mx-1 flex gap-2 overflow-x-auto pb-1">
         {tabs.map((tab) => (

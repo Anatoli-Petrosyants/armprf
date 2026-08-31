@@ -13,7 +13,7 @@ interface Props {
 }
 const { lang, eyebrow, title, lead, count, crumbs = [] } = Astro.props;
 ---
-<section class="moa-grid border-b border-[var(--color-border)]">
+<section class="moa-grid moa-reticle border-b border-[var(--color-border)]">
   <div class="wrap py-12 md:py-16">
     {crumbs.length > 0 && <Breadcrumbs lang={lang} items={crumbs} />}
     {eyebrow && <p class="eyebrow mt-4">{eyebrow}</p>}

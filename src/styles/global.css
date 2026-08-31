@@ -260,6 +260,31 @@
     background-size: 2.5rem 2.5rem;
   }
 
+  /* Reticle: concentric rings and a crosshair, sunk into a header's grid on
+     the trailing edge. Decoration only — it sits behind the heading, never
+     over it, and drops out below the breakpoint where it would crowd text. */
+  .moa-reticle {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .moa-reticle::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: -4rem;
+    width: 22rem;
+    height: 22rem;
+    transform: translateY(-50%);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%23f2a800' stroke-width='1.25'%3E%3Ccircle cx='100' cy='100' r='92'/%3E%3Ccircle cx='100' cy='100' r='68'/%3E%3Ccircle cx='100' cy='100' r='44'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3Cpath d='M100 4v52M100 144v52M4 100h52M144 100h52'/%3E%3Ccircle cx='100' cy='100' r='2.5' fill='%23f2a800' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat;
+    opacity: 0.16;
+    pointer-events: none;
+  }
+  @media (max-width: 48rem) {
+    .moa-reticle::before { display: none; }
+  }
+
   /* Ballistic arc divider — a thin parabola separating major sections. */
   .arc-divider {
     height: 1px;
