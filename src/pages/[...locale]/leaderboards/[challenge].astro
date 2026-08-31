@@ -1,10 +1,8 @@
 ---
 import { render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Leaderboard from '@/components/Leaderboard.astro';
 import LiteYouTube from '@/components/LiteYouTube.astro';
-import SmartImage from '@/components/SmartImage.astro';
 import { LOCALES, localeParam, localizePath, useTranslations, type Lang } from '@/lib/i18n';
 import { getChallenges } from '@/lib/content';
 import { assertResultsValid, getRankedRows } from '@/lib/leaderboard';
@@ -49,31 +47,9 @@ const tabs = (await getChallenges(lang)).map((c) => ({ id: c.data.id, title: c.d
     ]),
   ]}
 >
-  <header class="relative isolate overflow-hidden border-b border-[var(--color-border)]">
-    {data.heroImage && (
-      <>
-        <SmartImage
-          src={data.heroImage}
-          alt={data.heroAlt ?? data.title}
-          aspect="21/9"
-          widths={[960, 1600, 2200]}
-          sizes="100vw"
-          loading="eager"
-          fetchpriority="high"
-          class="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
-        />
-        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[var(--color-bg)] via-[color-mix(in_srgb,var(--color-bg)_70%,transparent)] to-transparent"></div>
-      </>
-    )}
+  <header class="moa-grid border-b border-[var(--color-border)]">
     <div class="wrap py-12 md:py-16">
-      <Breadcrumbs
-        lang={lang}
-        items={[
-          { name: t('lb.title'), path: '/leaderboards' },
-          { name: data.title, path: neutral },
-        ]}
-      />
-      <nav aria-label={t('lb.title')} class="no-scrollbar mt-5 -mx-1 flex gap-2 overflow-x-auto pb-1">
+      <nav aria-label={t('lb.title')} class="no-scrollbar -mx-1 flex gap-2 overflow-x-auto pb-1">
         {tabs.map((tab) => (
           <a
             href={localizePath(`/leaderboards/${tab.id}`, lang)}
