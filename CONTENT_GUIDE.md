@@ -206,7 +206,8 @@ frontmatter and they appear as a grid under the article, with a lightbox.
 ## Add a video
 
 Do not upload video files. Set `videoUrl` on a post or a challenge and the YouTube id is
-enough — the player only contacts YouTube once a visitor clicks it.
+enough — the page shows the YouTube player itself, with YouTube's own thumbnail and play
+button.
 
 ---
 

@@ -92,7 +92,13 @@ const ogImage = `/og/blog/${post.slug}.png`;
       </div>
     </header>
 
-    {post.data.cover && (
+    {/* A post with a video leads with the player instead of the cover, so the
+        same frame is not shown twice. The cover still serves the cards and OG. */}
+    {post.data.videoUrl ? (
+      <div class="wrap py-8">
+        <LiteYouTube lang={lang} url={post.data.videoUrl} title={post.data.title} />
+      </div>
+    ) : post.data.cover && (
       <div class="wrap py-8">
         <SmartImage
           src={post.data.cover}
@@ -110,12 +116,6 @@ const ogImage = `/og/blog/${post.slug}.png`;
     <div class="wrap-prose prose-armprf py-8">
       <Content />
     </div>
-
-    {post.data.videoUrl && (
-      <div class="wrap-prose py-6">
-        <LiteYouTube lang={lang} url={post.data.videoUrl} title={post.data.title} />
-      </div>
-    )}
 
     {post.data.gallery.length > 0 && (
       <div class="wrap py-10">
