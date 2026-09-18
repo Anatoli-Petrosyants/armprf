@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "name": "Artyom Mkrtchyan",
+    "club": "ARMPRF",
+    "division": "Open",
+    "date": "2026-09-18",
+    "rifle": "MPA",
+    "caliber": "6mm Dasher",
+    "score": 13,
+    "verified": true
+  },
+  {
+    "name": "Ara Peryan",
+    "club": "ARMPRF",
+    "division": "Open",
+    "date": "2026-09-18",
+    "rifle": "Victrix Venus",
+    "caliber": "6.5 Creedmoor",
+    "score": 13,
+    "verified": true
+  },
+  {
+    "name": "Sevak Sevanyan",
+    "club": "ARMPRF",
+    "division": "Open",
+    "date": "2026-09-18",
+    "rifle": "Haenel",
+    "caliber": ".308 Win",
+    "score": 13,
+    "verified": true
+  },
+  {
+    "name": "Arevik Mkrtchyan",
+    "club": "ARMPRF",
+    "division": "Open",
+    "date": "2026-09-18",
+    "rifle": "MPA",
+    "caliber": "6mm Dasher",
+    "score": 8,
+    "verified": true
+  },
+  {
+    "name": "Hovhannes Chitiryan",
+    "club": "ARMPRF",
+    "division": "Open",
+    "date": "2026-09-18",
+    "rifle": "CZ 600 Alpha",
+    "caliber": ".223 Rem",
+    "score": 2,
+    "verified": true
+  }
+]

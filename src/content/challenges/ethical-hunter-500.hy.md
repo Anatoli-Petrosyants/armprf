@@ -8,7 +8,7 @@ unit: "միավոր"
 videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
 heroAlt: "Որսորդը կրակում է ուսապարկից՝ լեռնային տեղանքում, 500 յարդ հեռավորության թիրախի ուղղությամբ"
-columns: ["rank", "name", "division", "rifle", "caliber", "score", "date"]
+columns: ["rank", "name", "rifle", "caliber", "score", "date"]
 active: true
 order: 20
 ---
