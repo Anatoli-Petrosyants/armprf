@@ -1,24 +1,24 @@
 ---
 id: "ethical-hunter-500"
-title: "500 Yard Ethical Hunter Challenge"
-summary: "One cold bore shot at a 5 inch vital zone, 500 yards out. It measures your honest hunting range, not your group size."
+title: "500 Meter Ethical Hunter Challenge"
+summary: "One cold bore shot at a 5 inch vital zone, 500 meters out. It measures your honest hunting range, not your group size."
 scoring: "points"
 sortDirection: "desc"
 unit: "pts"
 videoUrl: "https://www.youtube.com/watch?v=ymPoInhiGuE"
 heroImage: "/img/challenges/ethical-hunter-500.jpg"
-heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 yards"
+heroAlt: "A hunter shooting off a pack in mountain terrain toward a target at 500 meters"
 columns: ["rank", "name", "rifle", "caliber", "score", "date"]
 active: true
 order: 20
 ---
 
-The challenge was popularized by precision shooter Erik Cortina, and the premise is simple: if you cannot put your first cold bore shot into a vital zone at 500 yards, that is not your hunting range. There is a video on this page showing what it looks like.
+The challenge was popularized by precision shooter Erik Cortina, and the premise is simple: if you cannot put your first cold bore shot into a vital zone at 500 meters, that is not your hunting range. There is a video on this page showing what it looks like.
 
 ## Format
 
-- Distance: **exactly 500 yards (457 m)**.
-- Target: a **5 inch (13 cm)** circle — a **1 MOA** vital zone at that distance.
+- Distance: **exactly 500 meters**.
+- Target: a **5 inch (13 cm)** circle — a vital zone just under **1 MOA** at that distance.
 - The shot: **one cold bore shot**, the first round out of a clean, un-warmed barrel, the way the shot presents itself in the field.
 - Follow-ups: **up to two more shots** if the cold bore shot misses the vital zone.
 - Rifle: your **precision competition rifle or a hunting rifle**. No weight limit, no gear restrictions — the test is practical field accuracy.
