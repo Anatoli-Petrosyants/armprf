@@ -258,7 +258,7 @@ names will line up when you publish.
 **Hunting / ethical shooting** (`/img/hunting/`)
 
 - `hunting/field-positions/`: Improvised rests, packs, terrain
-- `hunting/500yd-challenge/`: Runs from the Ethical Hunter Challenge
+- `hunting/500yd-challenge/`: Runs from the Hunter Challenge
 - `hunting/landscape/`: Armenian terrain, giving a sense of distance
 
 **Range & construction** (`/img/range/`)

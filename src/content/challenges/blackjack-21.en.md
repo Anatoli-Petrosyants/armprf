@@ -40,8 +40,8 @@ A six-target rack shot against the clock. Clear the rack and you have 21 points 
 4. With ammunition and time left, you keep shooting until the 2 minutes are up.
 5. Ties are broken on time — the shooter with the shorter time wins.
 
-## Alongside: the Ethical Hunter Challenge
+## Alongside: the Hunter Challenge
 
-Everyone shooting the BlackJack Challenge is also given the opportunity to shoot the Ethical Hunter Challenge: one cold bore shot at a 5 inch vital zone, 500 meters out. You can use your BlackJack rifle for it or bring a separate hunting rifle.
+Everyone shooting the BlackJack Challenge is also given the opportunity to shoot the Hunter Challenge: one cold bore shot at a 5 inch vital zone, 500 meters out. You can use your BlackJack rifle for it or bring a separate hunting rifle.
 
 Both challenges are filmed, and the footage is used on social media.

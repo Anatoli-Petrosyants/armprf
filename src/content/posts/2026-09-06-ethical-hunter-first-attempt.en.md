@@ -1,6 +1,6 @@
 ---
-title: "Our first go at the Ethical Hunter challenge"
-excerpt: "For the first time, we take on the 500 meter Ethical Hunter challenge: one cold bore shot at a 5 inch target. The video is on YouTube."
+title: "Our first go at the Hunter challenge"
+excerpt: "For the first time, we take on the 500 meter Hunter challenge: one cold bore shot at a 5 inch target. The video is on YouTube."
 date: 2026-09-06
 tags: ["training", "community"]
 author: "ARMPRF"
@@ -9,7 +9,7 @@ videoUrl: "https://www.youtube.com/watch?v=yoRvup8zYLE"
 coverAlt: "A frame from the video: a shooter in a bright green hoodie on the range, his rifle over his shoulder"
 ---
 
-For the first time, we shoot the **500 Meter Ethical Hunter Challenge**: one cold bore shot at a 5 inch (13 cm) target, 500 meters out, with up to two follow-ups if the first one misses.
+For the first time, we shoot the **500 Meter Hunter Challenge**: one cold bore shot at a 5 inch (13 cm) target, 500 meters out, with up to two follow-ups if the first one misses.
 
 The video opens on the range with an introduction to the challenge, then goes prone behind the rifle for the shots at an animal silhouette.
 

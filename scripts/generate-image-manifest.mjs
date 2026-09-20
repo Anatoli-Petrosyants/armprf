@@ -146,7 +146,7 @@ const PLAN = [
   ]],
   ['Hunting / ethical shooting', 'hunting/', [
     ['field-positions', 'Improvised rests, packs, terrain'],
-    ['500yd-challenge', 'Runs from the Ethical Hunter Challenge'],
+    ['500yd-challenge', 'Runs from the Hunter Challenge'],
     ['landscape', 'Armenian terrain, giving a sense of distance'],
   ]],
   ['Range & construction', 'range/', [

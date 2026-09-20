@@ -1,6 +1,6 @@
 ---
 id: "ethical-hunter-500"
-title: "500 Meter Ethical Hunter Challenge"
+title: "500 Meter Hunter Challenge"
 summary: "One cold bore shot at a 5 inch vital zone, 500 meters out. It measures your honest hunting range, not your group size."
 scoring: "points"
 sortDirection: "desc"
