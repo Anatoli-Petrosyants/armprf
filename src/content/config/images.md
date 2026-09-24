@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (87 total)
+## Slots (88 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -207,6 +207,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 | `2026-06-18-tvank-175-mpa-vanquish.jpg` | placeholder | `2026-06-18-tvank-175-mpa-vanquish.en.md`, `2026-06-18-tvank-175-mpa-vanquish.hy.md` |
 | `2026-06-28-annual-meeting.jpg` | placeholder | `2026-06-28-annual-meeting.en.md`, `2026-06-28-annual-meeting.hy.md` |
 | `2026-09-06-ethical-hunter-first-attempt.jpg` | placeholder | `2026-09-06-ethical-hunter-first-attempt.en.md`, `2026-09-06-ethical-hunter-first-attempt.hy.md` |
+| `2026-09-18-no-limits-episode.jpg` | placeholder | `2026-09-18-no-limits-episode.en.md`, `2026-09-18-no-limits-episode.hy.md` |
 
 ### `/img/rimfire/matches/`
 
