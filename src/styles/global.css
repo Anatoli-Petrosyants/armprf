@@ -327,12 +327,25 @@
     padding-top: 0.75em;
     border-top: 1px solid var(--color-border);
   }
+  /* A post that opens straight on a heading needs no gap or rule above it. */
+  .prose-armprf > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
   .prose-armprf h3 { font-size: 1.1875rem; margin-top: 1.9em; }
   .prose-armprf a {
     color: var(--color-accent-text);
     text-decoration: underline;
     text-underline-offset: 0.2em;
   }
+  /* A call-to-action button inside a post, e.g. a registration link. */
+  .prose-armprf a.btn {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.9375rem 1.75rem;
+  }
+  .prose-armprf a.btn-primary { color: var(--color-accent-ink); }
   .prose-armprf ul, .prose-armprf ol { padding-inline-start: 1.35em; }
   .prose-armprf ul { list-style: square; }
   .prose-armprf ol { list-style: decimal; }
