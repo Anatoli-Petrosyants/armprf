@@ -24,7 +24,7 @@ YYYY-MM-DD_tag_short-description_01.jpg
 Landscape 3:2 or 16:9 for galleries and heroes, 1:1 for portraits. JPEG quality 90,
 longest edge at least 2000 px.
 
-## Slots (89 total)
+## Slots (92 total)
 
 Status `placeholder` means a generated stand-in is in place and the real photo is still missing.
 
@@ -68,6 +68,7 @@ Aspect **1:1** · minimum **1000×1000** · Head and shoulders, eyes on the uppe
 | `gevorg-ter-sahakyan.jpg` | placeholder | `gevorg-ter-sahakyan.en.md`, `gevorg-ter-sahakyan.hy.md` |
 | `gor-ispiryan.jpg` | placeholder | `gor-ispiryan.en.md`, `gor-ispiryan.hy.md` |
 | `hakob-ter-grigoryan.jpg` | placeholder | `hakob-ter-grigoryan.en.md`, `hakob-ter-grigoryan.hy.md` |
+| `hovhannes-chitiryan.jpg` | placeholder | `hovhannes-chitiryan.en.md`, `hovhannes-chitiryan.hy.md` |
 | `hrachya-khachatryan.jpg` | placeholder | `hrachya-khachatryan.en.md`, `hrachya-khachatryan.hy.md` |
 | `ishxan-gevorgyan.jpg` | placeholder | `ishxan-gevorgyan.en.md`, `ishxan-gevorgyan.hy.md`, `about.json` |
 | `maria-marutyan.jpg` | placeholder | `maria-marutyan.en.md`, `maria-marutyan.hy.md` |
@@ -78,6 +79,7 @@ Aspect **1:1** · minimum **1000×1000** · Head and shoulders, eyes on the uppe
 | `ruben-gevorgyan.jpg` | placeholder | `ruben-gevorgyan.en.md`, `ruben-gevorgyan.hy.md` |
 | `sevak-sevanyan.jpg` | placeholder | `sevak-sevanyan.en.md`, `sevak-sevanyan.hy.md` |
 | `sevan-iritsyan.jpg` | placeholder | `sevan-iritsyan.en.md`, `sevan-iritsyan.hy.md`, `about.json` |
+| `tigran-karamyan.jpg` | placeholder | `tigran-karamyan.en.md`, `tigran-karamyan.hy.md` |
 
 ### `/img/challenges/`
 
@@ -209,6 +211,7 @@ Aspect **16:9** · minimum **1920×1080** · Blog cover.
 | `2026-09-06-ethical-hunter-first-attempt.jpg` | placeholder | `2026-09-06-ethical-hunter-first-attempt.en.md`, `2026-09-06-ethical-hunter-first-attempt.hy.md` |
 | `2026-09-18-no-limits-episode.jpg` | placeholder | `2026-09-18-no-limits-episode.en.md`, `2026-09-18-no-limits-episode.hy.md` |
 | `2026-09-30-sniper-match-november.jpg` | placeholder | `2026-09-30-sniper-match-november.en.md`, `2026-09-30-sniper-match-november.hy.md` |
+| `2026-11-02-arordi-partnership.jpg` | placeholder | `2026-11-02-arordi-partnership.en.md`, `2026-11-02-arordi-partnership.hy.md` |
 
 ### `/img/rimfire/matches/`
 
